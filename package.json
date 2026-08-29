@@ -1,0 +1,17 @@
+{
+  "name": "subscrr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+     "build:css": "tailwindcss -i ./assets/input.css -o ./assets/output.css --minify",
+     "watch:css": "tailwindcss -i ./assets/input.css -o ./assets/output.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}
