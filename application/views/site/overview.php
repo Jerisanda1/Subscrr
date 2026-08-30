@@ -423,6 +423,156 @@
 
 </section>
 
+<!-- =====================================================
+     REMINDERS
+====================================================== -->
+<section
+    id="reminders"
+    class="bg-[#f5f3ef] px-3 py-3 sm:px-4 sm:py-4"
+>
+
+       <div class="flex flex-col items-center text-center">
+
+            <!-- LABEL -->
+            <p
+                class="text-sm font-bold uppercase tracking-[0.18em] text-[#526bd8]"
+            >
+                Reminders
+            </p>
+
+
+            <!-- HEADING -->
+            <h1
+                class="mt-7 max-w-[800px] text-[52px] font-bold leading-[0.94] tracking-[-0.055em] text-[#171717] sm:text-[64px] lg:text-[76px]"
+            >
+                Never get
+                <br>
+                surprise-charged 
+                <br>
+                 again.
+            </h1>
+
+
+            <!-- DESCRIPTION -->
+            <p
+                class="mt-8 max-w-[650px] text-[18px] leading-7 text-[#77736d] sm:text-[19px]"
+            >
+                The day before the money leaves, a gentle tap on the
+                shoulder. So you renew because you meant to, not because
+                you forgot it was there.
+            </p>
+
+            <br>
+            <br>
+
+
+<!-- =================================================
+     REMINDER IMAGE
+================================================== -->
+<div class="overview-reveal overview-delay-1 bg-transparent p-0">
+
+    <div class="relative mx-auto w-full max-w-[780px] overflow-hidden rounded-[2.5rem] bg-transparent">
+
+        <!-- GAMBAR 1: BACKGROUND ORANG (Harus paling atas di kode agar di posisi belakang) -->
+        <img
+            src="<?= base_url('assets/uploads/overview/reminder-bg.webp') ?>"
+            alt="Subscrr Subscription Reminder"
+            class="block h-auto w-full object-cover"
+        >
+
+        <!-- GAMBAR 2: NOTIFIKASI (Ditumpuk di atas/depan background) -->
+        <div class="absolute inset-0 flex items-center justify-center p-4">
+            <img 
+                src="<?= base_url('assets/uploads/overview/push-multiple.webp') ?>" 
+                alt="Notification Overlay" 
+                class="w-[85%] max-w-[450px] object-contain drop-shadow-lg"
+            >
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- =================================================
+     SETUP SECTION / IMPORT APPLE
+================================================== -->
+<section class="w-full bg-[#f6f5f1] py-16 px-6 md:px-12 lg:px-20">
+    <div class="mx-auto max-w-[1200px] grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+
+        <!-- KOLOM KIRI: TEKS & STEP BADGES -->
+        <div class="flex flex-col items-start">
+            
+            <!-- SUBTITLE -->
+            <p class="text-[13px] font-bold uppercase tracking-widest text-[#6366f1]">
+                SETUP • ONE SCREENSHOT
+            </p>
+
+            <!-- JUDUL (HEADING) -->
+            <h2 class="mt-4 text-[40px] font-extrabold leading-[1.1] tracking-tight text-slate-900 sm:text-[52px]">
+                Import what<br class="hidden sm:inline" />
+                Apple already<br class="hidden sm:inline" />
+                charges you for.
+            </h2>
+
+            <!-- DESKRIPSI -->
+            <p class="mt-6 max-w-[480px] text-[16px] leading-relaxed text-slate-500 sm:text-[18px]">
+                Everything on your Apple ID sits on one screen. Screenshot it, drop it in, and we read the names, prices and dates for you.
+            </p>
+
+            <!-- BADGES STEP / LANGKAH-LANGKAH -->
+            <div class="mt-8 flex flex-wrap gap-3">
+                
+                <!-- Step 1 -->
+                <div class="flex items-center gap-3 rounded-full bg-white px-5 py-3 shadow-[0_4px_15px_rgba(0,0,0,0.04)]">
+                    <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ff3218] text-[13px] font-bold text-white">
+                        1
+                    </span>
+                    <span class="text-[14px] font-semibold text-slate-800">
+                        Open Subscriptions
+                    </span>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex items-center gap-3 rounded-full bg-white px-5 py-3 shadow-[0_4px_15px_rgba(0,0,0,0.04)]">
+                    <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ff3218] text-[13px] font-bold text-white">
+                        2
+                    </span>
+                    <span class="text-[14px] font-semibold text-slate-800">
+                        Take a screenshot
+                    </span>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex items-center gap-3 rounded-full bg-white px-5 py-3 shadow-[0_4px_15px_rgba(0,0,0,0.04)]">
+                    <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ff3218] text-[13px] font-bold text-white">
+                        3
+                    </span>
+                    <span class="text-[14px] font-semibold text-slate-800">
+                        Drop it in here
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- KOLOM KANAN: GAMBAR MOCKUP -->
+        <div class="relative mx-auto w-full max-w-[570px] overflow-hidden rounded-[2.5rem]">
+            <img 
+                src="<?= base_url('assets/uploads/overview/import-appstore.jpg') ?>" 
+                alt="Import Apple Subscriptions" 
+                class="block h-auto w-full object-cover"
+            />
+        </div>
+
+    </div>
+</section>
 
     <!-- =====================================================
          JAVASCRIPT - KHUSUS OVERVIEW
@@ -456,7 +606,7 @@
 
                                 entry.target.classList.add('is-visible');
 
-                                observer.unobserve(entry.target);
+                                 observer.unobserve(entry.target);
 
                             }
 
