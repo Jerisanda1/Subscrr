@@ -72,7 +72,12 @@
                     <nav class="flex flex-wrap justify-center gap-6">
                         <a href="#" class="hover:text-white transition">Help Center</a>
                         <a href="#" class="hover:text-white transition">Contact us</a>
-                        <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                       <a
+    href="<?= base_url('privacy-policy') ?>"
+    class="transition hover:text-white"
+>
+    Privacy Policy
+</a>
                         <a href="#" class="hover:text-white transition">Terms of Use</a>
                     </nav>
                     <span class="text-gray-500">© 2026 Subscrr. All rights reserved.</span>

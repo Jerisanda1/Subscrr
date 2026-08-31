@@ -157,6 +157,7 @@
                 transform: translateY(-3px);
             }
         }
+        
     </style>
 
 
@@ -208,7 +209,6 @@
                 alt="Subscrr Overview"
                 class="block w-full rounded-[2.5rem] object-cover"
             >
-
         </div>
 
 
