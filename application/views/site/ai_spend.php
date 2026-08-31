@@ -1,7 +1,52 @@
 <!-- ================= BACKGROUND LAYER ================= -->
-<!-- Elemen ini harus berada di dalam <body>, sebelum konten utama -->
 <div id="page-background" 
      class="fixed inset-0 -z-10 transition-colors duration-1000 ease-in-out bg-[#f5f4ee]"></div>
+
+<!-- ================= SCROLL ANIMATION STYLES ================= -->
+<style>
+  [data-animate] {
+    transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+  }
+
+  [data-animate='fade-up'] {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  [data-animate='fade-down'] {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  [data-animate='slide-left'] {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  [data-animate='slide-right'] {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  [data-animate='zoom-in'] {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+
+  [data-animate].animate-visible {
+    opacity: 1;
+    transform: translate(0) scale(1);
+  }
+
+  @media (max-width: 768px) {
+    [data-animate='slide-left'],
+    [data-animate='slide-right'] {
+      transform: translateY(40px);
+    }
+    [data-animate='slide-left'].animate-visible,
+    [data-animate='slide-right'].animate-visible {
+      transform: translateY(0) scale(1);
+    }
+  }
+</style>
 
 <!-- ================= SECTION AI SPEND ================= -->
 <section id="ai_spend" class="min-h-screen flex items-center justify-center p-4 md:p-10">
@@ -9,7 +54,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-8 items-center w-full">
             
             <!-- Teks Kiri (Canvas Partikel) -->
-            <div class="space-y-4 z-10">
+            <div class="space-y-4 z-10" data-animate="slide-left" style="transition-delay: 0.1s;">
                 <p class="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase">
                     Premium · AI Spend
                 </p>
@@ -28,7 +73,7 @@
             </div>
 
             <!-- Video HP Kanan -->
-            <div class="relative h-90 w-full flex justify-center lg:justify-center items-start">
+            <div class="relative h-90 w-full flex justify-center lg:justify-center items-start" data-animate="slide-right" style="transition-delay: 0.2s;">
                 <div class="relative w-70 md:w-80 lg:w-80 aspect-9/19 overflow-hidden shadow-2xl">
                     <video class="w-full h-full object-cover" autoplay loop muted playsinline>
                         <source src="<?= base_url('assets/uploads/ai_spend/ai-device2.mp4') ?>" type="video/mp4">
@@ -42,19 +87,19 @@
 
 <!-- ================= SECTION PREMIUM WIDGETS ================= -->
 <section id="premium-widgets" class="min-h-screen flex flex-col items-center justify-center px-6 py-20 text-center">
-    <p class="text-xs font-bold tracking-[0.2em] text-blue-500 uppercase mb-4">
+    <p class="text-xs font-bold tracking-[0.2em] text-blue-500 uppercase mb-4" data-animate="fade-down" style="transition-delay: 0.1s;">
         Premium · Widgets
     </p>
-    <h2 class="text-5xl md:text-7xl font-extrabold tracking-tight text-[#111] leading-[1.1] max-w-4xl mx-auto">
+    <h2 class="text-5xl md:text-7xl font-extrabold tracking-tight text-[#111] leading-[1.1] max-w-4xl mx-auto" data-animate="fade-up" style="transition-delay: 0.2s;">
         Your next payment,<br>
         right on the Home Screen.
     </h2>
-    <p class="mt-6 text-lg md:text-xl text-[#555] leading-relaxed max-w-2xl mx-auto">
+    <p class="mt-6 text-lg md:text-xl text-[#555] leading-relaxed max-w-2xl mx-auto" data-animate="fade-up" style="transition-delay: 0.3s;">
         What is due next, on the Home and Lock Screen. You find out without opening the app,
         which is the highest praise an app can get. Comes with Premium.
     </p>
     <!-- Video Besar -->
-    <div class="mt-16 w-full max-w-4xl overflow-hidden rounded-[2.5rem] md:rounded-[3rem] shadow-2xl">
+    <div class="mt-16 w-full max-w-4xl overflow-hidden rounded-[2.5rem] md:rounded-[3rem] shadow-2xl" data-animate="zoom-in" style="transition-delay: 0.4s;">
         <video class="w-full h-auto" autoplay loop muted playsinline>
             <source src="<?= base_url('assets/uploads/ai_spend/widgets-device6.mp4') ?>" type="video/mp4">
             Browser Anda tidak mendukung tag video.
@@ -64,33 +109,33 @@
 
 <!-- ================= SECTION APPLE WATCH ================= -->
 <section id="apple-watch" class="min-h-screen flex flex-col items-center justify-center px-6 py-20 text-center">
-    <p class="text-xs font-bold tracking-[0.2em] text-blue-500 uppercase mb-4">
+    <p class="text-xs font-bold tracking-[0.2em] text-blue-500 uppercase mb-4" data-animate="fade-down" style="transition-delay: 0.1s;">
         Apple Watch
     </p>
-    <h2 class="text-5xl md:text-7xl font-extrabold tracking-tight text-[#111] leading-[1.1] max-w-4xl mx-auto">
+    <h2 class="text-5xl md:text-7xl font-extrabold tracking-tight text-[#111] leading-[1.1] max-w-4xl mx-auto" data-animate="fade-up" style="transition-delay: 0.2s;">
         The next charge,<br>
         on your wrist.
     </h2>
-    <p class="mt-6 text-lg md:text-xl text-[#555] leading-relaxed max-w-2xl mx-auto">
+    <p class="mt-6 text-lg md:text-xl text-[#555] leading-relaxed max-w-2xl mx-auto" data-animate="fade-up" style="transition-delay: 0.3s;">
         A complication on the watch face shows what is due next and what it costs.
         Pick its colour right on the watch. The daily affirmation lives there too.
     </p>
     <!-- Dua Media Sejajar -->
-    <div class="mt-16 w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="relative overflow-hidden rounded-[2rem] shadow-2xl aspect-[3/4]">
+    <div class="mt-16 w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="relative overflow-hidden rounded-[2rem] shadow-2xl aspect-[3/5]" data-animate="slide-left" style="transition-delay: 0.4s;">
             <video class="w-full h-full object-cover" autoplay loop muted playsinline>
                 <source src="<?= base_url('assets/uploads/ai_spend/watch-face.mp4') ?>" type="video/mp4">
                 Browser Anda tidak mendukung tag video.
             </video>
         </div>
-        <div class="relative overflow-hidden rounded-[2rem] shadow-2xl aspect-[3/4]">
+        <div class="relative overflow-hidden rounded-[2rem] shadow-2xl aspect-[3/5]" data-animate="slide-right" style="transition-delay: 0.5s;">
             <img src="<?= base_url('assets/uploads/ai_spend/watch-face.jpg') ?>" 
                  alt="Apple Watch" 
                  class="w-full h-full object-cover">
         </div>
     </div>
     <!-- Teks Besar di Bawah -->
-    <div class="mt-20 max-w-4xl mx-auto text-left">
+    <div class="mt-20 max-w-4xl mx-auto text-left" data-animate="fade-up" style="transition-delay: 0.6s;">
         <p class="text-3xl md:text-5xl font-extrabold tracking-tight text-[#111] leading-[1.2]">
             You know roughly what you pay every month. <span class="text-[#ff3b30]">Roughly</span> is the problem.
             All your subscriptions. We counted ours and cancelled three the same evening.
@@ -110,19 +155,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const ctx = canvas.getContext('2d');
     const TEXT = "Snap a receipt.\nLet AI do the math.";
-    const GAP = 2;               // kerapatan partikel
+    const GAP = 2;
     const PARTICLE_RADIUS = 1.5;
 
     let particles = [];
     let animating = false;
     let idleRAF = null;
+    let animationRAF = null;   // untuk animasi klik
+    let isParticleVisible = true; // default terlihat
 
     function resize() {
         const rect = container.getBoundingClientRect();
         canvas.width = rect.width;
         canvas.height = rect.height;
         initParticles();
-        if (!animating) startIdle();
+        if (!animating && isParticleVisible) startIdle();
     }
 
     function getTextPositions() {
@@ -224,8 +271,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function startIdle() {
         if (idleRAF) cancelAnimationFrame(idleRAF);
-        
+        if (!isParticleVisible) return; // jangan mulai jika tidak terlihat
+
         function update() {
+            if (!isParticleVisible) { idleRAF = null; return; } // hentikan jika keluar
             particles.forEach(p => {
                 p.x += p.vx;
                 p.y += p.vy;
@@ -235,12 +284,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 p.y = Math.max(0, Math.min(canvas.height, p.y));
             });
             paint();
-            if (!animating) idleRAF = requestAnimationFrame(update);
+            idleRAF = requestAnimationFrame(update);
         }
         idleRAF = requestAnimationFrame(update);
     }
 
     function animate() {
+        if (!animating || !isParticleVisible) {
+            if (animationRAF) { cancelAnimationFrame(animationRAF); animationRAF = null; }
+            return;
+        }
         particles.forEach(p => {
             const dx = p.targetX - p.x;
             const dy = p.targetY - p.y;
@@ -252,7 +305,7 @@ document.addEventListener('DOMContentLoaded', function() {
             p.y += p.vy;
         });
         paint();
-        if (animating) requestAnimationFrame(animate);
+        animationRAF = requestAnimationFrame(animate);
     }
 
     canvas.addEventListener('click', () => {
@@ -262,11 +315,31 @@ document.addEventListener('DOMContentLoaded', function() {
                 cancelAnimationFrame(idleRAF);
                 idleRAF = null;
             }
-            animate();
+            if (animationRAF) cancelAnimationFrame(animationRAF);
+            animationRAF = requestAnimationFrame(animate);
         }
     });
 
-    window.addEventListener('resize', resize);
+    // Observer untuk visibility partikel
+    const particleObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            isParticleVisible = entry.isIntersecting;
+            if (!isParticleVisible) {
+                // hentikan semua animasi
+                if (idleRAF) { cancelAnimationFrame(idleRAF); idleRAF = null; }
+                if (animationRAF) { cancelAnimationFrame(animationRAF); animationRAF = null; }
+                animating = false;
+            } else {
+                // jika terlihat kembali dan tidak sedang animating, mulai idle
+                if (!animating) {
+                    startIdle();
+                }
+            }
+        });
+    }, { threshold: 0.1 });
+    particleObserver.observe(container);
+
+    window.addEventListener('resize', resize, { passive: true });
     if (document.fonts) {
         document.fonts.ready.then(resize);
     }
@@ -275,14 +348,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // ---------- PERUBAHAN BACKGROUND HALAMAN ----------
     const bgElement = document.getElementById('page-background');
     const sections = [
-        { id: 'ai_spend',        color: '#f5f4ee' }, // krem
-        { id: 'premium-widgets', color: '#f5d0b0' }, // oranye muda
-        { id: 'apple-watch',     color: '#f5f4ee' }  // krem
+        { id: 'ai_spend',        color: '#f5f4ee' },
+        { id: 'premium-widgets', color: '#f5d0b0' },
+        { id: 'apple-watch',     color: '#f5f4ee' }
     ];
 
     const sectionElements = sections.map(s => document.getElementById(s.id));
 
-    const observer = new IntersectionObserver((entries) => {
+    const bgObserver = new IntersectionObserver((entries) => {
         let maxRatio = 0;
         let activeId = null;
 
@@ -304,7 +377,28 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     sectionElements.forEach(el => {
-        if (el) observer.observe(el);
+        if (el) bgObserver.observe(el);
     });
+
+    // ---------- SCROLL ANIMATION OBSERVER ----------
+    const animatedElements = document.querySelectorAll('[data-animate]');
+
+    const scrollObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-visible');
+                obs.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.15,
+        rootMargin: '0px 0px -40px 0px'
+    });
+
+    animatedElements.forEach(el => scrollObserver.observe(el));
+
+    if (!('IntersectionObserver' in window)) {
+        animatedElements.forEach(el => el.classList.add('animate-visible'));
+    }
 });
 </script>

@@ -1,14 +1,40 @@
+<!-- ================= STYLE UNTUK ANIMASI FADE-UP ================= -->
+<style>
+  /* Animasi fade-up untuk hero */
+  .fade-up {
+    opacity: 0;
+    animation: fadeUp 1s ease forwards;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* ===== PERBAIKAN: Gaya untuk elemen magnetik ===== */
+  .magnetic {
+    will-change: transform;
+    transition: transform 0.2s ease-out;
+  }
+</style>
+
 <!-- ================= HERO SECTION ================= -->
 <section class="min-h-screen flex flex-col lg:flex-row items-center justify-center bg-[#f5f4ee] px-6 py-20 gap-12 lg:gap-20">
     <div class="max-w-xl w-full">
-        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-[#111] leading-[1.1]">
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-[#111] leading-[1.1] fade-up" style="animation-delay: 0.1s;">
             All your subscriptions. And what they really cost.
         </h1>
-        <p class="mt-6 text-lg md:text-xl text-[#666] leading-relaxed max-w-lg">
+        <p class="mt-6 text-lg md:text-xl text-[#666] leading-relaxed max-w-lg fade-up" style="animation-delay: 0.3s;">
             Everything you pay for in one place, the honest total per day, month and year,
             and a quiet nudge the day before the money leaves.
         </p>
-        <div class="mt-8 flex flex-wrap gap-4">
+        <div class="mt-8 flex flex-wrap gap-4 fade-up" style="animation-delay: 0.5s;">
             <a href="https://apps.apple.com/us/app/subscrr-take-back-control/id6757530448" 
                target="_blank" 
                rel="noopener noreffer" 
@@ -20,7 +46,7 @@
             </a>
         </div>
     </div>
-    <div class="relative w-full max-w-[440px] h-auto flex justify-center mt-10 lg:mt-[100px]">
+    <div class="relative w-full max-w-[440px] h-auto flex justify-center mt-10 lg:mt-[100px] fade-up" style="animation-delay: 0.7s;">
         <video class="absolute top-[2%] left-[5%] w-[90%] h-[95%] object-cover rounded-[2.2rem] z-0"
                autoplay muted loop playsinline
                src="<?= base_url('assets/uploads/hero/hero-screen.mp4') ?>">
@@ -74,26 +100,63 @@
     (function() {
         'use strict';
 
+        // ===== MAGNETIC EFFECT (Sangat halus dengan interpolasi) =====
         const magneticElements = document.querySelectorAll('.magnetic');
 
         magneticElements.forEach((el) => {
+            let rafId = null;
+            let currentX = 0;
+            let currentY = 0;
+            let targetX = 0;
+            let targetY = 0;
+            let isHovering = false;
+
+            // Semakin kecil nilai smoothing, semakin halus namun semakin lambat.
+            const smoothing = 0.15;
+
+            function animate() {
+                // Interpolasi menuju target
+                currentX += (targetX - currentX) * smoothing;
+                currentY += (targetY - currentY) * smoothing;
+
+                el.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
+
+                // Lanjutkan animasi jika masih hover atau posisi belum seimbang
+                if (isHovering || Math.abs(currentX - targetX) > 0.1 || Math.abs(currentY - targetY) > 0.1) {
+                    rafId = requestAnimationFrame(animate);
+                } else {
+                    rafId = null;
+                }
+            }
+
             el.addEventListener('mousemove', (e) => {
                 const rect = el.getBoundingClientRect();
                 const x = e.clientX - rect.left - rect.width / 2;
                 const y = e.clientY - rect.top - rect.height / 2;
 
+                const strength = 0.4;
                 const maxShift = 20;
-                const shiftX = Math.max(-maxShift, Math.min(maxShift, x * 0.5));
-                const shiftY = Math.max(-maxShift, Math.min(maxShift, y * 0.5));
 
-                el.style.transform = `translate(${shiftX}px, ${shiftY}px)`;
+                targetX = Math.max(-maxShift, Math.min(maxShift, x * strength));
+                targetY = Math.max(-maxShift, Math.min(maxShift, y * strength));
+
+                isHovering = true;
+                if (!rafId) {
+                    rafId = requestAnimationFrame(animate);
+                }
             });
 
             el.addEventListener('mouseleave', () => {
-                el.style.transform = 'translate(0, 0)';
+                isHovering = false;
+                targetX = 0;
+                targetY = 0;
+                if (!rafId) {
+                    rafId = requestAnimationFrame(animate);
+                }
             });
         });
 
+        // ===== VIDEO SOUND TOGGLE =====
         const video = document.getElementById('promo-video');
         const btn = document.getElementById('toggle-sound');
         const iconMuted = document.getElementById('icon-muted');
@@ -114,9 +177,9 @@
                     iconUnmuted.classList.add('hidden');
                 }
             });
-
         }
 
+        // ===== SCROLL SCALE ANIMATION =====
         const promoSection = document.getElementById('promo-section');
         const promoVideo = document.getElementById('promo-video');
 
@@ -125,23 +188,16 @@
 
             const rect = promoSection.getBoundingClientRect();
             const viewportHeight = window.innerHeight;
-
-            // Deteksi layar mobile (Android/iOS) - lebar layar < 1024px
             const isMobile = window.innerWidth < 1024;
 
             if (isMobile) {
-                // LOGIKA ANDROID: Lebih responsif, animasi muncul saat video mulai terlihat
-                // Gunakan threshold sedikit lebih besar dari 0.5 (misal 0.85 atau 1)
-                // agar tidak perlu scroll jauh ke tengah layar.
-                const threshold = viewportHeight * 0.85; // bisa diubah ke 1 jika ingin langsung aktif
-
+                const threshold = viewportHeight * 0.85;
                 if (rect.top < threshold) {
                     promoVideo.style.transform = 'scale(1)';
                 } else {
                     promoVideo.style.transform = 'scale(0.85)';
                 }
             } else {
-                // LOGIKA DESKTOP: Tetap pakai kondisi asli (tengah layar)
                 if (rect.top < viewportHeight * 0.5) {
                     promoVideo.style.transform = 'scale(1)';
                 } else {
@@ -153,5 +209,5 @@
         window.addEventListener('scroll', handleScrollScale, { passive: true });
         window.addEventListener('resize', handleScrollScale);
         handleScrollScale();
-      })();
+    })();
 </script>
