@@ -70,7 +70,7 @@
                 <!-- Kanan: Links & Copyright -->
                 <div class="flex flex-col md:flex-row items-center gap-6 text-sm text-gray-400">
                     <nav class="flex flex-wrap justify-center gap-6">
-                        <a href="#" class="hover:text-white transition">Help Center</a>
+                        <a href="<?= site_url('help_center') ?>" class="hover:text-white transition">Help Center</a>
                         <a href="#" class="hover:text-white transition">Contact us</a>
                        <a
     href="<?= base_url('privacy-policy') ?>"
