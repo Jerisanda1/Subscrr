@@ -109,8 +109,11 @@
                 <?php foreach ($all_articles as $article_item): ?>
                     <?php if ($article_item['slug'] !== $slug): // Jangan tampilkan artikel yang sedang dibuka ?>
                         <li>
-                            <a href="<?php echo base_url('Help_center/article/' . $article_item['slug']); ?>" class="flex justify-between items-center py-4 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white group">
-                                <span><?php echo $article_item['title']; ?></span>
+                            <a href="<?php echo base_url('Help_center/article/' . $article_item['slug']); ?>" 
+                               class="group flex justify-between items-center py-4 px-3 -mx-3 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors duration-200">
+                                <span class="transition-transform duration-200 group-hover:translate-x-1">
+                                    <?php echo $article_item['title']; ?>
+                                </span>
                                 <span class="text-gray-400 group-hover:text-gray-600 dark:group-hover:text-gray-300">›</span>
                             </a>
                         </li>

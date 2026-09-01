@@ -1,5 +1,5 @@
 <section class="max-w-6xl mx-auto px-6 lg:px-8 pb-24">
-    
+
     <!-- HERO SECTION -->
     <div class="text-center pt-20 pb-16">
         <span class="text-orange-600 dark:text-orange-500 font-bold text-xs tracking-[0.2em] uppercase">Subscrr Help Center</span>
@@ -60,4 +60,26 @@
         </a>
         <?php endforeach; ?>
     </div>
+
+    <!-- ====== SECTION BARU: STILL NEED A HAND ====== -->
+    <div class="mt-24">
+        <div class="bg-white dark:bg-[#161616] rounded-[2.5rem] border border-gray-100 dark:border-gray-800 shadow-sm px-6 sm:px-12 py-14 sm:py-16 text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+                Still need a hand?
+            </h2>
+            <p class="mt-6 text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-2xl mx-auto">
+                Write to us and a human answers, usually within one business day.<br>
+                Your iOS version and a screenshot solve most cases on the first reply.
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#" class="px-8 py-4 rounded-full bg-orange-600 hover:bg-orange-700 text-white font-semibold text-sm transition-colors duration-300 shadow-md">
+                    Contact us
+                </a>
+                <a href="#" class="px-8 py-4 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-white font-semibold text-sm transition-colors duration-300">
+                    Telegram channel
+                </a>
+            </div>
+        </div>
+    </div>
+
 </section>
