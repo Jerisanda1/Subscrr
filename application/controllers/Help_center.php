@@ -68,6 +68,12 @@ class Help_center extends CI_Controller {
             ['slug' => 'add-widgets-home-lock-screen', 'title' => 'Add widgets to your home and lock screen', 'desc' => 'Put the next charge, or today\'s affirmation, where you will actually see it.'],
             ['slug' => 'reminder-settings', 'title' => 'Reminder settings', 'desc' => 'Choose how many days of warning you get, and mute a single subscription without touching the rest.'],
             ['slug' => 'put-affirmation-on-lock-screen', 'title' => 'Put the affirmation on your Lock Screen', 'desc' => 'Go live with the daily affirmation — Lock Screen, Dynamic Island and a home screen widget.'],
+             ['slug' => 'search-your-subscriptions', 'title' => 'Search your subscriptions', 'desc' => 'The search bar at the bottom of the list finds anything you track, by name or category.'],
+            ['slug' => 'split-a-subscriptions-cost', 'title' => 'Split a subscription\'s cost', 'desc' => 'Sharing a family plan? Tell Subscrr how many people chip in, and your totals count only your share.'],
+            ['slug' => 'mark-a-payment-as-paid', 'title' => 'Mark a payment as paid', 'desc' => 'Tick off what you have already covered, and the "left this month" figure tells the truth.'],
+            ['slug' => 'set-a-duration-or-a-one-off-payment', 'title' => 'Set a duration or a one-off payment', 'desc' => 'Not everything runs forever — give a subscription an end date, or record a single payment.'],
+            ['slug' => 'set-aside-for-annual-plans', 'title' => 'Set aside for annual plans', 'desc' => 'What a yearly renewal costs per month, and how much should already be waiting for it.'],
+            ['slug' => 'change-the-app-icon', 'title' => 'Change the app icon', 'desc' => 'Six looks for the Home Screen, all free.'],  
         ];
 
         return [
