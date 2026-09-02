@@ -158,7 +158,473 @@
             }
         }
         
-    </style>
+                /* =====================================================
+           RESPONSIVE - TAMBAHAN SAJA
+           Tidak mengubah tampilan desktop
+        ====================================================== */
+
+
+        /* =====================================================
+           TABLET & LAPTOP LAYAR KECIL
+        ====================================================== */
+        @media (max-width: 1100px) {
+
+            /*
+             * OVERVIEW CONTENT
+             * Gambar dan teks yang sebelumnya berdampingan
+             * menjadi vertikal agar tidak keluar layar.
+             */
+            #overview .flex.flex-row.items-center {
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 45px !important;
+            }
+
+
+            /*
+             * GAMBAR OVERVIEW
+             * Override width 613px dari inline style.
+             */
+            #overview .flex.flex-row.items-center > div:first-child {
+                width: 100% !important;
+                max-width: 613px !important;
+                flex: 0 1 auto !important;
+            }
+
+
+            /*
+             * TEXT OVERVIEW
+             * Override width 520px dari inline style.
+             */
+            #overview .flex.flex-row.items-center > div:last-child {
+                width: 100% !important;
+                max-width: 613px !important;
+                flex: 0 1 auto !important;
+            }
+
+
+            /*
+             * BREAKDOWN
+             * Text dan gambar menjadi vertikal.
+             */
+            #breakdown .flex.items-center.justify-between {
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 45px !important;
+            }
+
+
+            /*
+             * BREAKDOWN TEXT
+             * Override width 560px.
+             */
+            #breakdown .flex.items-center.justify-between > div:first-child {
+                width: 100% !important;
+                max-width: 613px !important;
+            }
+
+
+            /*
+             * BREAKDOWN IMAGE
+             * Override width 613px.
+             */
+            #breakdown .flex.items-center.justify-between > div:last-child {
+                width: 100% !important;
+                max-width: 613px !important;
+            }
+
+
+            /*
+             * BREAKDOWN HEADING
+             * Dari 76px menjadi lebih fleksibel.
+             */
+            #breakdown h2 {
+                font-size: 64px !important;
+            }
+
+
+            /*
+             * BREAKDOWN SECTION
+             * Mencegah 100vw menyebabkan horizontal scroll.
+             */
+            #breakdown {
+                width: 100% !important;
+                margin-left: 0 !important;
+            }
+
+        }
+
+
+
+        /* =====================================================
+           TABLET
+        ====================================================== */
+        @media (max-width: 768px) {
+
+            /*
+             * OVERVIEW CONTAINER
+             */
+            #overview .max-w-\[1250px\] {
+                padding-left: 24px !important;
+                padding-right: 24px !important;
+            }
+
+
+            /*
+             * JARAK CONTENT OVERVIEW
+             */
+            #overview .flex.flex-row.items-center {
+                gap: 35px !important;
+            }
+
+
+            /*
+             * OVERVIEW IMAGE
+             */
+            #overview .flex.flex-row.items-center > div:first-child {
+                max-width: 100% !important;
+            }
+
+
+            /*
+             * OVERVIEW TEXT
+             */
+            #overview .flex.flex-row.items-center > div:last-child {
+                max-width: 100% !important;
+            }
+
+
+            /*
+             * BREAKDOWN
+             */
+            #breakdown .flex.items-center.justify-between {
+                padding-left: 32px !important;
+                padding-right: 32px !important;
+                gap: 35px !important;
+            }
+
+
+            /*
+             * BREAKDOWN HEADING
+             */
+            #breakdown h2 {
+                font-size: 56px !important;
+            }
+
+
+            /*
+             * REMINDERS DESCRIPTION
+             */
+            #overview #reminders p {
+                max-width: 90% !important;
+            }
+
+
+            /*
+             * SETUP SECTION
+             */
+            #overview .grid {
+                gap: 40px !important;
+            }
+
+        }
+
+
+
+        /* =====================================================
+           MOBILE
+        ====================================================== */
+        @media (max-width: 640px) {
+
+            /*
+             * OVERVIEW SECTION
+             */
+            #overview {
+                overflow-x: hidden;
+            }
+
+
+            /*
+             * INTRO
+             */
+            #overview .max-w-7xl {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+                padding-top: 110px !important;
+                padding-bottom: 60px !important;
+            }
+
+
+            /*
+             * INTRO HEADING
+             */
+            #overview h1 {
+                font-size: 42px !important;
+                line-height: 0.98 !important;
+            }
+
+
+            /*
+             * OVERVIEW CONTENT
+             */
+            #overview .max-w-\[1250px\] {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+
+
+            /*
+             * OVERVIEW IMAGE
+             */
+            #overview .flex.flex-row.items-center > div:first-child {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+
+            #overview .flex.flex-row.items-center > div:first-child img {
+                width: 100% !important;
+                height: auto !important;
+                border-radius: 1.5rem !important;
+            }
+
+
+            /*
+             * OVERVIEW TEXT
+             */
+            #overview .flex.flex-row.items-center > div:last-child {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+
+            /*
+             * OVERVIEW DESCRIPTION
+             */
+            #overview .flex.flex-row.items-center > div:last-child p {
+                font-size: 16px !important;
+                line-height: 1.65 !important;
+            }
+
+
+            /*
+             * FEATURE TEXT
+             */
+            #overview .flex.flex-row.items-center > div:last-child span {
+                font-size: 15px !important;
+            }
+
+
+            /*
+             * BREAKDOWN SECTION
+             */
+            #breakdown {
+                width: 100% !important;
+                margin-left: 0 !important;
+                padding-left: 8px !important;
+                padding-right: 8px !important;
+            }
+
+
+            /*
+             * BREAKDOWN CARD
+             */
+            #breakdown > div {
+                border-radius: 1.5rem !important;
+            }
+
+
+            /*
+             * BREAKDOWN CONTENT
+             */
+            #breakdown .flex.items-center.justify-between {
+                padding: 45px 24px !important;
+                gap: 35px !important;
+            }
+
+
+            /*
+             * BREAKDOWN TEXT
+             */
+            #breakdown .flex.items-center.justify-between > div:first-child {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+
+            /*
+             * BREAKDOWN IMAGE
+             */
+            #breakdown .flex.items-center.justify-between > div:last-child {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+
+            #breakdown .flex.items-center.justify-between img {
+                width: 100% !important;
+                height: auto !important;
+                border-radius: 1.5rem !important;
+            }
+
+
+            /*
+             * BREAKDOWN HEADING
+             */
+            #breakdown h2 {
+                font-size: 44px !important;
+                line-height: 0.95 !important;
+            }
+
+
+            /*
+             * BREAKDOWN DESCRIPTION
+             */
+            #breakdown p {
+                font-size: 16px !important;
+                line-height: 1.6 !important;
+            }
+
+
+            /*
+             * REMINDERS
+             */
+            #reminders {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+
+
+            /*
+             * REMINDERS HEADING
+             */
+            #reminders h1 {
+                font-size: 44px !important;
+                line-height: 0.98 !important;
+            }
+
+
+            /*
+             * REMINDERS DESCRIPTION
+             */
+            #reminders > div > p {
+                max-width: 100% !important;
+                font-size: 16px !important;
+                line-height: 1.6 !important;
+            }
+
+
+            /*
+             * REMINDER IMAGE
+             */
+            #reminders img {
+                max-width: 100% !important;
+                height: auto !important;
+            }
+
+
+            /*
+             * SETUP SECTION
+             */
+            #overview section.w-full {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+
+
+            /*
+             * SETUP HEADING
+             */
+            #overview section.w-full h2 {
+                font-size: 36px !important;
+                line-height: 1.08 !important;
+            }
+
+
+            /*
+             * SETUP DESCRIPTION
+             */
+            #overview section.w-full p {
+                font-size: 16px !important;
+                line-height: 1.6 !important;
+            }
+
+
+            /*
+             * STEP BADGES
+             * Supaya tidak melebar keluar layar.
+             */
+            #overview section.w-full .flex.flex-wrap {
+                width: 100% !important;
+            }
+
+
+            #overview section.w-full .flex.flex-wrap > div {
+                width: 100% !important;
+                justify-content: flex-start !important;
+            }
+
+
+            /*
+             * SETUP IMAGE
+             */
+            #overview section.w-full img {
+                width: 100% !important;
+                height: auto !important;
+            }
+
+        }
+
+
+
+        /* =====================================================
+           MOBILE SANGAT KECIL
+        ====================================================== */
+        @media (max-width: 400px) {
+
+            /*
+             * INTRO HEADING
+             */
+            #overview h1 {
+                font-size: 36px !important;
+            }
+
+
+            /*
+             * BREAKDOWN HEADING
+             */
+            #breakdown h2 {
+                font-size: 38px !important;
+            }
+
+
+            /*
+             * REMINDER HEADING
+             */
+            #reminders h1 {
+                font-size: 38px !important;
+            }
+
+
+            /*
+             * SETUP HEADING
+             */
+            #overview section.w-full h2 {
+                font-size: 32px !important;
+            }
+
+
+            /*
+             * BREAKDOWN CONTENT
+             */
+            #breakdown .flex.items-center.justify-between {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+
+        }
+
+     </style>
 
 
     <!-- =====================================================
@@ -431,70 +897,71 @@
     class="bg-[#f5f3ef] px-3 py-3 sm:px-4 sm:py-4"
 >
 
-       <div class="flex flex-col items-center text-center">
+    <div class="flex flex-col items-center text-center">
 
-            <!-- LABEL -->
-            <p
-                class="text-sm font-bold uppercase tracking-[0.18em] text-[#526bd8]"
-            >
-                Reminders
-            </p>
-
-
-            <!-- HEADING -->
-            <h1
-                class="mt-7 max-w-[800px] text-[52px] font-bold leading-[0.94] tracking-[-0.055em] text-[#171717] sm:text-[64px] lg:text-[76px]"
-            >
-                Never get
-                <br>
-                surprise-charged 
-                <br>
-                 again.
-            </h1>
-
-
-            <!-- DESCRIPTION -->
-            <p
-                class="mt-8 max-w-[650px] text-[18px] leading-7 text-[#77736d] sm:text-[19px]"
-            >
-                The day before the money leaves, a gentle tap on the
-                shoulder. So you renew because you meant to, not because
-                you forgot it was there.
-            </p>
-
-            <br>
-            <br>
-
-
-<!-- =================================================
-     REMINDER IMAGE
-================================================== -->
-<div class="overview-reveal overview-delay-1 bg-transparent p-0">
-
-    <div class="relative mx-auto w-full max-w-[780px] overflow-hidden rounded-[2.5rem] bg-transparent">
-
-        <!-- GAMBAR 1: BACKGROUND ORANG (Harus paling atas di kode agar di posisi belakang) -->
-        <img
-            src="<?= base_url('assets/uploads/overview/reminder-bg.webp') ?>"
-            alt="Subscrr Subscription Reminder"
-            class="block h-auto w-full object-cover"
+        <!-- LABEL -->
+        <p
+            class="overview-reveal text-sm font-bold uppercase tracking-[0.18em] text-[#526bd8]"
         >
+            Reminders
+        </p>
 
-        <!-- GAMBAR 2: NOTIFIKASI (Ditumpuk di atas/depan background) -->
-        <div class="absolute inset-0 flex items-center justify-center p-4">
-            <img 
-                src="<?= base_url('assets/uploads/overview/push-multiple.webp') ?>" 
-                alt="Notification Overlay" 
-                class="w-[85%] max-w-[450px] object-contain drop-shadow-lg"
-            >
+
+        <!-- HEADING -->
+        <h1
+            class="overview-reveal overview-delay-1 mt-7 max-w-[800px] text-[52px] font-bold leading-[0.94] tracking-[-0.055em] text-[#171717] sm:text-[64px] lg:text-[76px]"
+        >
+            Never get
+            <br>
+            surprise-charged 
+            <br>
+            again.
+        </h1>
+
+
+        <!-- DESCRIPTION -->
+        <p
+            class="overview-reveal overview-delay-2 mt-8 max-w-[650px] text-[18px] leading-7 text-[#77736d] sm:text-[19px]"
+        >
+            The day before the money leaves, a gentle tap on the
+            shoulder. So you renew because you meant to, not because
+            you forgot it was there.
+        </p>
+
+        <br>
+        <br>
+
+
+        <!-- =================================================
+             REMINDER IMAGE
+        ================================================== -->
+        <div class="overview-reveal overview-delay-3 bg-transparent p-0">
+
+            <div class="relative mx-auto w-full max-w-[780px] overflow-hidden rounded-[2.5rem] bg-transparent">
+
+                <!-- GAMBAR 1: BACKGROUND ORANG -->
+                <img
+                    src="<?= base_url('assets/uploads/overview/reminder-bg.webp') ?>"
+                    alt="Subscrr Subscription Reminder"
+                    class="block h-auto w-full object-cover"
+                >
+
+                <!-- GAMBAR 2: NOTIFIKASI -->
+                <div class="absolute inset-0 flex items-center justify-center p-4">
+
+                    <img 
+                        src="<?= base_url('assets/uploads/overview/push-multiple.webp') ?>" 
+                        alt="Notification Overlay" 
+                        class="w-[85%] max-w-[450px] object-contain drop-shadow-lg"
+                    >
+
+                </div>
+
+            </div>
+
         </div>
 
     </div>
-
-</div>
-
-</div>
-</div>
 
 </section>
 
@@ -503,75 +970,122 @@
      SETUP SECTION / IMPORT APPLE
 ================================================== -->
 <section class="w-full bg-[#f6f5f1] py-16 px-6 md:px-12 lg:px-20">
+
     <div class="mx-auto max-w-[1200px] grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
 
-        <!-- KOLOM KIRI: TEKS & STEP BADGES -->
+
+        <!-- =================================================
+             KOLOM KIRI: TEKS & STEP BADGES
+        ================================================== -->
         <div class="flex flex-col items-start">
-            
+
             <!-- SUBTITLE -->
-            <p class="text-[13px] font-bold uppercase tracking-widest text-[#6366f1]">
+            <p
+                class="overview-reveal text-[13px] font-bold uppercase tracking-widest text-[#6366f1]"
+            >
                 SETUP • ONE SCREENSHOT
             </p>
 
-            <!-- JUDUL (HEADING) -->
-            <h2 class="mt-4 text-[40px] font-extrabold leading-[1.1] tracking-tight text-slate-900 sm:text-[52px]">
+
+            <!-- JUDUL -->
+            <h2
+                class="overview-reveal overview-delay-1 mt-4 text-[40px] font-extrabold leading-[1.1] tracking-tight text-slate-900 sm:text-[52px]"
+            >
                 Import what<br class="hidden sm:inline" />
                 Apple already<br class="hidden sm:inline" />
                 charges you for.
             </h2>
 
+
             <!-- DESKRIPSI -->
-            <p class="mt-6 max-w-[480px] text-[16px] leading-relaxed text-slate-500 sm:text-[18px]">
-                Everything on your Apple ID sits on one screen. Screenshot it, drop it in, and we read the names, prices and dates for you.
+            <p
+                class="overview-reveal overview-delay-2 mt-6 max-w-[480px] text-[16px] leading-relaxed text-slate-500 sm:text-[18px]"
+            >
+                Everything on your Apple ID sits on one screen. Screenshot it,
+                drop it in, and we read the names, prices and dates for you.
             </p>
 
+
             <!-- BADGES STEP / LANGKAH-LANGKAH -->
-            <div class="mt-8 flex flex-wrap gap-3">
-                
+            <div
+                class="overview-reveal overview-delay-3 mt-8 flex flex-wrap gap-3"
+            >
+
                 <!-- Step 1 -->
-                <div class="flex items-center gap-3 rounded-full bg-white px-5 py-3 shadow-[0_4px_15px_rgba(0,0,0,0.04)]">
-                    <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ff3218] text-[13px] font-bold text-white">
+                <div
+                    class="flex items-center gap-3 rounded-full bg-white px-5 py-3 shadow-[0_4px_15px_rgba(0,0,0,0.04)]"
+                >
+
+                    <span
+                        class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ff3218] text-[13px] font-bold text-white"
+                    >
                         1
                     </span>
+
                     <span class="text-[14px] font-semibold text-slate-800">
                         Open Subscriptions
                     </span>
+
                 </div>
 
+
                 <!-- Step 2 -->
-                <div class="flex items-center gap-3 rounded-full bg-white px-5 py-3 shadow-[0_4px_15px_rgba(0,0,0,0.04)]">
-                    <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ff3218] text-[13px] font-bold text-white">
+                <div
+                    class="flex items-center gap-3 rounded-full bg-white px-5 py-3 shadow-[0_4px_15px_rgba(0,0,0,0.04)]"
+                >
+
+                    <span
+                        class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ff3218] text-[13px] font-bold text-white"
+                    >
                         2
                     </span>
+
                     <span class="text-[14px] font-semibold text-slate-800">
                         Take a screenshot
                     </span>
+
                 </div>
 
+
                 <!-- Step 3 -->
-                <div class="flex items-center gap-3 rounded-full bg-white px-5 py-3 shadow-[0_4px_15px_rgba(0,0,0,0.04)]">
-                    <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ff3218] text-[13px] font-bold text-white">
+                <div
+                    class="flex items-center gap-3 rounded-full bg-white px-5 py-3 shadow-[0_4px_15px_rgba(0,0,0,0.04)]"
+                >
+
+                    <span
+                        class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ff3218] text-[13px] font-bold text-white"
+                    >
                         3
                     </span>
+
                     <span class="text-[14px] font-semibold text-slate-800">
                         Drop it in here
                     </span>
+
                 </div>
 
             </div>
 
         </div>
 
-        <!-- KOLOM KANAN: GAMBAR MOCKUP -->
-        <div class="relative mx-auto w-full max-w-[570px] overflow-hidden rounded-[2.5rem]">
-            <img 
-                src="<?= base_url('assets/uploads/overview/import-appstore.jpg') ?>" 
-                alt="Import Apple Subscriptions" 
+
+        <!-- =================================================
+             KOLOM KANAN: GAMBAR MOCKUP
+        ================================================== -->
+        <div
+            class="overview-reveal overview-delay-1 relative mx-auto w-full max-w-[570px] overflow-hidden rounded-[2.5rem]"
+        >
+
+            <img
+                src="<?= base_url('assets/uploads/overview/import-appstore.jpg') ?>"
+                alt="Import Apple Subscriptions"
                 class="block h-auto w-full object-cover"
             />
+
         </div>
 
     </div>
+
 </section>
 
     <!-- =====================================================

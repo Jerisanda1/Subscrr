@@ -8,6 +8,496 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="<?= base_url('assets/output.css') ?>">
+
+<style>
+    /* =====================================================
+       RESPONSIVE - PRIVACY POLICY
+    ====================================================== */
+
+    /* =====================================================
+       TABLET & LAPTOP KECIL
+    ====================================================== */
+    @media (max-width: 900px) {
+
+        /* NAVBAR */
+        #navbar {
+            width: calc(100% - 32px);
+            top: 16px;
+        }
+
+        #navbar nav {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        /* Kurangi jarak menu */
+        #navbar .md\:gap-8 {
+            gap: 18px !important;
+        }
+
+        #navbar .lg\:gap-7 {
+            gap: 18px !important;
+        }
+
+        /* MAIN */
+        main {
+            padding-left: 24px !important;
+            padding-right: 24px !important;
+        }
+
+        main > div {
+            max-width: 760px;
+        }
+
+        /* HEADING */
+        main h1 {
+            font-size: 46px !important;
+            line-height: 1.05 !important;
+        }
+
+        /* SECTION */
+        main section {
+            padding-top: 30px !important;
+            padding-bottom: 30px !important;
+        }
+
+        /* FOOTER */
+        footer {
+            padding-left: 24px !important;
+            padding-right: 24px !important;
+        }
+    }
+
+
+    /* =====================================================
+       TABLET
+    ====================================================== */
+    @media (max-width: 768px) {
+
+        /* =================================================
+           NAVBAR
+        ================================================== */
+
+        #navbar {
+            width: calc(100% - 24px);
+            top: 12px;
+        }
+
+        #navbar nav {
+            padding: 10px 16px;
+        }
+
+        /* LOGO */
+        #logo-subscrr {
+            gap: 8px;
+        }
+
+        #logo-subscrr span:first-child {
+            width: 34px;
+            height: 34px;
+            font-size: 31px;
+        }
+
+        #logo-subscrr span:last-child {
+            font-size: 19px;
+        }
+
+        /* NAVIGATION */
+        #navbar .hidden.sm\:flex {
+            display: none !important;
+        }
+
+        /* BUTTON */
+        #navbar a[href*="apps.apple.com"] {
+            padding-left: 18px;
+            padding-right: 18px;
+            padding-top: 9px;
+            padding-bottom: 9px;
+            font-size: 14px;
+        }
+
+
+        /* =================================================
+           MAIN CONTENT
+        ================================================== */
+
+        body {
+            padding-top: 90px !important;
+        }
+
+        main {
+            padding: 24px 24px 70px !important;
+        }
+
+        main > div {
+            width: 100%;
+        }
+
+        /* PAGE TITLE */
+        main h1 {
+            font-size: 42px !important;
+            line-height: 1.05 !important;
+        }
+
+        /* LAST UPDATED */
+        main .mb-10 {
+            margin-bottom: 35px !important;
+        }
+
+        main .mb-10 > div {
+            font-size: 14px !important;
+        }
+
+
+        /* =================================================
+           SECTION
+        ================================================== */
+
+        main section {
+            padding-top: 28px !important;
+            padding-bottom: 28px !important;
+        }
+
+        /* SECTION TITLE */
+        main section h2 {
+            font-size: 22px !important;
+            line-height: 1.25 !important;
+        }
+
+        /* BODY TEXT */
+        main section p,
+        main section li {
+            font-size: 16px !important;
+            line-height: 1.7 !important;
+        }
+
+        /* BULLET */
+        main section li {
+            gap: 12px !important;
+        }
+
+
+        /* =================================================
+           WHITE INFO BOX
+        ================================================== */
+
+        main section .rounded-2xl {
+            padding: 16px 18px !important;
+        }
+
+        main section .rounded-2xl p {
+            font-size: 15px !important;
+            line-height: 1.65 !important;
+        }
+
+
+        /* =================================================
+           FOOTER
+        ================================================== */
+
+        footer {
+            padding: 40px 24px !important;
+        }
+
+        footer .md\:flex-row {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 28px !important;
+        }
+
+        footer nav {
+            width: 100%;
+            gap: 10px 20px !important;
+        }
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ====================================================== */
+    @media (max-width: 640px) {
+
+        /* =================================================
+           BODY
+        ================================================== */
+
+        body {
+            padding-top: 78px !important;
+            overflow-x: hidden;
+        }
+
+
+        /* =================================================
+           NAVBAR
+        ================================================== */
+
+        #navbar {
+            width: calc(100% - 20px);
+            top: 10px;
+            border-radius: 999px;
+        }
+
+        #navbar nav {
+            min-height: 52px;
+            padding: 8px 12px;
+        }
+
+
+        /* LOGO */
+        #logo-subscrr {
+            gap: 7px;
+        }
+
+        #logo-subscrr span:first-child {
+            width: 32px;
+            height: 32px;
+            border-radius: 10px;
+            font-size: 29px;
+        }
+
+        #logo-subscrr span:last-child {
+            font-size: 18px;
+        }
+
+
+        /* SEMBUNYIKAN MENU */
+        #navbar .hidden.sm\:flex {
+            display: none !important;
+        }
+
+
+        /* JARAK KANAN */
+        #navbar nav > div {
+            gap: 0 !important;
+        }
+
+
+        /* GET THE APP */
+        #navbar a[href*="apps.apple.com"] {
+            padding: 8px 14px;
+            font-size: 13px;
+        }
+
+
+        /* =================================================
+           MAIN
+        ================================================== */
+
+        main {
+            padding: 20px 20px 60px !important;
+        }
+
+
+        /* =================================================
+           HEADER PRIVACY
+        ================================================== */
+
+        main .mb-10 {
+            margin-bottom: 30px !important;
+        }
+
+        main h1 {
+            font-size: 36px !important;
+            line-height: 1 !important;
+            letter-spacing: -0.035em !important;
+        }
+
+
+        /* LAST UPDATED */
+        main .mb-10 > div {
+            margin-top: 12px !important;
+            font-size: 13px !important;
+            line-height: 1.5 !important;
+        }
+
+
+        /* =================================================
+           PRIVACY SECTIONS
+        ================================================== */
+
+        main section {
+            padding-top: 25px !important;
+            padding-bottom: 25px !important;
+        }
+
+
+        /* SECTION TITLE */
+        main section h2 {
+            font-size: 21px !important;
+            line-height: 1.25 !important;
+        }
+
+
+        /* =================================================
+           PARAGRAPH
+        ================================================== */
+
+        main section > p,
+        main section > div p,
+        main section li {
+            font-size: 15.5px !important;
+            line-height: 1.7 !important;
+        }
+
+
+        /* =================================================
+           LIST
+        ================================================== */
+
+        main section ul {
+            margin-top: 16px !important;
+        }
+
+        main section li {
+            gap: 11px !important;
+            align-items: flex-start !important;
+        }
+
+        main section li > span {
+            margin-top: 9px !important;
+            width: 5px !important;
+            height: 5px !important;
+        }
+
+        main section li > p {
+            min-width: 0;
+            flex: 1;
+        }
+
+
+        /* =================================================
+           INFO BOX
+        ================================================== */
+
+        main section .rounded-2xl {
+            margin-top: 20px !important;
+            padding: 15px 16px !important;
+            border-radius: 16px !important;
+        }
+
+        main section .rounded-2xl p {
+            font-size: 14px !important;
+            line-height: 1.65 !important;
+        }
+
+
+        /* =================================================
+           CONTACT
+        ================================================== */
+
+        main section:last-child p {
+            font-size: 15px !important;
+        }
+
+
+        /* =================================================
+           FOOTER
+        ================================================== */
+
+        footer {
+            padding: 36px 20px !important;
+        }
+
+        footer .mx-auto {
+            width: 100%;
+        }
+
+        footer .md\:flex-row {
+            flex-direction: column !important;
+            align-items: flex-start !important;
+            gap: 25px !important;
+        }
+
+        footer nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 18px !important;
+            line-height: 1.4;
+        }
+
+        footer nav a {
+            font-size: 13px;
+        }
+    }
+
+
+    /* =====================================================
+       MOBILE SANGAT KECIL
+    ====================================================== */
+    @media (max-width: 400px) {
+
+        /* NAVBAR */
+        #navbar {
+            width: calc(100% - 14px);
+        }
+
+        #navbar nav {
+            padding-left: 9px;
+            padding-right: 9px;
+        }
+
+        #logo-subscrr span:last-child {
+            font-size: 17px;
+        }
+
+        #navbar a[href*="apps.apple.com"] {
+            padding-left: 11px;
+            padding-right: 11px;
+            font-size: 12px;
+        }
+
+
+        /* MAIN */
+        main {
+            padding-left: 16px !important;
+            padding-right: 16px !important;
+        }
+
+
+        /* TITLE */
+        main h1 {
+            font-size: 32px !important;
+        }
+
+
+        /* SECTION TITLE */
+        main section h2 {
+            font-size: 20px !important;
+        }
+
+
+        /* BODY */
+        main section > p,
+        main section > div p,
+        main section li {
+            font-size: 15px !important;
+        }
+
+
+        /* FOOTER */
+        footer {
+            padding-left: 16px !important;
+            padding-right: 16px !important;
+        }
+    }
+
+
+    /* =====================================================
+       ACCESSIBILITY
+    ====================================================== */
+
+    @media (prefers-reduced-motion: reduce) {
+
+        *,
+        *::before,
+        *::after {
+            scroll-behavior: auto !important;
+            transition-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+        }
+    }
+</style>
 </head>
 
 <body class="bg-[#f4f3ef] text-[#1a1a1a] antialiased selection:bg-[#ff3218] selection:text-white pt-24">

@@ -70,15 +70,10 @@
                 <!-- Kanan: Links & Copyright -->
                 <div class="flex flex-col md:flex-row items-center gap-6 text-sm text-gray-400">
                     <nav class="flex flex-wrap justify-center gap-6">
-                        <a href="<?= site_url('help_center') ?>" class="hover:text-white transition">Help Center</a>
+                        <a href="<?= base_url('help_center') ?>" class="hover:text-white transition">Help Center</a>
                         <a href="#" class="hover:text-white transition">Contact us</a>
-                       <a
-    href="<?= base_url('privacy-policy') ?>"
-    class="transition hover:text-white"
->
-    Privacy Policy
-</a>
-                        <a href="#" class="hover:text-white transition">Terms of Use</a>
+                       <a href="<?= base_url('privacy-policy') ?>"class="transition hover:text-white"> Privacy Policy</a>
+                        <a href="<?= base_url('terms') ?>" class="hover:text-white transition">Terms of Use</a>
                     </nav>
                     <span class="text-gray-500">© 2026 Subscrr. All rights reserved.</span>
                 </div>

@@ -12,4 +12,9 @@ class Site extends CI_Controller
     {
         $this->load->view('site/privacy_policy');
     }
+
+    public function terms()
+    {
+        $this->load->view('site/terms');
+    }
 }
