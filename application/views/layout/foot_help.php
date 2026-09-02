@@ -3,12 +3,14 @@
         
         <!-- Baris Atas: Logo & 4 Sosial Media -->
         <div class="flex justify-between items-center mb-8">
-            <div class="flex items-center gap-3">
+            
+            <!-- Logo & Tulisan Subscrr (Link ke Help Center) -->
+            <a href="<?= site_url('Help_center') ?>" class="flex items-center gap-3">
                 <img src="<?= base_url('assets/uploads/icon/icon_Subscrr.png') ?>" alt="Subscrr" class="h-9 w-9 object-contain">
                 <span class="text-xl font-bold text-gray-900 dark:text-white">Subscrr</span>
-            </div>
+            </a>
             
-                <div class="flex items-center gap-6 text-gray-500 dark:text-gray-400">
+            <div class="flex items-center gap-6 text-gray-500 dark:text-gray-400">
                 <!-- Icon Threads -->
                 <a href="#" class="hover:text-gray-900 dark:hover:text-white transition-colors">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -34,20 +36,25 @@
         <hr class="border-gray-200 dark:border-gray-800 mb-8">
 
         <!-- Baris Tengah: Link Navigasi & Dark Mode -->
-        <div class="flex flex-wrap items-center gap-x-6 gap-y-4">
-            <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Website</a>
-            <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Blog</a>
-            <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Contact us</a>
-            <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Terms of Use</a>
+        <nav class="flex flex-wrap items-center gap-x-6 gap-y-4">
+            <!-- Link Website ke Home -->
+            <a href="<?= site_url('home') ?>" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Website</a>
             
-            <button id="theme-toggle" class="flex items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
-                </svg>
-                <span class="text-sm">Light</span>
-            </button>
-        </div>
+            <!-- Link Blog -->
+            <a href="<?= site_url('blog') ?>" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Blog</a>
+            
+            <!-- Link Contact us -->
+            <a href="<?= site_url('Help_center/contact') ?>" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Contact us</a>
+            
+            <!-- Link Help Center -->
+            <a href="<?= base_url('help_center') ?>" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Help Center</a>
+            
+            <!-- Link Privacy Policy -->
+            <a href="<?= base_url('privacy-policy') ?>" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Privacy Policy</a>
+            
+            <!-- Link Terms of Use -->
+            <a href="<?= base_url('terms') ?>" class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors">Terms of Use</a>
+        </nav>
 
         <!-- Baris Bawah: Copyright -->
         <p class="mt-8 text-sm text-gray-500 dark:text-gray-500">© 2026 Subscrr. All rights reserved.</p>

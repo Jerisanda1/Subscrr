@@ -17,8 +17,8 @@
                 <!-- Link Website diarahkan ke Home Website -->
                 <a href="<?= site_url('home') ?>" class="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors hover:bg-[#eceae7] rounded-3xl p-2 dark:hover:bg-[#181818] rounded-3xl p-2">Website</a>
                 
-                <!-- Link Contact us (sesuaikan jika ada URL spesifik) -->
-                <a href="#" class="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors hover:bg-[#eceae7] rounded-3xl p-2 dark:hover:bg-[#181818] rounded-3xl p-2">Contact us</a>
+                <!-- Link Contact us (URL Controller, bukan path view) -->
+                <a href="<?= site_url('Help_center/contact') ?>" class="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors hover:bg-[#eceae7] rounded-3xl p-2 dark:hover:bg-[#181818] rounded-3xl p-2">Contact us</a>
                 
                 <!-- Tombol Toggle (id="theme-toggle") -->
                 <button id="theme-toggle" class="p-2 rounded-full border border-gray-300 dark:border-gray-600 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-700 dark:hover:text-white transition-all">

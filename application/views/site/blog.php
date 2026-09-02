@@ -317,71 +317,7 @@
     </section>
 
 </main>
-
-<!-- ================= FOOTER SECTION ================= -->
-<footer style="background-color: #0d0e12; color: #9ca3af; padding: 24px 24px; border-top: 1px solid #1f2937; font-family: sans-serif;">
-  <div style="max-width: 1280px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
-    
-    <!-- Bagian Kiri: Logo & Ikon Media Sosial -->
-    <div style="display: flex; align-items: center; gap: 20px;">
-      <!-- Logo & Nama Subscrr -->
-      <a href="https://subscrr.com" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
-        <div style="width: 24px; height: 24px; background-color: #74c9ebf1; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #f21e1e; font-weight: 900; font-size: 28px; line-height: 1;">
-          S
-        </div>
-        <span style="color: #ffffff; font-weight: 700; font-size: 18px; letter-spacing: -0.025em;">Subscrr</span>
-      </a>
-
-      <!-- Ikon Social Media -->
-      <div style="display: flex; align-items: center; gap: 14px; margin-left: 8px;">
-        <!-- Threads -->
-        <a href="https://www.threads.com/@subscrr" target="_blank" rel="noopener noreferrer" title="Threads" style="color: #9ca3af; display: flex; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#9ca3af'">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M19.25 8.5C18.1 5.3 15.3 3 12 3 7.03 3 3 7.03 3 12s4.03 9 9 9c3.87 0 7.15-2.45 8.4-5.9"></path>
-            <path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"></path>
-            <path d="M15.5 12a3.5 3.5 0 0 1-3.5 3.5c-1.2 0-2.2-.6-2.8-1.5"></path>
-          </svg>
-        </a>
-
-        <!-- Instagram -->
-        <a href="https://www.instagram.com/subscrr" target="_blank" rel="noopener noreferrer" title="Instagram" style="color: #9ca3af; display: flex; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#9ca3af'">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-          </svg>
-        </a>
-
-        <!-- Telegram -->
-        <a href="https://t.me/subscrr" target="_blank" rel="noopener noreferrer" title="Telegram" style="color: #9ca3af; display: flex; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#9ca3af'">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.2-.08-.06-.19-.04-.27-.02-.12.02-1.96 1.25-5.54 3.69-.52.36-1 .53-1.42.52-.47-.01-1.37-.26-2.03-.48-.82-.27-1.47-.42-1.42-.88.03-.24.38-.49 1.07-.75 4.19-1.82 6.98-3.02 8.38-3.6 3.99-1.66 4.82-1.95 5.36-1.96.12 0 .38.03.55.17.14.12.18.28.2.4.02.13.01.27 0 .39z"/>
-          </svg>
-        </a>
-
-        <!-- X (Twitter) -->
-        <a href="https://x.com/subscrr" target="_blank" rel="noopener noreferrer" title="X" style="color: #9ca3af; display: flex; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#9ca3af'">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-
-    <!-- Bagian Kanan: Menu Links & Copyright -->
-    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px; font-size: 13px;">
-      <a href="https://subscrr.com/help" style="color: #9ca3af; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#9ca3af'">Help Center</a>
-      <a href="mailto:support@subscrr.com" style="color: #9ca3af; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#9ca3af'">Contact us</a>
-      <a href="<?= base_url('privacy-policy') ?>"
-   class="hover:text-white transition">
-    Privacy Policy
-</a>
-      <a href="https://subscrr.com/terms" style="color: #9ca3af; text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#9ca3af'">Terms of Use</a>
-      <span style="color: #6b7280; margin-left: 8px;">© 2026 Subscrr. All rights reserved.</span>
-    </div>
-
-  </div>
-</footer>
+ <?php $this->load->view('layout/footer.php'); ?>
 
 
 <style>

@@ -133,9 +133,9 @@
         <div class="border-t border-gray-200 dark:border-gray-800 pt-8 pb-16">
             <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-6">Did this answer your question?</h3>
             <div class="flex flex-wrap gap-4">
-                <button class="bg-[#e63329] hover:bg-[#d12b21] text-white font-medium py-3 px-8 rounded-full transition-colors">
+                <a href="<?php echo base_url('Help_center/contact'); ?>" class="bg-[#e63329] hover:bg-[#d12b21] text-white font-medium py-3 px-8 rounded-full transition-colors inline-block">
                     No, I need help
-                </button>
+                </a>
                 <a href="<?php echo base_url('Help_center/devices'); ?>" class="bg-white dark:bg-[#161616] hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-900 dark:text-white font-medium py-3 px-8 rounded-full border border-gray-300 dark:border-gray-700 transition-colors inline-block">
                     Back to Subscrr Across Devices
                 </a>
