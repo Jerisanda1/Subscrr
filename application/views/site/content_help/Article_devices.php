@@ -162,7 +162,7 @@
             </ul>
         </div>
     </section>
-
+    <?php $this->load->view ('layout/foot_help.php');?>
     <!-- Script Toggle Dark Mode -->
     <script>
         const themeToggleBtn = document.getElementById('theme-toggle');

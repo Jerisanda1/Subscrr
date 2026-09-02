@@ -89,6 +89,7 @@
         </div>
         <!-- ====== END SECTION ====== -->
     </section>
+    <?php $this->load->view ('layout/foot_help.php');?>
 
     <script>
         const themeToggleBtn = document.getElementById('theme-toggle');

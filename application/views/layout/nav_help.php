@@ -2,19 +2,22 @@
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
         <div class="flex justify-between items-center h-20">
             
-            <!-- Bagian Kiri -->
-            <div class="flex items-center gap-3">
+            <!-- Bagian Kiri (Logo & Title) - Diarahkan ke Help Center agar Refresh halaman -->
+            <a href="<?= site_url('Help_center') ?>" id="logo-subscrr" class="flex items-center gap-3">
                <img src="<?= base_url('assets/uploads/icon/icon_Subscrr.png') ?>" alt="Subscrr Logo" class="h-9 w-9 object-contain">
                 
                 <div class="flex items-baseline gap-1.5 text-xl">
                     <span class="font-medium text-gray-900 dark:text-gray-100">Subscrr</span>
                     <span class="font-bold text-gray-900 dark:text-white">Help Center</span>
                 </div>
-            </div>
+            </a>
 
             <!-- Bagian Kanan -->
             <div class="flex items-center gap-6">
-                <a href="#" class="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors hover:bg-[#eceae7] rounded-3xl p-2 dark:hover:bg-[#181818] rounded-3xl p-2">Website</a>
+                <!-- Link Website diarahkan ke Home Website -->
+                <a href="<?= site_url('home') ?>" class="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors hover:bg-[#eceae7] rounded-3xl p-2 dark:hover:bg-[#181818] rounded-3xl p-2">Website</a>
+                
+                <!-- Link Contact us (sesuaikan jika ada URL spesifik) -->
                 <a href="#" class="text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors hover:bg-[#eceae7] rounded-3xl p-2 dark:hover:bg-[#181818] rounded-3xl p-2">Contact us</a>
                 
                 <!-- Tombol Toggle (id="theme-toggle") -->
