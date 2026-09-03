@@ -71,8 +71,11 @@
                 <div class="flex flex-col md:flex-row items-center gap-6 text-sm text-gray-400">
                     <nav class="flex flex-wrap justify-center gap-6">
                         <a href="<?= base_url('help_center') ?>" class="hover:text-white transition">Help Center</a>
-                        <a href="#" class="hover:text-white transition">Contact us</a>
-                       <a href="<?= base_url('privacy-policy') ?>"class="transition hover:text-white"> Privacy Policy</a>
+                        <a href="<?= base_url('journal') ?>" class="hover:text-white transition">Journal</a>
+                        <!-- Link Contact us dengan mailto (tetap ada) -->
+                        <a href="mailto:hi@subscrr.app" id="contact-link" class="hover:text-white transition">Contact us</a>
+                        <!-- Link Privacy Policy dan Terms of Use tetap dipertahankan -->
+                        <a href="<?= base_url('privacy-policy') ?>" class="hover:text-white transition">Privacy Policy</a>
                         <a href="<?= base_url('terms') ?>" class="hover:text-white transition">Terms of Use</a>
                     </nav>
                     <span class="text-gray-500">© 2026 Subscrr. All rights reserved.</span>
@@ -130,5 +133,44 @@
         }, { threshold: 0.1 }); // muncul saat 10% elemen terlihat
 
         observer.observe(revealElement);
+    }
+
+    // Script untuk menampilkan email saat "Contact us" diklik
+    // Catatan: Karena link sekarang menggunakan mailto, klik kiri akan membuka aplikasi email.
+    // Untuk menampilkan feedback "✓ hi@subscrr.app copied", kita perlu mencegah default mailto dan menyalin email.
+    const contactLink = document.getElementById('contact-link');
+    if (contactLink) {
+        const originalText = contactLink.textContent;
+        const emailAddress = 'hi@subscrr.app';
+        
+        contactLink.addEventListener('click', function(e) {
+            e.preventDefault(); // Mencegah membuka aplikasi email
+            
+            // Salin email ke clipboard
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(emailAddress).then(() => {
+                    // Ubah teks menjadi feedback
+                    contactLink.textContent = "✓ " + emailAddress + " copied";
+                    setTimeout(() => {
+                        contactLink.textContent = originalText;
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Gagal menyalin: ', err);
+                });
+            } else {
+                // Fallback untuk browser lama
+                const tempInput = document.createElement('textarea');
+                tempInput.value = emailAddress;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempInput);
+                
+                contactLink.textContent = "✓ " + emailAddress + " copied";
+                setTimeout(() => {
+                    contactLink.textContent = originalText;
+                }, 2000);
+            }
+        });
     }
 </script>

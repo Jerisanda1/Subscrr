@@ -25,7 +25,7 @@
 </style>
 
 <!-- ================= HERO SECTION ================= -->
-<section class="min-h-screen flex flex-col lg:flex-row items-center justify-center bg-[#f5f4ee] px-6 py-20 gap-12 lg:gap-20">
+<section class="min-h-screen flex flex-col lg:flex-row items-center justify-center bg-[#f5f4ee] px-6 pt-32 pb-20 gap-12 lg:pt-20 lg:pb-20 lg:gap-20">
     <div class="max-w-xl w-full">
         <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-[#111] leading-[1.1] fade-up" style="animation-delay: 0.1s;">
             All your subscriptions. And what they really cost.
@@ -46,7 +46,7 @@
             </a>
         </div>
     </div>
-    <div class="relative w-full max-w-[440px] h-auto flex justify-center mt-10 lg:mt-[100px] fade-up" style="animation-delay: 0.7s;">
+        <div class="relative w-full max-w-[440px] h-auto flex justify-center mt-10 lg:mt-[100px] fade-up" style="animation-delay: 0.7s;">
         <video class="absolute top-[2%] left-[5%] w-[90%] h-[95%] object-cover rounded-[2.2rem] z-0"
                autoplay muted loop playsinline
                src="<?= base_url('assets/uploads/hero/hero-screen.mp4') ?>">
@@ -54,11 +54,17 @@
         <img src="<?= base_url('assets/uploads/hero/hero-frame.png') ?>"
              alt="Phone Frame"
              class="relative w-full h-auto object-contain drop-shadow-2xl z-10">
-        <div class="magnetic absolute left-[-90px] bottom-[90px] z-20 bg-white/60 backdrop-blur-md border border-gray-200 shadow-sm p-4 rounded-3xl ">
+             
+        <!-- MODIFIKASI DI SINI: Tambahkan hidden lg:block -->
+               <!-- MODIFIKASI DI SINI: QR Code menjadi link yang bisa diklik -->
+        <a href="https://apps.apple.com/us/app/subscrr-subscription-tracker/id6757530448" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="magnetic absolute left-[-90px] bottom-[90px] z-20 bg-white/60 backdrop-blur-md border border-gray-200 shadow-sm p-4 rounded-3xl hidden lg:block">
             <img src="<?= base_url('assets/uploads/hero/qr-appstore.svg') ?>"
                  alt="QR Code App Store"
                  class="w-[150px] h-auto block">
-        </div>
+        </a>
     </div>
 </section>
 

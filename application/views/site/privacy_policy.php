@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Subscrr</title>
-
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="<?= base_url('assets/uploads/icon/icon_Subscrr.png') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/output.css') ?>">
 
 <style>
@@ -844,30 +844,7 @@
     <!-- =====================================================
          FOOTER
     ====================================================== -->
-    <footer class="border-t border-black/10 bg-[#121214] px-5 py-12 text-white sm:px-8 lg:px-10">
-        <div class="mx-auto max-w-[1100px]">
-            <div class="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
-                
-                <!-- LEFT -->
-                <div>
-                    <a href="<?= base_url() ?>" class="text-[20px] font-black tracking-tight">
-                        Subscrr
-                    </a>
-                    <p class="mt-2 text-[13px] text-gray-400">
-                        © 2026 Subscrr. All rights reserved.
-                    </p>
-                </div>
-
-                <!-- RIGHT -->
-                <nav class="flex flex-wrap gap-x-6 gap-y-3 text-[13px] text-gray-400">
-                    <a href="#" class="transition hover:text-white">Help Center</a>
-                    <a href="#" class="transition hover:text-white">Contact us</a>
-                    <a href="<?= base_url('privacy-policy') ?>" class="font-medium text-white">Privacy Policy</a>
-                    <a href="<?= base_url('terms') ?>" class="transition hover:text-white">Terms of Use</a>
-                </nav>
-            </div>
-        </div>
-    </footer>
+<?php $this->load->view('layout/footer.php'); ?>
 
 </body>
 </html> 

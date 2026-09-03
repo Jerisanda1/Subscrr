@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subscrr</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="<?= base_url('assets/uploads/icon/icon_Subscrr.png') ?>">
+    <!-- Apple Touch Icon (untuk iOS/iPhone) -->
+    <link rel="apple-touch-icon" href="<?= base_url('assets/uploads/icon/icon_Subscrr.png') ?>">
+    
     <link rel="stylesheet" href="<?= base_url('assets/output.css') ?>">
     
     <!-- Anti-Flicker Script -->
