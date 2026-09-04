@@ -7,11 +7,11 @@
     
     <!-- nav links (desktop) -->
     <nav class="hidden md:flex gap-8 text-sm text-gray-500 ml-auto">
-        <a href="<?= site_url('home') ?>#overview" class="relative font-medium hover:text-gray-900 transition after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-orange-600 after:transition-all hover:after:w-full">Overview</a>
-        <a href="<?= site_url('home') ?>#ai_spend" class="relative font-medium hover:text-gray-900 transition after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-orange-600 after:transition-all hover:after:w-full">AI Spend</a>
-        <a href="<?= site_url('home') ?>#privacy" class="relative font-medium hover:text-gray-900 transition after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-orange-600 after:transition-all hover:after:w-full">Privacy</a>
-        <a href="<?= site_url('home') ?>#pricing" class="relative font-medium hover:text-gray-900 transition after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-orange-600 after:transition-all hover:after:w-full">Pricing</a>
-        <a href="<?= site_url('journal') ?>#journal" id="nav-journal" class="relative font-medium hover:text-gray-900 transition after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-orange-600 after:transition-all hover:after:w-full">Journal</a>
+        <a href="<?= site_url('home') ?>#overview" class="relative font-medium hover:text-gray-900 dark:hover:text-white transition after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-orange-600 after:transition-all hover:after:w-full">Overview</a>
+        <a href="<?= site_url('home') ?>#ai_spend" class="relative font-medium hover:text-gray-900 dark:hover:text-white transition after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-orange-600 after:transition-all hover:after:w-full">AI Spend</a>
+        <a href="<?= site_url('home') ?>#privacy" class="relative font-medium hover:text-gray-900 dark:hover:text-white transition after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-orange-600 after:transition-all hover:after:w-full">Privacy</a>
+        <a href="<?= site_url('home') ?>#pricing" class="relative font-medium hover:text-gray-900 dark:hover:text-white transition after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-orange-600 after:transition-all hover:after:w-full">Pricing</a>
+        <a href="<?= site_url('journal') ?>#journal" id="nav-journal" class="relative font-medium hover:text-gray-900 dark:hover:text-white transition after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-orange-600 after:transition-all hover:after:w-full">Journal</a>
     </nav>
     
     <!-- Tombol Get the app (Selalu Terlihat di Semua Ukuran Layar) -->

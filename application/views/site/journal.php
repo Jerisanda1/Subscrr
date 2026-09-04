@@ -56,12 +56,18 @@
     <style>
 
         /* =====================================================
-           RESET & BACKGROUND
+           RESET & BACKGROUND (LIGHT MODE DEFAULT)
         ====================================================== */
 
         body {
-            background-color: #0b0b0b !important;
-            color: #ffffff !important;
+            background-color: #f4f3ef;
+            color: #1a1a1a;
+        }
+
+        /* Dark Mode Override */
+        .dark body {
+            background-color: #0b0b0b;
+            color: #ffffff;
         }
 
 
@@ -87,9 +93,13 @@
         .j-lede h2 {
             font-size: 52px;
             font-weight: 700;
-            color: #ffffff;
+            color: #1a1a1a;
             letter-spacing: -0.04em;
             line-height: 1;
+        }
+
+        .dark .j-lede h2 {
+            color: #ffffff;
         }
 
 
@@ -122,6 +132,10 @@
             margin-bottom: 12px;
         }
 
+        .dark .journal-topics-title {
+            color: #666666;
+        }
+
         .journal-topic-list {
             display: flex;
             flex-direction: column;
@@ -135,13 +149,25 @@
             border-radius: 10px;
             font-size: 14px;
             font-weight: 600;
-            color: #a1a1a1;
-            background: #161616;
+            color: #555555;
+            background: #ffffff;
+            border: 1px solid #e5e5e5;
             text-decoration: none;
             transition: all 0.2s ease;
         }
 
+        .dark .journal-topic-item {
+            color: #a1a1a1;
+            background: #161616;
+            border: 1px solid #1f1f1f;
+        }
+
         .journal-topic-item:hover {
+            background: #e8e8e8;
+            color: #000000;
+        }
+
+        .dark .journal-topic-item:hover {
             background: #222222;
             color: #ffffff;
         }
@@ -149,6 +175,13 @@
         .journal-topic-item.active {
             background: #ff331a;
             color: #ffffff;
+            border-color: #ff331a;
+        }
+
+        .dark .journal-topic-item.active {
+            background: #ff331a;
+            color: #ffffff;
+            border-color: #ff331a;
         }
 
 
@@ -184,15 +217,20 @@
         ====================================================== */
 
         .featured-card {
-            background: #141414;
+            background: #ffffff;
             border-radius: 20px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
             text-decoration: none;
-            border: 1px solid #1f1f1f;
+            border: 1px solid #e5e5e5;
             transition: transform 0.3s ease;
             min-width: 0;
+        }
+
+        .dark .featured-card {
+            background: #141414;
+            border: 1px solid #1f1f1f;
         }
 
         .featured-card:hover {
@@ -234,14 +272,22 @@
             font-weight: 500;
         }
 
+        .dark .featured-meta .date {
+            color: #777777;
+        }
+
         .featured-title {
             font-size: 26px;
             font-weight: 700;
             line-height: 1.2;
-            color: #ffffff;
+            color: #1a1a1a;
             margin-bottom: 12px;
             letter-spacing: -0.02em;
             transition: color 0.3s ease;
+        }
+
+        .dark .featured-title {
+            color: #ffffff;
         }
 
         .featured-card:hover .featured-title {
@@ -251,12 +297,20 @@
         .featured-desc {
             font-size: 14px;
             line-height: 1.5;
-            color: #888888;
+            color: #555555;
             margin-bottom: 18px;
+        }
+
+        .dark .featured-desc {
+            color: #888888;
         }
 
         .featured-stats {
             font-size: 12px;
+            color: #999999;
+        }
+
+        .dark .featured-stats {
             color: #555555;
         }
 
@@ -267,16 +321,21 @@
         ====================================================== */
 
         .promo-card {
-            background: #141414;
+            background: #ffffff;
             border-radius: 20px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            border: 1px solid #1f1f1f;
+            border: 1px solid #e5e5e5;
 
             /* PENTING:
                promo selalu berada di kolom kanan */
             grid-column: 2;
+        }
+
+        .dark .promo-card {
+            background: #141414;
+            border: 1px solid #1f1f1f;
         }
 
         .promo-image-wrapper {
@@ -306,15 +365,23 @@
         .promo-title {
             font-size: 18px;
             font-weight: 700;
-            color: #ffffff;
+            color: #1a1a1a;
             margin-bottom: 8px;
+        }
+
+        .dark .promo-title {
+            color: #ffffff;
         }
 
         .promo-desc {
             font-size: 13px;
             line-height: 1.4;
-            color: #888888;
+            color: #555555;
             margin-bottom: 20px;
+        }
+
+        .dark .promo-desc {
+            color: #888888;
         }
 
         .promo-btn {
@@ -348,14 +415,19 @@
         }
 
         .article-card {
-            background: #141414;
+            background: #ffffff;
             border-radius: 20px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
             text-decoration: none;
-            border: 1px solid #1f1f1f;
+            border: 1px solid #e5e5e5;
             transition: transform 0.3s ease;
+        }
+
+        .dark .article-card {
+            background: #141414;
+            border: 1px solid #1f1f1f;
         }
 
         .article-card:hover {
@@ -366,6 +438,10 @@
             width: 100%;
             aspect-ratio: 1 / 0.8;
             overflow: hidden;
+            background: #f0f0f0;
+        }
+
+        .dark .article-image-wrapper {
             background: #1e1e1e;
         }
 
@@ -401,13 +477,21 @@
             font-weight: 500;
         }
 
+        .dark .article-meta .date {
+            color: #777777;
+        }
+
         .article-title {
             font-size: 18px;
             font-weight: 700;
             line-height: 1.3;
-            color: #ffffff;
+            color: #1a1a1a;
             margin-bottom: 8px;
             transition: color 0.3s ease;
+        }
+
+        .dark .article-title {
+            color: #ffffff;
         }
 
         .article-card:hover .article-title {
@@ -417,6 +501,10 @@
         .article-desc {
             font-size: 13px;
             line-height: 1.5;
+            color: #555555;
+        }
+
+        .dark .article-desc {
             color: #888888;
         }
 
@@ -497,7 +585,7 @@
 </head>
 
 
-<body class="bg-[#0b0b0b] text-white antialiased">
+<body class="bg-[#f4f3ef] text-[#1a1a1a] antialiased dark:bg-[#0b0b0b] dark:text-white">
 
 
 <main class="journal-wrapper px-5 sm:px-8 lg:px-10">

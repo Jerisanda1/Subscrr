@@ -2516,6 +2516,9 @@
   .dark\:bg-\[\#0a0a0a\]\/95:where(.dark, .dark *) {
     background-color: color-mix(in oklab, #0a0a0a 95%, transparent);
   }
+  .dark\:bg-\[\#0b0b0b\]:where(.dark, .dark *) {
+    background-color: #0b0b0b;
+  }
   .dark\:bg-\[\#1a1a1a\]:where(.dark, .dark *) {
     background-color: #1a1a1a;
   }
@@ -2533,6 +2536,9 @@
   }
   .dark\:bg-\[\#4a2a26\]:where(.dark, .dark *) {
     background-color: #4a2a26;
+  }
+  .dark\:bg-\[\#11111\]:where(.dark, .dark *) {
+    background-color: #11111;
   }
   .dark\:bg-\[\#14141a\]:where(.dark, .dark *) {
     background-color: #14141a;
@@ -2703,6 +2709,11 @@
     .dark\:hover\:shadow-\[0_6px_18px_rgba\(0\,0\,0\,0\.6\)\]:where(.dark, .dark *):hover {
       --tw-shadow: 0 6px 18px var(--tw-shadow-color, rgba(0,0,0,0.6));
       box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+    .dark\:hover\:transition:where(.dark, .dark *):hover {
+      transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+      transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+      transition-duration: var(--tw-duration, var(--default-transition-duration));
     }
   }
   .dark\:focus\:ring-orange-900:where(.dark, .dark *):focus {

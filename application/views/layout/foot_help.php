@@ -1,4 +1,4 @@
-<footer class="bg-[#d3cfc6] dark:bg-[#0a0a0a] transition-colors duration-300">
+<footer class="bg-[#d3cfc6] dark:bg-[#111111] transition-colors duration-300">
     <div class="max-w-6xl mx-auto px-6 lg:px-8 py-12 pb-8">
         
         <!-- Baris Atas: Logo & 4 Sosial Media -->
