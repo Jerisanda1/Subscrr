@@ -25,12 +25,12 @@
 </style>
 
 <!-- ================= HERO SECTION ================= -->
-<section class="min-h-screen flex flex-col lg:flex-row items-center justify-center bg-[#f5f4ee] px-6 pt-32 pb-20 gap-12 lg:pt-20 lg:pb-20 lg:gap-20">
+<section class="min-h-screen flex flex-col lg:flex-row items-center justify-center bg-[#f5f4ee] dark:bg-[#0a0a0a] px-6 pt-32 pb-20 gap-12 lg:pt-20 lg:pb-20 lg:gap-20">
     <div class="max-w-xl w-full">
-        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-[#111] leading-[1.1] fade-up" style="animation-delay: 0.1s;">
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-[#111] dark:text-white leading-[1.1] fade-up" style="animation-delay: 0.1s;">
             All your subscriptions. And what they really cost.
         </h1>
-        <p class="mt-6 text-lg md:text-xl text-[#666] leading-relaxed max-w-lg fade-up" style="animation-delay: 0.3s;">
+        <p class="mt-6 text-lg md:text-xl text-[#666] dark:text-gray-400 leading-relaxed max-w-lg fade-up" style="animation-delay: 0.3s;">
             Everything you pay for in one place, the honest total per day, month and year,
             and a quiet nudge the day before the money leaves.
         </p>
@@ -41,7 +41,7 @@
                class="magnetic inline-flex items-center justify-center rounded-full bg-[#ff3b30] px-8 py-4 text-base font-semibold text-white transition shadow-sm">
                 Download on the App Store
             </a>
-            <a href="#overview" class="magnetic inline-flex items-center justify-center rounded-full border border-gray-300 px-8 py-4 text-base font-semibold text-[#111] transition">
+            <a href="#overview" class="magnetic inline-flex items-center justify-center rounded-full border border-gray-300 dark:border-gray-600 px-8 py-4 text-base font-semibold text-[#111] dark:text-white transition">
                 See it in motion
             </a>
         </div>
@@ -60,7 +60,7 @@
         <a href="https://apps.apple.com/us/app/subscrr-subscription-tracker/id6757530448" 
            target="_blank" 
            rel="noopener noreferrer"
-           class="magnetic absolute left-[-90px] bottom-[90px] z-20 bg-white/60 backdrop-blur-md border border-gray-200 shadow-sm p-4 rounded-3xl hidden lg:block">
+           class="magnetic absolute left-[-90px] bottom-[90px] z-20 bg-white/60 dark:bg-gray-800/60 backdrop-blur-md border border-gray-200 dark:border-gray-700 shadow-sm p-4 rounded-3xl hidden lg:block">
             <img src="<?= base_url('assets/uploads/hero/qr-appstore.svg') ?>"
                  alt="QR Code App Store"
                  class="w-[150px] h-auto block">
@@ -69,7 +69,7 @@
 </section>
 
 <!-- ================= PROMO VIDEO ================= -->
-<section id="promo-section" class="relative w-full h-auto lg:min-h-screen overflow-hidden bg-[#f5f4ee]">
+<section id="promo-section" class="relative w-full h-auto lg:min-h-screen overflow-hidden bg-[#f5f4ee] dark:bg-[#0a0a0a]">
     <!-- Wrapper: relative di mobile, absolute di desktop -->
     <div id="promo-video-wrapper" class="relative w-full h-auto lg:absolute lg:inset-0 lg:overflow-hidden lg:rounded-[2.5rem]">
         <video id="promo-video"

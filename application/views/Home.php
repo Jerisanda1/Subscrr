@@ -13,6 +13,15 @@
     <link rel="stylesheet" href="<?= base_url('assets/output.css') ?>">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap" rel="stylesheet">
 
+    <!-- Anti-Flicker Dark Mode Script -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+
     <!-- CSS untuk Splash Screen (Typewriter Halus & Responsif) -->
     <style>
         body {
@@ -31,6 +40,10 @@
             align-items: center;
             overflow: hidden; /* Mencegah teks keluar dari layar */
             transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+        /* Tambahan untuk dark mode pada splash screen */
+        .dark #splash-screen {
+            background-color: #0a0a0a;
         }
         #splash-screen.hidden {
             opacity: 0;
@@ -64,7 +77,7 @@
         }
     </style>
 </head>
-<body class="bg-white">
+<body class="bg-white dark:bg-[#0a0a0a] text-gray-900 dark:text-gray-100 transition-colors duration-300">
 
     <!-- Splash Screen -->
     <div id="splash-screen">
@@ -110,6 +123,21 @@
         window.addEventListener('load', () => {
             setTimeout(typeChar, 200);
         });
+    </script>
+
+    <!-- Script Toggle Dark Mode (Tombol dengan id="theme-toggle" di footer) -->
+    <script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', function() {
+                document.documentElement.classList.toggle('dark');
+                if (document.documentElement.classList.contains('dark')) {
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        }
     </script>
 
 </body>

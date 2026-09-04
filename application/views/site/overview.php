@@ -1,4 +1,4 @@
-<section id="overview" class="relative overflow-hidden bg-[#f8f7f4]">
+<section id="overview" class="relative overflow-hidden bg-[#f8f7f4] dark:bg-[#0a0a0a]">
 
     <!-- =====================================================
          CUSTOM CSS - KHUSUS SECTION OVERVIEW
@@ -158,7 +158,7 @@
             }
         }
         
-                /* =====================================================
+        /* =====================================================
            RESPONSIVE - TAMBAHAN SAJA
            Tidak mengubah tampilan desktop
         ====================================================== */
@@ -634,12 +634,12 @@
 
         <div class="overview-reveal">
 
-            <p class="text-sm font-bold uppercase tracking-[0.18em] text-[#526bd8]">
+            <p class="text-sm font-bold uppercase tracking-[0.18em] text-[#526bd8] dark:text-[#7a8ff0]">
                 Overview
             </p>
 
             <h1
-                class="text-left text-5xl font-bold leading-[0.95] tracking-[-0.05em] text-gray-900 sm:text-6xl lg:text-7xl"
+                class="text-left text-5xl font-bold leading-[0.95] tracking-[-0.05em] text-gray-900 dark:text-gray-100 sm:text-6xl lg:text-7xl"
             >
                 See how much you <br>
                 really spend.
@@ -684,7 +684,7 @@
             style="width: 520px; flex: 0 0 520px;"
         >
 
-            <p class="text-[18px] leading-[1.55] tracking-[-0.01em] text-[#555555]">
+            <p class="text-[18px] leading-[1.55] tracking-[-0.01em] text-[#555555] dark:text-gray-400">
 
                 Open the app and the sums are already done.
                 How many you are paying for, what it costs a month and a
@@ -698,10 +698,10 @@
                 <!-- Feature 1 -->
                 <div class="flex items-center gap-4">
 
-                    <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ffd9d2]">
+                    <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ffd9d2] dark:bg-[#4a2a26]">
 
                         <svg
-                            class="h-3.5 w-3.5 text-[#ff3218]"
+                            class="h-3.5 w-3.5 text-[#ff3218] dark:text-[#ff4d33]"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -716,7 +716,7 @@
 
                     </div>
 
-                    <span class="text-[17px] text-[#85817b]">
+                    <span class="text-[17px] text-[#85817b] dark:text-gray-400">
                         Live monthly &amp; yearly totals
                     </span>
 
@@ -726,10 +726,10 @@
                 <!-- Feature 2 -->
                 <div class="flex items-center gap-4">
 
-                    <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ffd9d2]">
+                    <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ffd9d2] dark:bg-[#4a2a26]">
 
                         <svg
-                            class="h-3.5 w-3.5 text-[#ff3218]"
+                            class="h-3.5 w-3.5 text-[#ff3218] dark:text-[#ff4d33]"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -744,7 +744,7 @@
 
                     </div>
 
-                    <span class="text-[17px] text-[#85817b]">
+                    <span class="text-[17px] text-[#85817b] dark:text-gray-400">
                         A countdown to every charge
                     </span>
 
@@ -754,10 +754,10 @@
                 <!-- Feature 3 -->
                 <div class="flex items-center gap-4">
 
-                    <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ffd9d2]">
+                    <div class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#ffd9d2] dark:bg-[#4a2a26]">
 
                         <svg
-                            class="h-3.5 w-3.5 text-[#ff3218]"
+                            class="h-3.5 w-3.5 text-[#ff3218] dark:text-[#ff4d33]"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -772,7 +772,7 @@
 
                     </div>
 
-                    <span class="text-[17px] text-[#85817b]">
+                    <span class="text-[17px] text-[#85817b] dark:text-gray-400">
                         Any currency, converted at daily rates
                     </span>
 
@@ -792,7 +792,7 @@
 ====================================================== -->
 <section
     id="breakdown"
-    class="bg-[#f5f3ef] px-3 py-3 sm:px-4 sm:py-4"
+    class="bg-[#f5f3ef] px-3 py-3 sm:px-4 sm:py-4 dark:bg-[#0a0a0a]"
     style="width: 100vw; margin-left: calc(50% - 50vw);"
 >
 
@@ -800,7 +800,7 @@
          WHITE BREAKDOWN CARD
     ================================================== -->
     <div
-        class="w-full overflow-hidden rounded-[2rem] bg-white"
+        class="w-full overflow-hidden rounded-[2rem] bg-white dark:bg-[#161616]"
     >
 
         <!-- =================================================
@@ -821,7 +821,7 @@
 
                 <!-- Label -->
                 <p
-                    class="text-sm font-bold uppercase tracking-[0.18em] text-[#526bd8]"
+                    class="text-sm font-bold uppercase tracking-[0.18em] text-[#526bd8] dark:text-[#7a8ff0]"
                 >
                     Breakdown
                 </p>
@@ -829,7 +829,7 @@
 
                 <!-- Heading -->
                 <h2
-                    class="mt-7 font-bold leading-[0.92] tracking-[-0.055em] text-[#171717]"
+                    class="mt-7 font-bold leading-[0.92] tracking-[-0.055em] text-[#171717] dark:text-gray-100"
                     style="font-size: 76px;"
                 >
 
@@ -841,7 +841,7 @@
                         Per month.
                     </span>
 
-                    <span class="block text-[#ff3218]">
+                    <span class="block text-[#ff3218] dark:text-[#ff4d33]">
                         Per day.
                     </span>
 
@@ -850,7 +850,7 @@
 
                 <!-- Description -->
                 <p
-                    class="mt-9 text-[17px] leading-7 text-[#77736d]"
+                    class="mt-9 text-[17px] leading-7 text-[#77736d] dark:text-gray-400"
                     style="max-width: 560px;"
                 >
                     That "cheap" annual plan, divided by 365, is still a small
@@ -894,14 +894,14 @@
 ====================================================== -->
 <section
     id="reminders"
-    class="bg-[#f5f3ef] px-3 py-3 sm:px-4 sm:py-4"
+    class="bg-[#f5f3ef] px-3 py-3 sm:px-4 sm:py-4 dark:bg-[#0a0a0a]"
 >
 
     <div class="flex flex-col items-center text-center">
 
         <!-- LABEL -->
         <p
-            class="overview-reveal text-sm font-bold uppercase tracking-[0.18em] text-[#526bd8]"
+            class="overview-reveal text-sm font-bold uppercase tracking-[0.18em] text-[#526bd8] dark:text-[#7a8ff0]"
         >
             Reminders
         </p>
@@ -909,7 +909,7 @@
 
         <!-- HEADING -->
         <h1
-            class="overview-reveal overview-delay-1 mt-7 max-w-[800px] text-[52px] font-bold leading-[0.94] tracking-[-0.055em] text-[#171717] sm:text-[64px] lg:text-[76px]"
+            class="overview-reveal overview-delay-1 mt-7 max-w-[800px] text-[52px] font-bold leading-[0.94] tracking-[-0.055em] text-[#171717] dark:text-gray-100 sm:text-[64px] lg:text-[76px]"
         >
             Never get
             <br>
@@ -921,7 +921,7 @@
 
         <!-- DESCRIPTION -->
         <p
-            class="overview-reveal overview-delay-2 mt-8 max-w-[650px] text-[18px] leading-7 text-[#77736d] sm:text-[19px]"
+            class="overview-reveal overview-delay-2 mt-8 max-w-[650px] text-[18px] leading-7 text-[#77736d] dark:text-gray-400 sm:text-[19px]"
         >
             The day before the money leaves, a gentle tap on the
             shoulder. So you renew because you meant to, not because
@@ -969,7 +969,7 @@
 <!-- =================================================
      SETUP SECTION / IMPORT APPLE
 ================================================== -->
-<section class="w-full bg-[#f6f5f1] py-16 px-6 md:px-12 lg:px-20">
+<section class="w-full bg-[#f6f5f1] py-16 px-6 md:px-12 lg:px-20 dark:bg-[#0a0a0a]">
 
     <div class="mx-auto max-w-[1200px] grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
 
@@ -981,7 +981,7 @@
 
             <!-- SUBTITLE -->
             <p
-                class="overview-reveal text-[13px] font-bold uppercase tracking-widest text-[#6366f1]"
+                class="overview-reveal text-[13px] font-bold uppercase tracking-widest text-[#6366f1] dark:text-[#818cf8]"
             >
                 SETUP • ONE SCREENSHOT
             </p>
@@ -989,7 +989,7 @@
 
             <!-- JUDUL -->
             <h2
-                class="overview-reveal overview-delay-1 mt-4 text-[40px] font-extrabold leading-[1.1] tracking-tight text-slate-900 sm:text-[52px]"
+                class="overview-reveal overview-delay-1 mt-4 text-[40px] font-extrabold leading-[1.1] tracking-tight text-slate-900 dark:text-white sm:text-[52px]"
             >
                 Import what<br class="hidden sm:inline" />
                 Apple already<br class="hidden sm:inline" />
@@ -1013,7 +1013,7 @@
 
                 <!-- Step 1 -->
                 <div
-                    class="flex items-center gap-3 rounded-full bg-white px-5 py-3 shadow-[0_4px_15px_rgba(0,0,0,0.04)]"
+                    class="flex items-center gap-3 rounded-full bg-white px-5 py-3 shadow-[0_4px_15px_rgba(0,0,0,0.04)] dark:bg-[#161616] dark:shadow-[0_4px_15px_rgba(0,0,0,0.3)]"
                 >
 
                     <span
@@ -1022,7 +1022,7 @@
                         1
                     </span>
 
-                    <span class="text-[14px] font-semibold text-slate-800">
+                    <span class="text-[14px] font-semibold text-slate-800 dark:text-white">
                         Open Subscriptions
                     </span>
 
@@ -1031,7 +1031,7 @@
 
                 <!-- Step 2 -->
                 <div
-                    class="flex items-center gap-3 rounded-full bg-white px-5 py-3 shadow-[0_4px_15px_rgba(0,0,0,0.04)]"
+                    class="flex items-center gap-3 rounded-full bg-white px-5 py-3 shadow-[0_4px_15px_rgba(0,0,0,0.04)] dark:bg-[#161616] dark:shadow-[0_4px_15px_rgba(0,0,0,0.3)]"
                 >
 
                     <span
@@ -1040,7 +1040,7 @@
                         2
                     </span>
 
-                    <span class="text-[14px] font-semibold text-slate-800">
+                    <span class="text-[14px] font-semibold text-slate-800 dark:text-white">
                         Take a screenshot
                     </span>
 
@@ -1049,7 +1049,7 @@
 
                 <!-- Step 3 -->
                 <div
-                    class="flex items-center gap-3 rounded-full bg-white px-5 py-3 shadow-[0_4px_15px_rgba(0,0,0,0.04)]"
+                    class="flex items-center gap-3 rounded-full bg-white px-5 py-3 shadow-[0_4px_15px_rgba(0,0,0,0.04)] dark:bg-[#161616] dark:shadow-[0_4px_15px_rgba(0,0,0,0.3)]"
                 >
 
                     <span
@@ -1058,7 +1058,7 @@
                         3
                     </span>
 
-                    <span class="text-[14px] font-semibold text-slate-800">
+                    <span class="text-[14px] font-semibold text-slate-800 dark:text-white">
                         Drop it in here
                     </span>
 
