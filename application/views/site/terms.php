@@ -514,82 +514,8 @@
     <!-- =====================================================
          HEADER / NAVBAR
     ====================================================== -->
+<?php $this->load->view('layout/navbar'); ?>
 
-    <header id="navbar"
-        class="fixed top-5 inset-x-0 z-50 mx-auto w-[calc(100%-48px)] max-w-[1240px] bg-white shadow-[0_4px_25px_rgba(0,0,0,0.06)] border border-gray-100/80 rounded-full transition-all">
-
-        <nav class="flex items-center justify-between px-6 py-3.5">
-
-
-            <!-- LOGO -->
-
-            <a href="<?= site_url('home') ?>"
-                id="logo-subscrr"
-                class="flex items-center gap-3 shrink-0">
-
-                <span
-                    class="flex items-center justify-center h-9 w-9 rounded-xl bg-[#c6d7ff] text-[#ff3218] text-[39px] font-black leading-none shrink-0 shadow-sm">
-                    S
-                </span>
-
-                <span class="text-[22px] font-extrabold tracking-tight text-[#171717]">
-                    Subscrr
-                </span>
-
-            </a>
-
-
-            <!-- MENU + BUTTON -->
-
-            <div class="flex items-center gap-6 md:gap-8">
-
-
-                <!-- NAVIGATION -->
-
-                <div class="hidden sm:flex items-center gap-6 lg:gap-7">
-
-                    <a href="<?= site_url('home') ?>#overview"
-                        class="text-[15px] font-semibold text-[#6b7280] transition hover:text-[#111827]">
-                        Overview
-                    </a>
-
-                    <a href="<?= site_url('home') ?>#ai_spend"
-                        class="text-[15px] font-semibold text-[#6b7280] transition hover:text-[#111827]">
-                        AI Spend
-                    </a>
-
-                    <a href="<?= base_url('privacy-policy') ?>"
-                        class="text-[15px] font-semibold text-[#6b7280] transition hover:text-[#111827]">
-                        Privacy
-                    </a>
-
-                    <a href="<?= site_url('home') ?>#pricing"
-                        class="text-[15px] font-semibold text-[#6b7280] transition hover:text-[#111827]">
-                        Pricing
-                    </a>
-
-                    <a href="<?= base_url('blog') ?>"
-                        class="text-[15px] font-semibold text-[#6b7280] transition hover:text-[#111827]">
-                        Blog
-                    </a>
-
-                </div>
-
-
-                <!-- GET THE APP -->
-
-                <a href="https://apps.apple.com/us/app/subscrr-take-back-control/id6757530448"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="shrink-0 rounded-full bg-[#ff3218] px-6 py-2.5 text-[15px] font-bold text-white whitespace-nowrap shadow-sm transition duration-200 hover:bg-[#e02b14] active:scale-[0.98]">
-                    Get the app
-                </a>
-
-            </div>
-
-        </nav>
-
-    </header>
 
 
     <!-- =====================================================

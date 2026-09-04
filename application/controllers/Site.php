@@ -17,4 +17,9 @@ class Site extends CI_Controller
     {
         $this->load->view('site/terms');
     }
+
+    public function journal()
+    {
+        $this->load->view('site/journal');
+    }
 }

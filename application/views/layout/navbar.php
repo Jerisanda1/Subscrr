@@ -11,7 +11,7 @@
         <a href="<?= site_url('home') ?>#ai_spend" class="relative font-medium hover:text-gray-900 transition after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-orange-600 after:transition-all hover:after:w-full">AI Spend</a>
         <a href="<?= site_url('home') ?>#privacy" class="relative font-medium hover:text-gray-900 transition after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-orange-600 after:transition-all hover:after:w-full">Privacy</a>
         <a href="<?= site_url('home') ?>#pricing" class="relative font-medium hover:text-gray-900 transition after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-orange-600 after:transition-all hover:after:w-full">Pricing</a>
-        <a href="<?= site_url('blog') ?>" id="nav-blog" class="relative font-medium hover:text-gray-900 transition after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-orange-600 after:transition-all hover:after:w-full">Blog</a>
+        <a href="<?= site_url('journal') ?>#journal" id="nav-journal" class="relative font-medium hover:text-gray-900 transition after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-orange-600 after:transition-all hover:after:w-full">Journal</a>
     </nav>
     
     <!-- Tombol Get the app (Selalu Terlihat di Semua Ukuran Layar) -->
@@ -37,7 +37,7 @@
         <a href="<?= site_url('home') ?>#ai_spend" class="text-base font-medium hover:text-orange-600 transition">AI Spend</a>
         <a href="<?= site_url('home') ?>#privacy" class="text-base font-medium hover:text-orange-600 transition">Privacy</a>
         <a href="<?= site_url('home') ?>#pricing" class="text-base font-medium hover:text-orange-600 transition">Pricing</a>
-        <a href="<?= site_url('blog') ?>" class="text-base font-medium hover:text-orange-600 transition">Blog</a>
+        <a href="<?= site_url('journal') ?>#journal" class="text-base font-medium hover:text-orange-600 transition">Journal</a>
     </nav>
 </div>
 
@@ -57,7 +57,7 @@
     // Efek magnetik tombol "Get the app" - Hanya aktif di Desktop (Lebar >= 768px)
     const navbar = document.getElementById('navbar');
     const btnGetApp = document.getElementById('btn-get-app');
-    const navBlog = document.getElementById('nav-blog');
+    const navJournal = document.getElementById('nav-journal');
 
     const activationRadius = 60; 
 
@@ -69,10 +69,10 @@
         const mouseX = e.clientX - navbarRect.left;
         const mouseY = e.clientY - navbarRect.top;
         
-        const blogRect = navBlog.getBoundingClientRect();
-        const blogLeftRel = blogRect.left - navbarRect.left;
+        const journalRect = navJournal.getBoundingClientRect();
+        const journalLeftRel = journalRect.left - navbarRect.left;
         
-        if (mouseX < blogLeftRel) {
+        if (mouseX < journalLeftRel) {
             btnGetApp.style.transform = 'translate(0, 0)';
             return;
         }
