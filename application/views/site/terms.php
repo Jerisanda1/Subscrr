@@ -508,14 +508,14 @@
 </head>
 
 
-<body class="bg-[#f4f3ef] text-[#1a1a1a] antialiased selection:bg-[#ff3218] selection:text-white pt-24">
+<body class="bg-[#f4f3ef] text-[#1a1a1a] antialiased selection:bg-[#ff3218] selection:text-white pt-24 dark:bg-[#0a0a0a] dark:text-[#f3f4f6]">
 
 
     <!-- =====================================================
          HEADER / NAVBAR
     ====================================================== -->
-<?php $this->load->view('layout/navbar'); ?>
 
+    <?php $this->load->view('layout/navbar'); ?>
 
 
     <!-- =====================================================
@@ -530,11 +530,11 @@
             <!-- PAGE HEADER -->
 <div class="mb-10">
 
-    <h1 class="text-[36px] font-bold tracking-[-0.03em] text-[#111827] sm:text-[46px] lg:text-[52px]">
+    <h1 class="text-[36px] font-bold tracking-[-0.03em] text-[#111827] sm:text-[46px] lg:text-[52px] dark:text-white">
         Terms of Use
     </h1>
 
-    <div class="mt-3 flex flex-wrap items-center gap-1.5 text-[15px] text-[#707070]">
+    <div class="mt-3 flex flex-wrap items-center gap-1.5 text-[15px] text-[#707070] dark:text-gray-400">
 
         <span>
             Last updated: July 8, 2026
@@ -555,22 +555,22 @@
 
 
 <!-- INTRODUCTION -->
-<section class="border-t border-[#e2dfd7] py-8">
+<section class="border-t border-[#e2dfd7] py-8 dark:border-[#27272a]">
 
-    <div class="space-y-4 text-[16px] leading-relaxed text-[#555555]">
+    <div class="space-y-4 text-[16px] leading-relaxed text-[#555555] dark:text-gray-400">
 
         <p>
             Subscrr is operated by an independent developer (“we”, “us”).
             By using Subscrr you agree to these Terms and to our
             <a href="<?= base_url('privacy-policy') ?>"
-                class="font-medium text-[#111827] underline underline-offset-4 hover:text-[#ff3218]">
+                class="font-medium text-[#111827] underline underline-offset-4 hover:text-[#ff3218] dark:text-white dark:hover:text-[#ff3218]">
                 Privacy Policy
             </a>.
             The app license is governed by
             <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="font-medium text-[#111827] underline underline-offset-4 hover:text-[#ff3218]">
+                class="font-medium text-[#111827] underline underline-offset-4 hover:text-[#ff3218] dark:text-white dark:hover:text-[#ff3218]">
                 Apple’s standard End User License Agreement (EULA)
             </a>.
         </p>
@@ -581,13 +581,13 @@
 
 
 <!-- 1. ELIGIBILITY -->
-<section class="border-t border-[#e2dfd7] py-8">
+<section class="border-t border-[#e2dfd7] py-8 dark:border-[#27272a]">
 
-    <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px]">
+    <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px] dark:text-white">
         1. Eligibility
     </h2>
 
-    <div class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555]">
+    <div class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555] dark:text-gray-400">
 
         <p>
             You must be at least 13 years old (or the age of digital consent
@@ -601,13 +601,13 @@
 
 
 <!-- 2. SUBSCRIPTION -->
-<section class="border-t border-[#e2dfd7] py-8">
+<section class="border-t border-[#e2dfd7] py-8 dark:border-[#27272a]">
 
-    <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px]">
+    <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px] dark:text-white">
         2. Subscription (Subscrr Premium)
     </h2>
 
-    <div class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555]">
+    <div class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555] dark:text-gray-400">
 
         <p>
             Subscrr is free to use and tracks up to six subscriptions
@@ -620,10 +620,10 @@
 
     </div>
 
-    <ul class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555]">
+    <ul class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555] dark:text-gray-400">
 
         <li class="flex items-start gap-3">
-            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070]"></span>
+            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070] dark:bg-gray-400"></span>
 
             <p>
                 Payment is charged to your Apple ID account at confirmation
@@ -632,7 +632,7 @@
         </li>
 
         <li class="flex items-start gap-3">
-            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070]"></span>
+            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070] dark:bg-gray-400"></span>
 
             <p>
                 The subscription renews automatically unless cancelled
@@ -643,7 +643,7 @@
         </li>
 
         <li class="flex items-start gap-3">
-            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070]"></span>
+            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070] dark:bg-gray-400"></span>
 
             <p>
                 Manage or cancel anytime in your App Store account settings
@@ -652,7 +652,7 @@
         </li>
 
         <li class="flex items-start gap-3">
-            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070]"></span>
+            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070] dark:bg-gray-400"></span>
 
             <p>
                 Billing, confirmations, and refunds are handled by Apple.
@@ -660,7 +660,7 @@
                 <a href="https://reportaproblem.apple.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="font-medium text-[#111827] underline underline-offset-4 hover:text-[#ff3218]">
+                    class="font-medium text-[#111827] underline underline-offset-4 hover:text-[#ff3218] dark:text-white dark:hover:text-[#ff3218]">
                     reportaproblem.apple.com
                 </a>.
             </p>
@@ -668,9 +668,9 @@
 
     </ul>
 
-    <div class="mt-6 rounded-2xl px-5 py-4">
+    <div class="mt-6 rounded-2xl bg-white px-5 py-4 border border-black/5 dark:bg-[#1a1a1a] dark:border-white/10">
 
-        <p class="text-[15px] leading-relaxed text-[#555555]">
+        <p class="text-[15px] leading-relaxed text-[#555555] dark:text-gray-400">
             Nothing here limits mandatory consumer rights under applicable law.
         </p>
 
@@ -680,13 +680,13 @@
 
 
 <!-- 3. AI FEATURES -->
-<section class="border-t border-[#e2dfd7] py-8">
+<section class="border-t border-[#e2dfd7] py-8 dark:border-[#27272a]">
 
-    <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px]">
+    <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px] dark:text-white">
         3. AI Features
     </h2>
 
-    <div class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555]">
+    <div class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555] dark:text-gray-400">
 
         <p>
             AI Spend uses third-party AI services to analyze receipts and
@@ -708,13 +708,13 @@
 
 
 <!-- 4. RECEIPT SCANNING -->
-<section class="border-t border-[#e2dfd7] py-8">
+<section class="border-t border-[#e2dfd7] py-8 dark:border-[#27272a]">
 
-    <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px]">
+    <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px] dark:text-white">
         4. Receipt Scanning
     </h2>
 
-    <div class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555]">
+    <div class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555] dark:text-gray-400">
 
         <p>
             Only scan documents you have the right to use.
@@ -730,13 +730,13 @@
 
 
 <!-- 5. INTELLECTUAL PROPERTY -->
-<section class="border-t border-[#e2dfd7] py-8">
+<section class="border-t border-[#e2dfd7] py-8 dark:border-[#27272a]">
 
-    <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px]">
+    <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px] dark:text-white">
         5. Intellectual Property
     </h2>
 
-    <div class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555]">
+    <div class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555] dark:text-gray-400">
 
         <p>
             The app, its design, code, and content (excluding third-party
@@ -752,13 +752,13 @@
 
 
 <!-- 6. TRADEMARKS -->
-<section class="border-t border-[#e2dfd7] py-8">
+<section class="border-t border-[#e2dfd7] py-8 dark:border-[#27272a]">
 
-    <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px]">
+    <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px] dark:text-white">
         6. Trademarks
     </h2>
 
-    <div class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555]">
+    <div class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555] dark:text-gray-400">
 
         <p>
             Subscrr displays names and logos of third-party subscription
@@ -773,13 +773,13 @@
 
 
 <!-- 7. DISCLAIMER -->
-<section class="border-t border-[#e2dfd7] py-8">
+<section class="border-t border-[#e2dfd7] py-8 dark:border-[#27272a]">
 
-    <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px]">
+    <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px] dark:text-white">
         7. Disclaimer
     </h2>
 
-    <div class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555]">
+    <div class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555] dark:text-gray-400">
 
         <p>
             Subscrr is provided “as is” and “as available”, without warranties
@@ -788,10 +788,10 @@
 
     </div>
 
-    <ul class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555]">
+    <ul class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555] dark:text-gray-400">
 
         <li class="flex items-start gap-3">
-            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070]"></span>
+            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070] dark:bg-gray-400"></span>
 
             <p>
                 Subscrr is a tracker, not a cancellation service:
@@ -802,7 +802,7 @@
         </li>
 
         <li class="flex items-start gap-3">
-            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070]"></span>
+            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070] dark:bg-gray-400"></span>
 
             <p>
                 Reminders depend on your device and notification settings
@@ -811,7 +811,7 @@
         </li>
 
         <li class="flex items-start gap-3">
-            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070]"></span>
+            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070] dark:bg-gray-400"></span>
 
             <p>
                 Exchange rates are provided for convenience and may not reflect
@@ -821,7 +821,7 @@
         </li>
 
         <li class="flex items-start gap-3">
-            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070]"></span>
+            <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070] dark:bg-gray-400"></span>
 
             <p>
                 We do not guarantee that the app or any feature will be accurate,
@@ -836,13 +836,13 @@
 
 
 <!-- 8. LIMITATION OF LIABILITY -->
-<section class="border-t border-[#e2dfd7] py-8">
+<section class="border-t border-[#e2dfd7] py-8 dark:border-[#27272a]">
 
-    <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px]">
+    <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px] dark:text-white">
         8. Limitation of Liability
     </h2>
 
-    <div class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555]">
+    <div class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555] dark:text-gray-400">
 
         <p>
             To the maximum extent permitted by law, we are not liable for
@@ -865,13 +865,13 @@
 
 
 <!-- 9. TERMINATION -->
-<section class="border-t border-[#e2dfd7] py-8">
+<section class="border-t border-[#e2dfd7] py-8 dark:border-[#27272a]">
 
-    <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px]">
+    <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px] dark:text-white">
         9. Termination
     </h2>
 
-    <div class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555]">
+    <div class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555] dark:text-gray-400">
 
         <p>
             You may stop using Subscrr at any time by deleting the app.
@@ -886,16 +886,16 @@
 
 
 <!-- CONTACT -->
-<section class="border-t border-[#e2dfd7] py-8">
+<section class="border-t border-[#e2dfd7] py-8 dark:border-[#27272a]">
 
-    <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px]">
+    <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px] dark:text-white">
         Contact
     </h2>
 
     <p class="mt-4">
 
         <a href="mailto:hi@subscrr.app"
-            class="text-[16px] font-semibold text-[#111827] underline underline-offset-4 transition hover:text-[#ff3218]">
+            class="text-[16px] font-semibold text-[#111827] underline underline-offset-4 transition hover:text-[#ff3218] dark:text-white dark:hover:text-[#ff3218]">
             hi@subscrr.app
         </a>
 

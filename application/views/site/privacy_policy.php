@@ -500,14 +500,9 @@
 </style>
 </head>
 
-<body class="bg-[#f4f3ef] text-[#1a1a1a] antialiased selection:bg-[#ff3218] selection:text-white pt-24">
+<body class="bg-[#f4f3ef] text-[#1a1a1a] antialiased selection:bg-[#ff3218] selection:text-white pt-24 dark:bg-[#0a0a0a] dark:text-[#f3f4f6]">
 
-    <!-- =====================================================
-         HEADER / NAVBAR (EXACT REPLICA DESIGN)
-    ====================================================== -->
-    <?php $this->load->view('layout/navbar'); ?>
-
-
+<?php $this->load->view('layout/navbar'); ?>
     <!-- =====================================================
          MAIN CONTENT
     ====================================================== -->
@@ -516,26 +511,26 @@
 
             <!-- HEADER PAGE -->
             <div class="mb-10">
-                <h1 class="text-[36px] font-bold tracking-[-0.03em] text-[#111827] sm:text-[46px] lg:text-[52px]">
+                <h1 class="text-[36px] font-bold tracking-[-0.03em] text-[#111827] sm:text-[46px] lg:text-[52px] dark:text-white">
                     Privacy Policy
                 </h1>
 
-                <div class="mt-3 flex flex-wrap items-center gap-1.5 text-[15px] text-[#707070]">
+                <div class="mt-3 flex flex-wrap items-center gap-1.5 text-[15px] text-[#707070] dark:text-gray-400">
                     <span>Last updated: August 11, 2026</span>
                     <span class="px-1">•</span>
-                    <a href="<?= base_url('terms') ?>" class="font-medium text-[#ff3218] transition hover:underline">
+                    <a href="<?= base_url('terms') ?>" class="font-medium text-[#ff3218] transition hover:underline dark:text-[#ff3218]">
                         Terms of Use
                     </a>
                 </div>
             </div>
 
             <!-- WHO WE ARE -->
-            <section class="border-t border-[#e2dfd7] py-8">
-                <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px]">
+            <section class="border-t border-[#e2dfd7] py-8 dark:border-[#27272a]">
+                <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px] dark:text-white">
                     Who We Are
                 </h2>
 
-                <div class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555]">
+                <div class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555] dark:text-gray-400">
                     <p>
                         Subscrr is an iOS app for tracking subscriptions, operated by an independent developer. Subscrr has no user accounts and shows no ads inside the app. Your subscription data stays on your device and in your private iCloud.
                     </p>
@@ -544,7 +539,7 @@
                     </p>
                     <p>
                         If you have any question about this policy, contact 
-                        <a href="mailto:hi@subscrr.app" class="font-medium text-[#111827] underline underline-offset-4 hover:text-[#ff3218]">
+                        <a href="mailto:hi@subscrr.app" class="font-medium text-[#111827] underline underline-offset-4 hover:text-[#ff3218] dark:text-white dark:hover:text-[#ff3218]">
                             hi@subscrr.app
                         </a>.
                     </p>
@@ -552,35 +547,35 @@
             </section>
 
             <!-- WHAT WE COLLECT -->
-            <section class="border-t border-[#e2dfd7] py-8">
-                <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px]">
+            <section class="border-t border-[#e2dfd7] py-8 dark:border-[#27272a]">
+                <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px] dark:text-white">
                     What We Collect
                 </h2>
 
-                <ul class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555]">
+                <ul class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555] dark:text-gray-400">
                     <li class="flex items-start gap-3">
-                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070]"></span>
+                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070] dark:bg-gray-400"></span>
                         <p>
-                            <strong class="font-semibold text-[#111827]">Content you create in the app:</strong> 
+                            <strong class="font-semibold text-[#111827] dark:text-white">Content you create in the app:</strong> 
                             subscription details (name, price, renewal period, dates, category, icons, colors) and personal calculation entries. This content stays on your device and, if you enable iCloud sync, in your private iCloud database.
                         </p>
                     </li>
                     <li class="flex items-start gap-3">
-                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070]"></span>
+                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070] dark:bg-gray-400"></span>
                         <p>
-                            <strong class="font-semibold text-[#111827]">Usage &amp; diagnostic data:</strong> 
+                            <strong class="font-semibold text-[#111827] dark:text-white">Usage &amp; diagnostic data:</strong> 
                             anonymous product analytics about how the app is used — events such as completing onboarding, adding a subscription (its billing period, not its name or price), opening the paywall, or purchasing Premium — together with basic device and app information (device model, OS version, app version) and a random analytics identifier. This never includes the names, prices, or notes of your subscriptions.
                         </p>
                     </li>
                     <li class="flex items-start gap-3">
-                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070]"></span>
+                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070] dark:bg-gray-400"></span>
                         <p>
-                            <strong class="font-semibold text-[#111827]">Advertising measurement:</strong> 
+                            <strong class="font-semibold text-[#111827] dark:text-white">Advertising measurement:</strong> 
                             if you install Subscrr from one of our ads, limited app events (such as install and app open) are shared with Meta to measure whether our advertising works, and Apple’s SKAdNetwork provides aggregated, anonymous attribution. The device advertising identifier is used only if you allow tracking when asked.
                         </p>
                     </li>
                     <li class="flex items-start gap-3">
-                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070]"></span>
+                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070] dark:bg-gray-400"></span>
                         <p>
                             We still do not collect your name, email, contacts, or precise location, we never sell your data, and we do not share it with data brokers.
                         </p>
@@ -589,145 +584,145 @@
             </section>
 
             <!-- AI PROCESSING -->
-            <section class="border-t border-[#e2dfd7] py-8">
-                <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px]">
+            <section class="border-t border-[#e2dfd7] py-8 dark:border-[#27272a]">
+                <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px] dark:text-white">
                     AI Processing (AI Spend)
                 </h2>
 
-                <p class="mt-4 text-[16px] leading-relaxed text-[#555555]">
+                <p class="mt-4 text-[16px] leading-relaxed text-[#555555] dark:text-gray-400">
                     AI Spend is an optional Premium feature. When you choose to scan a receipt or bank screenshot:
                 </p>
 
-                <ul class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555]">
+                <ul class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555] dark:text-gray-400">
                     <li class="flex items-start gap-3">
-                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070]"></span>
+                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070] dark:bg-gray-400"></span>
                         <p>the image is transmitted over HTTPS through our secure proxy (hosted on Cloudflare) to Google Gemini, solely to extract the total, line items, merchant, and date;</p>
                     </li>
                     <li class="flex items-start gap-3">
-                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070]"></span>
+                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070] dark:bg-gray-400"></span>
                         <p>we do not store your images on any server;</p>
                     </li>
                     <li class="flex items-start gap-3">
-                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070]"></span>
+                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070] dark:bg-gray-400"></span>
                         <p>the app keeps a small thumbnail and the extracted values in an on-device history until you delete them or they are automatically removed after a retention period;</p>
                     </li>
                     <li class="flex items-start gap-3">
-                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070]"></span>
+                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070] dark:bg-gray-400"></span>
                         <p>please do not scan documents you would not want processed by an AI service.</p>
                     </li>
                 </ul>
             </section>
 
             <!-- ANALYTICS & ADVERTISING -->
-            <section class="border-t border-[#e2dfd7] py-8">
-                <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px]">
+            <section class="border-t border-[#e2dfd7] py-8 dark:border-[#27272a]">
+                <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px] dark:text-white">
                     Analytics &amp; Advertising
                 </h2>
 
-                <ul class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555]">
+                <ul class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555] dark:text-gray-400">
                     <li class="flex items-start gap-3">
-                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070]"></span>
+                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070] dark:bg-gray-400"></span>
                         <p>
-                            <strong class="font-semibold text-[#111827]">PostHog</strong> 
+                            <strong class="font-semibold text-[#111827] dark:text-white">PostHog</strong> 
                             — product analytics that helps us see which features are used and where people get stuck, so we can improve the app. It receives the usage events and device information described above, tied to a random identifier, and stores them on PostHog’s cloud in the United States. It does not receive your subscription content.
                         </p>
                     </li>
                     <li class="flex items-start gap-3">
-                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070]"></span>
+                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070] dark:bg-gray-400"></span>
                         <p>
-                            <strong class="font-semibold text-[#111827]">Meta (Facebook) SDK</strong> 
+                            <strong class="font-semibold text-[#111827] dark:text-white">Meta (Facebook) SDK</strong> 
                             — advertising measurement. When you arrive from one of our ads, it reports basic app events to Meta so we can tell whether a campaign worked, and it supports Apple’s privacy-preserving SKAdNetwork. It uses the advertising identifier for cross-app measurement only if you grant permission in the “Allow Tracking” prompt; if you decline, measurement falls back to aggregated, anonymous data.
                         </p>
                     </li>
                 </ul>
 
-                <div class="mt-6 rounded-2xl bg-white px-5 py-4 shadow-sm border border-black/5">
-                    <p class="text-[15px] leading-relaxed text-[#555555]">
+                <div class="mt-6 rounded-2xl bg-white px-5 py-4 shadow-sm border border-black/5 dark:bg-[#1a1a1a] dark:border-white/10">
+                    <p class="text-[15px] leading-relaxed text-[#555555] dark:text-gray-400">
                         You can turn tracking off at any time in 
-                        <strong class="font-semibold text-[#111827]">iOS Settings → Privacy &amp; Security → Tracking.</strong> 
+                        <strong class="font-semibold text-[#111827] dark:text-white">iOS Settings → Privacy &amp; Security → Tracking.</strong> 
                         Declining does not limit any app feature.
                     </p>
                 </div>
             </section>
 
             <!-- THIRD-PARTY SERVICES -->
-            <section class="border-t border-[#e2dfd7] py-8">
-                <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px]">
+            <section class="border-t border-[#e2dfd7] py-8 dark:border-[#27272a]">
+                <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px] dark:text-white">
                     Third-Party Services
                 </h2>
 
-                <ul class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555]">
+                <ul class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555] dark:text-gray-400">
                     <li class="flex items-start gap-3">
-                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070]"></span>
+                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070] dark:bg-gray-400"></span>
                         <p>
-                            <strong class="font-semibold text-[#111827]">Apple iCloud / CloudKit</strong> 
+                            <strong class="font-semibold text-[#111827] dark:text-white">Apple iCloud / CloudKit</strong> 
                             — optional private sync through your Apple account. We cannot access your private iCloud data.
                         </p>
                     </li>
                     <li class="flex items-start gap-3">
-                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070]"></span>
+                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070] dark:bg-gray-400"></span>
                         <p>
-                            <strong class="font-semibold text-[#111827]">Google Gemini</strong> 
+                            <strong class="font-semibold text-[#111827] dark:text-white">Google Gemini</strong> 
                             (via our Cloudflare-hosted proxy) — receipt recognition for AI Spend, only when you submit an image.
                         </p>
                     </li>
                     <li class="flex items-start gap-3">
-                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070]"></span>
+                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070] dark:bg-gray-400"></span>
                         <p>
-                            <strong class="font-semibold text-[#111827]">Brandfetch</strong> 
+                            <strong class="font-semibold text-[#111827] dark:text-white">Brandfetch</strong> 
                             (with Simple Icons as a fallback) — brand search and logos. These services receive only the text you type into brand search or the public domain name of a service (for example, netflix.com).
                         </p>
                     </li>
                     <li class="flex items-start gap-3">
-                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070]"></span>
+                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070] dark:bg-gray-400"></span>
                         <p>
-                            <strong class="font-semibold text-[#111827]">PostHog</strong> 
+                            <strong class="font-semibold text-[#111827] dark:text-white">PostHog</strong> 
                             — product analytics (usage events and device info, no subscription content). See Analytics &amp; Advertising above.
                         </p>
                     </li>
                     <li class="flex items-start gap-3">
-                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070]"></span>
+                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070] dark:bg-gray-400"></span>
                         <p>
-                            <strong class="font-semibold text-[#111827]">Meta Platforms</strong> 
+                            <strong class="font-semibold text-[#111827] dark:text-white">Meta Platforms</strong> 
                             — advertising measurement for our ads. See Analytics &amp; Advertising above.
                         </p>
                     </li>
                 </ul>
 
-                <p class="mt-6 text-[16px] font-medium text-[#111827]">
+                <p class="mt-6 text-[16px] font-medium text-[#111827] dark:text-white">
                     No third party receives your subscription list, prices, notes, or any personal identifiers from us.
                 </p>
             </section>
 
             <!-- WEBSITE ANALYTICS -->
-            <section class="border-t border-[#e2dfd7] py-8">
-                <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px]">
+            <section class="border-t border-[#e2dfd7] py-8 dark:border-[#27272a]">
+                <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px] dark:text-white">
                     Website Analytics
                 </h2>
 
-                <div class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555]">
+                <div class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555] dark:text-gray-400">
                     <p>
-                        Our website (subscrr.app) uses <strong class="font-semibold text-[#111827]">PostHog</strong> to understand which pages people read and whether they go on to the App Store, so we can improve the site. It records page views, the page you came from, a coarse location derived from your IP address, your browser and device type, and clicks on links such as the App Store button.
+                        Our website (subscrr.app) uses <strong class="font-semibold text-[#111827] dark:text-white">PostHog</strong> to understand which pages people read and whether they go on to the App Store, so we can improve the site. It records page views, the page you came from, a coarse location derived from your IP address, your browser and device type, and clicks on links such as the App Store button.
                     </p>
                     <p>
-                        It sets <strong class="font-semibold text-[#111827]">no cookies</strong>: a random visit identifier is stored in your browser’s local storage, and nothing links it to your name or to your subscription data, which never leaves your device and iCloud.
+                        It sets <strong class="font-semibold text-[#111827] dark:text-white">no cookies</strong>: a random visit identifier is stored in your browser’s local storage, and nothing links it to your name or to your subscription data, which never leaves your device and iCloud.
                     </p>
                     <p>
                         We do not record your screen, and if your browser sends a “Do Not Track” signal we collect nothing at all.
                     </p>
                     <p>
-                        To opt out completely, enable Do Not Track in your browser settings or block <strong class="font-semibold text-[#111827]">us.i.posthog.com</strong>. For analytics and advertising measurement inside the app, see the “Analytics &amp; Advertising” section above.
+                        To opt out completely, enable Do Not Track in your browser settings or block <strong class="font-semibold text-[#111827] dark:text-white">us.i.posthog.com</strong>. For analytics and advertising measurement inside the app, see the “Analytics &amp; Advertising” section above.
                     </p>
                 </div>
             </section>
 
             <!-- PURCHASES -->
-            <section class="border-t border-[#e2dfd7] py-8">
-                <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px]">
+            <section class="border-t border-[#e2dfd7] py-8 dark:border-[#27272a]">
+                <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px] dark:text-white">
                     Purchases
                 </h2>
 
-                <div class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555]">
+                <div class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555] dark:text-gray-400">
                     <p>
                         Subscrr Premium is purchased through Apple’s App Store. Apple processes all payments; we never see or store your payment details.
                     </p>
@@ -738,34 +733,34 @@
             </section>
 
             <!-- DATA STORAGE & DELETION -->
-            <section class="border-t border-[#e2dfd7] py-8">
-                <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px]">
+            <section class="border-t border-[#e2dfd7] py-8 dark:border-[#27272a]">
+                <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px] dark:text-white">
                     Data Storage &amp; Deletion
                 </h2>
 
-                <ul class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555]">
+                <ul class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555] dark:text-gray-400">
                     <li class="flex items-start gap-3">
-                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070]"></span>
+                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070] dark:bg-gray-400"></span>
                         <p>
                             Your data is stored locally on your device and, if iCloud sync is enabled, in your private iCloud database linked to your Apple ID. Sync can be turned off in Settings → iCloud &amp; Data.
                         </p>
                     </li>
                     <li class="flex items-start gap-3">
-                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070]"></span>
+                        <span class="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-[#707070] dark:bg-gray-400"></span>
                         <p>
-                            You can delete any subscription, calculation, or AI scan at any time, use <strong class="font-semibold text-[#111827]">“Delete All Data”</strong> in Settings → iCloud &amp; Data (removes local and synced data), or delete the app. iCloud data can also be managed from your Apple ID settings.
+                            You can delete any subscription, calculation, or AI scan at any time, use <strong class="font-semibold text-[#111827] dark:text-white">“Delete All Data”</strong> in Settings → iCloud &amp; Data (removes local and synced data), or delete the app. iCloud data can also be managed from your Apple ID settings.
                         </p>
                     </li>
                 </ul>
             </section>
 
             <!-- YOUR RIGHTS -->
-            <section class="border-t border-[#e2dfd7] py-8">
-                <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px]">
+            <section class="border-t border-[#e2dfd7] py-8 dark:border-[#27272a]">
+                <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px] dark:text-white">
                     Your Rights
                 </h2>
 
-                <div class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555]">
+                <div class="mt-4 space-y-4 text-[16px] leading-relaxed text-[#555555] dark:text-gray-400">
                     <p>
                         Depending on where you live (including the EEA and the UK), you may have rights to access, correct, delete, restrict, or object to processing of your personal data.
                     </p>
@@ -782,13 +777,13 @@
             </section>
 
             <!-- CONTACT -->
-            <section class="border-t border-[#e2dfd7] py-8">
-                <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px]">
+            <section class="border-t border-[#e2dfd7] py-8 dark:border-[#27272a]">
+                <h2 class="text-[22px] font-bold text-[#111827] sm:text-[24px] dark:text-white">
                     Contact
                 </h2>
 
                 <p class="mt-4">
-                    <a href="mailto:hi@subscrr.app" class="text-[16px] font-semibold text-[#111827] underline underline-offset-4 transition hover:text-[#ff3218]">
+                    <a href="mailto:hi@subscrr.app" class="text-[16px] font-semibold text-[#111827] underline underline-offset-4 transition hover:text-[#ff3218] dark:text-white dark:hover:text-[#ff3218]">
                         hi@subscrr.app
                     </a>
                 </p>
@@ -803,4 +798,4 @@
 <?php $this->load->view('layout/footer.php'); ?>
 
 </body>
-</html> 
+</html>

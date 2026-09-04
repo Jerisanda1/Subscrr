@@ -1,7 +1,7 @@
-<header id="navbar" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-32px)] max-w-[1500px] flex items-center px-6 py-3 bg-white/60 backdrop-blur-lg rounded-full border border-gray-200 shadow-sm">
+<header id="navbar" class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-32px)] max-w-[1500px] flex items-center px-6 py-3  bg-[#f5f4ee]/60 dark:bg-[#0a0a0a]/60 backdrop-blur-lg rounded-full border border-gray-200 shadow-sm dark:border-gray-500">
     <!-- logo -->
-    <a href="<?= site_url('home') ?>" id="logo-subscrr" class="flex items-center gap-2 font-bold text-xl text-gray-800">
-        <img src="<?= base_url('assets/uploads/icon/icon_Subscrr.png') ?>" alt="Subscrr" class="h-8 w-8 object-contain">
+    <a href="<?= site_url('home') ?>" id="logo-subscrr" class="flex items-center gap-2 font-bold text-xl text-gray-800 dark:text-white">
+        <img src="<?= base_url('assets/uploads/icon/icon_Subscrr.png') ?>" alt="Subscrr" class="h-8 w-8 object-contain rounded-md">
         Subscrr
     </a>
     
@@ -15,7 +15,7 @@
     </nav>
     
     <!-- Tombol Get the app (Selalu Terlihat di Semua Ukuran Layar) -->
-    <a href="<?= site_url('home') ?>" id="btn-get-app" class="bg-orange-600 text-white text-sm font-semibold px-6 py-3 rounded-full transition ml-4">Get the app</a>
+    <a href="https://apps.apple.com/us/app/subscrr-subscription-tracker/id6757530448?ct=site_nav" target="_blank" rel="noopener noreferrer" id="btn-get-app" class="bg-orange-600 text-white text-sm font-semibold px-6 py-3 rounded-full transition ml-4">Get the app</a>
 
     <!-- Tombol Hamburger (Hanya Mobile) -->
     <button id="menu-toggle" class="md:hidden ml-3 p-2 text-gray-700 focus:outline-none">

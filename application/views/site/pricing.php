@@ -77,18 +77,18 @@
   }
 </style>
 
-<section id="pricing" class="min-h-screen flex items-center justify-center bg-[#f5f4ee] font-sans p-6">
+<section id="pricing" class="min-h-screen flex items-center justify-center bg-[#f5f4ee] font-sans p-6 dark:bg-[#0a0a0a]">
   <div class="max-w-4xl w-full text-center">
     <p
       data-animate="fade-down"
-      class="text-blue-700 font-bold tracking-widest text-sm mb-4"
+      class="text-blue-700 font-bold tracking-widest text-sm mb-4 dark:text-blue-400"
     >
       PRICING
     </p>
     <h1
       data-animate="fade-up"
       style="transition-delay: 0.1s"
-      class="text-5xl md:text-7xl font-extrabold tracking-tight text-gray-900 leading-tight"
+      class="text-5xl md:text-7xl font-extrabold tracking-tight text-gray-900 leading-tight dark:text-white"
     >
       Free to start.<br />Premium when you grow.
     </h1>
@@ -97,7 +97,7 @@
     <div
       data-animate="fade-up"
       style="transition-delay: 0.2s"
-      class="mt-10 inline-flex bg-white/60 backdrop-blur-md rounded-full p-1 relative shadow-md"
+      class="mt-10 inline-flex bg-white/60 backdrop-blur-md rounded-full p-1 relative shadow-md dark:bg-gray-800/60"
     >
       <div
         id="toggle-indicator"
@@ -121,7 +121,7 @@
       </button>
       <button
         id="btn-yearly"
-        class="relative z-10 flex-1 px-8 py-3 rounded-full font-semibold transition-colors duration-300 text-gray-600 whitespace-nowrap"
+        class="relative z-10 flex-1 px-8 py-3 rounded-full font-semibold transition-colors duration-300 text-gray-600 dark:text-gray-400 whitespace-nowrap"
         style="background: transparent"
       >
         Yearly
@@ -137,14 +137,14 @@
       <div
         data-animate="slide-left"
         style="transition-delay: 0.3s"
-        class="bg-white rounded-[2rem] p-10 shadow-sm border border-gray-100 flex flex-col"
+        class="bg-white rounded-[2rem] p-10 shadow-sm border border-gray-100 flex flex-col dark:bg-[#141414] dark:border-gray-800"
       >
         <div class="flex justify-between items-start mb-2">
-          <h2 class="text-2xl font-bold text-gray-900">Free</h2>
-          <div class="text-5xl font-extrabold text-gray-900">$0</div>
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Free</h2>
+          <div class="text-5xl font-extrabold text-gray-900 dark:text-white">$0</div>
         </div>
-        <p class="text-gray-500">Enough to see the whole picture.</p>
-        <ul class="mt-8 space-y-4 text-gray-800 flex-grow">
+        <p class="text-gray-500 dark:text-gray-400">Enough to see the whole picture.</p>
+        <ul class="mt-8 space-y-4 text-gray-800 dark:text-gray-200 flex-grow">
           <li class="flex gap-3 items-center">
             <span class="text-[#f24e1e] font-bold">➜ </span> Up to 6
             subscriptions
@@ -169,7 +169,7 @@
           href="https://apps.apple.com/us/app/subscrr-take-back-control/id6757530448"
           target="_blank"
           rel="noopener noreferrer"
-          class="magnetic mt-10 w-full py-4 border border-gray-300 rounded-full font-semibold text-gray-900 hover:bg-gray-50 transition-colors text-center"
+          class="magnetic mt-10 w-full py-4 border border-gray-300 rounded-full font-semibold text-gray-900 hover:bg-gray-50 transition-colors text-center dark:border-gray-600 dark:text-white dark:hover:bg-gray-800"
         >
           Start free
         </a>
@@ -179,7 +179,7 @@
       <div
         data-animate="slide-right-premium"
         style="transition-delay: 0.4s; border: 1px solid #f24e1e;"
-        class="bg-white rounded-[2rem] p-10 shadow-xl relative flex flex-col"
+        class="bg-white rounded-[2rem] p-10 shadow-xl relative flex flex-col dark:bg-[#161515]"
         data-scale="1.03"
       >
         <div
@@ -188,18 +188,18 @@
           Most popular
         </div>
         <div class="flex justify-between items-start mb-2">
-          <h2 class="text-2xl font-bold text-gray-900">Premium</h2>
-          <div class="text-5xl font-extrabold text-gray-900">
+          <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Premium</h2>
+          <div class="text-5xl font-extrabold text-gray-900 dark:text-white">
             <span id="premium-price">$7.99</span>
-            <span id="premium-suffix" class="text-lg font-medium text-gray-500"
+            <span id="premium-suffix" class="text-lg font-medium text-gray-500 dark:text-gray-400"
               >/mo</span
             >
           </div>
         </div>
-        <p id="premium-subtitle" class="text-gray-500">
+        <p id="premium-subtitle" class="text-gray-500 dark:text-gray-400">
           Billed monthly. Cancel anytime.
         </p>
-        <ul class="mt-8 space-y-4 text-gray-800 flex-grow">
+        <ul class="mt-8 space-y-4 text-gray-800 dark:text-gray-200 flex-grow">
           <li class="flex gap-3 items-center">
             <span class="text-[#f24e1e] font-bold">➜ </span> Unlimited
             subscriptions
@@ -238,16 +238,16 @@
 </section>
 
 <!-- ================= FAQ SECTION (DIPERBARUI) ================= -->
-<section class="bg-[#f5f4ee] px-6 py-24 lg:py-32">
+<section class="bg-[#f5f4ee] px-6 py-24 lg:py-32 dark:bg-[#0a0a0a]">
   <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
     <!-- Kolom Kiri -->
     <div class="lg:col-span-5" data-animate="fade-up">
       <span
-        class="text-blue-600 font-bold text-sm uppercase tracking-wider"
+        class="text-blue-600 font-bold text-sm uppercase tracking-wider dark:text-blue-400"
         >FAQ</span
       >
       <h2
-        class="text-5xl md:text-5xl font-extrabold tracking-tight text-[#111] leading-[1.05] mt-4"
+        class="text-5xl md:text-5xl font-extrabold tracking-tight text-[#111] leading-[1.05] mt-4 dark:text-white"
       >
         Good questions.
       </h2>
@@ -257,7 +257,7 @@
     <div class="lg:col-span-7">
       <!-- Pertanyaan 1 -->
       <div
-        class="faq-item border-b border-gray-300 py-6 first:border-t"
+        class="faq-item border-b border-gray-300 py-6 first:border-t dark:border-gray-700"
         data-animate="fade-up"
         style="transition-delay: 0.1s"
       >
@@ -265,7 +265,7 @@
           class="faq-question w-full flex items-center justify-between text-left cursor-pointer bg-transparent border-none p-0 group"
         >
           <span
-            class="faq-question-text text-xl md:text-2xl font-semibold text-[#111] transition-colors duration-200 group-hover:text-[#ff3b30]"
+            class="faq-question-text text-xl md:text-2xl font-semibold text-[#111] transition-colors duration-200 group-hover:text-[#ff3b30] dark:text-white"
             >Do I have to connect my bank?</span
           >
           <span
@@ -276,7 +276,7 @@
         <div
           class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
         >
-          <p class="text-gray-500 text-base md:text-lg leading-relaxed pt-4">
+          <p class="text-gray-500 text-base md:text-lg leading-relaxed pt-4 dark:text-gray-400">
             Never. Subscrr doesn't touch your bank. You add subscriptions
             yourself. Takes a minute, and nothing about your finances ever
             leaves your hands.
@@ -286,7 +286,7 @@
 
       <!-- Pertanyaan 2 -->
       <div
-        class="faq-item border-b border-gray-300 py-6"
+        class="faq-item border-b border-gray-300 py-6 dark:border-gray-700"
         data-animate="fade-up"
         style="transition-delay: 0.2s"
       >
@@ -294,7 +294,7 @@
           class="faq-question w-full flex items-center justify-between text-left cursor-pointer bg-transparent border-none p-0 group"
         >
           <span
-            class="faq-question-text text-xl md:text-2xl font-semibold text-[#111] transition-colors duration-200 group-hover:text-[#ff3b30]"
+            class="faq-question-text text-xl md:text-2xl font-semibold text-[#111] transition-colors duration-200 group-hover:text-[#ff3b30] dark:text-white"
             >Where is my data stored?</span
           >
           <span
@@ -305,7 +305,7 @@
         <div
           class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
         >
-          <p class="text-gray-500 text-base md:text-lg leading-relaxed pt-4">
+          <p class="text-gray-500 text-base md:text-lg leading-relaxed pt-4 dark:text-gray-400">
             Your subscriptions sit in your own private iCloud, tied to your
             Apple ID and synced across your devices. They never reach our
             servers, so we can't read them even if we wanted to.
@@ -315,7 +315,7 @@
 
       <!-- Pertanyaan 3 -->
       <div
-        class="faq-item border-b border-gray-300 py-6"
+        class="faq-item border-b border-gray-300 py-6 dark:border-gray-700"
         data-animate="fade-up"
         style="transition-delay: 0.3s"
       >
@@ -323,7 +323,7 @@
           class="faq-question w-full flex items-center justify-between text-left cursor-pointer bg-transparent border-none p-0 group"
         >
           <span
-            class="faq-question-text text-xl md:text-2xl font-semibold text-[#111] transition-colors duration-200 group-hover:text-[#ff3b30]"
+            class="faq-question-text text-xl md:text-2xl font-semibold text-[#111] transition-colors duration-200 group-hover:text-[#ff3b30] dark:text-white"
             >Do you track me?</span
           >
           <span
@@ -334,7 +334,7 @@
         <div
           class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
         >
-          <p class="text-gray-500 text-base md:text-lg leading-relaxed pt-4">
+          <p class="text-gray-500 text-base md:text-lg leading-relaxed pt-4 dark:text-gray-400">
             Not your money. We use PostHog to count anonymous events like
             "opened the app" or "added a subscription", plus Meta's SDK to
             tell whether an ad we paid for actually worked. No names, no
@@ -346,7 +346,7 @@
 
       <!-- Pertanyaan 4 -->
       <div
-        class="faq-item border-b border-gray-300 py-6"
+        class="faq-item border-b border-gray-300 py-6 dark:border-gray-700"
         data-animate="fade-up"
         style="transition-delay: 0.4s"
       >
@@ -354,7 +354,7 @@
           class="faq-question w-full flex items-center justify-between text-left cursor-pointer bg-transparent border-none p-0 group"
         >
           <span
-            class="faq-question-text text-xl md:text-2xl font-semibold text-[#111] transition-colors duration-200 group-hover:text-[#ff3b30]"
+            class="faq-question-text text-xl md:text-2xl font-semibold text-[#111] transition-colors duration-200 group-hover:text-[#ff3b30] dark:text-white"
             >What do I get for free?</span
           >
           <span
@@ -365,7 +365,7 @@
         <div
           class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
         >
-          <p class="text-gray-500 text-base md:text-lg leading-relaxed pt-4">
+          <p class="text-gray-500 text-base md:text-lg leading-relaxed pt-4 dark:text-gray-400">
             Up to six subscriptions with full breakdowns, reminders, custom
             icons and iCloud sync. When six stops being enough, Premium unlocks
             unlimited subscriptions and the AI Spend scanner.
@@ -375,7 +375,7 @@
 
       <!-- Pertanyaan 5 -->
       <div
-        class="faq-item border-b border-gray-300 py-6"
+        class="faq-item border-b border-gray-300 py-6 dark:border-gray-700"
         data-animate="fade-up"
         style="transition-delay: 0.5s"
       >
@@ -383,7 +383,7 @@
           class="faq-question w-full flex items-center justify-between text-left cursor-pointer bg-transparent border-none p-0 group"
         >
           <span
-            class="faq-question-text text-xl md:text-2xl font-semibold text-[#111] transition-colors duration-200 group-hover:text-[#ff3b30]"
+            class="faq-question-text text-xl md:text-2xl font-semibold text-[#111] transition-colors duration-200 group-hover:text-[#ff3b30] dark:text-white"
             >How does AI Spend handle my receipts?</span
           >
           <span
@@ -394,7 +394,7 @@
         <div
           class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
         >
-          <p class="text-gray-500 text-base md:text-lg leading-relaxed pt-4">
+          <p class="text-gray-500 text-base md:text-lg leading-relaxed pt-4 dark:text-gray-400">
             AI reads the numbers and forgets the picture. Images are analysed,
             values extracted, photo discarded. We keep only hashes, never the
             pictures.
@@ -404,7 +404,7 @@
 
       <!-- Pertanyaan 6 -->
       <div
-        class="faq-item border-b border-gray-300 py-6"
+        class="faq-item border-b border-gray-300 py-6 dark:border-gray-700"
         data-animate="fade-up"
         style="transition-delay: 0.6s"
       >
@@ -412,7 +412,7 @@
           class="faq-question w-full flex items-center justify-between text-left cursor-pointer bg-transparent border-none p-0 group"
         >
           <span
-            class="faq-question-text text-xl md:text-2xl font-semibold text-[#111] transition-colors duration-200 group-hover:text-[#ff3b30]"
+            class="faq-question-text text-xl md:text-2xl font-semibold text-[#111] transition-colors duration-200 group-hover:text-[#ff3b30] dark:text-white"
             >Can I cancel Premium anytime?</span
           >
           <span
@@ -423,7 +423,7 @@
         <div
           class="faq-answer max-h-0 overflow-hidden transition-all duration-300 ease-in-out"
         >
-          <p class="text-gray-500 text-base md:text-lg leading-relaxed pt-4">
+          <p class="text-gray-500 text-base md:text-lg leading-relaxed pt-4 dark:text-gray-400">
             Yes, in two taps: it's a standard App Store subscription. Your free
             plan keeps working. No hard feelings.
           </p>
@@ -434,42 +434,102 @@
 </section>
 
 <!-- ================= THREADS PROMO BLOCK ================= -->
-<section class="bg-[#f5f4ee] px-6 pb-24 lg:pb-32">
-  <a
-    href="https://www.threads.com/@subscrr"
-    target="_blank"
-    rel="noopener noreferrer"
-    data-animate="zoom-in"
-    style="transition-delay: 0.1s"
-    class="block max-w-6xl mx-auto rounded-[2rem] overflow-hidden relative shadow-lg border border-gray-100 bg-white group"
-  >
-    <!-- Gambar Background dengan Hover Zoom -->
-    <img
-      src="assets/uploads/pricing/threads-block.webp"
-      alt="Threads @subscrr"
-      class="w-full h-auto object-cover block select-none transition-transform duration-500 ease-in-out group-hover:scale-105"
-    />
-
-    <!-- Overlay Teks -->
-    <div
-      class="absolute bottom-6 left-6 md:bottom-20 md:left-12 flex items-center gap-5 md:gap-7"
+<section class="bg-[#f5f4ee] px-6 pb-24 lg:pb-32 dark:bg-[#0a0a0a]">
+  
+  <div class="max-w-6xl mx-auto">
+    
+    <!-- Bagian Banner Gambar -->
+    <div 
+      data-animate="zoom-in"
+      style="transition-delay: 0.1s"
+      class="relative overflow-hidden rounded-[2rem] shadow-lg border border-gray-100 bg-white group dark:bg-gray-900 dark:border-gray-700"
     >
-      <!-- Logo Threads (Menggunakan File PNG) -->
+      <!-- Link ke Threads -->
+      <a href="https://www.threads.com/@subscrr" target="_blank" rel="noopener noreferrer" class="absolute inset-0 z-0"></a>
+
+      <!-- Gambar Background -->
       <img
-        src="assets/uploads/pricing/threads-icon.png"
-        alt="Threads Icon"
-        class="w-16 h-16 md:w-25 md:h-25 object-contain drop-shadow-md"
+        src="assets/uploads/pricing/journal-block.png"
+        alt="Threads @subscrr"
+        class="w-full h-auto object-cover block select-none transition-transform duration-500 ease-in-out group-hover:scale-105"
       />
 
-      <!-- Teks -->
-      <div class="text-white drop-shadow-md">
-        <h2 class="text-5xl md:text-8xl font-extrabold tracking-tight leading-none">
-          Threads
-        </h2>
-        <p class="text-3xl md:text-5xl font-bold mt-1">@subscrr</p>
+      <!-- Konten Kiri (Teks dan Tombol Panah) -->
+      <!-- PERUBAHAN: gunakan top-10 untuk mobile, dan bottom-10 untuk desktop -->
+      <div class="absolute top-10 left-10 md:top-auto md:bottom-10 z-10 flex flex-col items-start max-w-xl p-4 md:p-0">
+    <!-- Judul: Bisa diklik, mengarah ke blog, dan tambahkan cursor-pointer -->
+    <h1 
+        onclick="window.location.href='<?= site_url('blog') ?>'; event.stopPropagation();" 
+        class="text-white text-2xl md:text-7xl font-bold leading-tight tracking-tight drop-shadow-lg cursor-pointer"
+    >
+        Open<br />
+        the Subscrr<br />
+        Journal
+    </h1>
+    
+    <!-- Paragraf: Hanya muncul di desktop (md ke atas) -->
+    <p class="text-white text-base md:text-xl font-light opacity-90 mt-4 md:mt-6 mb-6 md:mb-10 leading-relaxed drop-shadow-md hidden md:block">
+        We break down subscriptions and how much money they're costing you.
+    </p>
+
+    <!-- Tombol Panah Merah: Ukuran diperkecil di mobile (w-12 h-12) -->
+    <div class="relative group/btn" onclick="window.location.href='<?= site_url('blog') ?>'; event.stopPropagation();">
+        <!-- Ring / Lingkaran luar transparan saat hover -->
+        <div class="absolute inset-0 rounded-full bg-red-500 opacity-0 scale-100 group-hover/btn:opacity-40 group-hover/btn:scale-125 transition-all duration-500 pointer-events-none"></div>
+        
+        <!-- Tombol Panah utama: w-12 h-12 untuk mobile, w-20 h-20 untuk desktop -->
+        <div class="relative z-10 bg-red-500 hover:bg-red-600 transition-colors duration-300 w-10 h-10 md:w-20 md:h-20 rounded-full flex items-center justify-center cursor-pointer shadow-lg">
+            <!-- Ikon Panah SVG: w-6 h-6 untuk mobile, w-10 h-10 untuk desktop -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6 md:w-10 md:h-10 text-white transform transition-transform group-hover/btn:translate-x-1">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+        </div>
+    </div>
+</div>
+      <!-- Card Subscribe KHUSUS DESKTOP -->
+      <div 
+        class="hidden md:block absolute right-10 top-1/2 -translate-y-1/2 z-10 w-[450px] bg-white dark:bg-[#1a1a1a]/95 backdrop-blur-sm p-8 rounded-[2rem] shadow-2xl border border-gray-200 dark:border-white/10" 
+        onclick="event.stopPropagation()"
+      >
+          <h2 class="text-gray-900 dark:text-white text-2xl font-semibold mb-6">Subscribe for updates</h2>
+          <form class="flex items-center gap-3">
+              <input 
+                  type="email" 
+                  placeholder="you@example.com" 
+                  class="flex-1 bg-gray-100 border-gray-300 text-gray-900 placeholder-gray-500 dark:bg-[#2a2a2a] dark:border-transparent dark:text-white dark:placeholder-gray-400 rounded-full px-6 py-4 outline-none focus:ring-2 focus:ring-red-500 border transition-colors"
+              />
+              <button type="submit" class="bg-[#ff4d00] hover:bg-[#e64400] text-white font-bold rounded-full px-8 py-4 transition-colors whitespace-nowrap">
+                  Subscribe
+              </button>
+          </form>
+          <p class="text-gray-500 dark:text-gray-400 text-sm mt-5 leading-relaxed">
+              By subscribing, you agree to receive the Subscrr newsletter. You can unsubscribe anytime.
+          </p>
       </div>
     </div>
-  </a>
+
+    <!-- Card Subscribe KHUSUS MOBILE -->
+    <div 
+      class="md:hidden mt-6 bg-white dark:bg-[#1a1a1a]/95 backdrop-blur-sm p-8 rounded-[2rem] shadow-2xl border border-gray-200 dark:border-white/10" 
+      onclick="event.stopPropagation()"
+    >
+        <h2 class="text-gray-900 dark:text-white text-2xl font-semibold mb-6">Subscribe for updates</h2>
+        <form class="flex flex-col gap-3">
+            <input 
+                type="email" 
+                placeholder="you@example.com" 
+                class="w-full bg-gray-100 border-gray-300 text-gray-900 placeholder-gray-500 dark:bg-[#2a2a2a] dark:border-transparent dark:text-white dark:placeholder-gray-400 rounded-full px-6 py-4 outline-none focus:ring-2 focus:ring-red-500 border transition-colors"
+            />
+            <button type="submit" class="w-full bg-[#ff4d00] hover:bg-[#e64400] text-white font-bold rounded-full px-8 py-4 transition-colors whitespace-nowrap">
+                Subscribe
+            </button>
+        </form>
+        <p class="text-gray-500 dark:text-gray-400 text-sm mt-5 leading-relaxed">
+            By subscribing, you agree to receive the Subscrr newsletter. You can unsubscribe anytime.
+        </p>
+    </div>
+
+  </div>
 </section>
 
 <!-- ================= SCRIPTS (PRICING + FAQ + SCROLL ANIMATION) ================= -->

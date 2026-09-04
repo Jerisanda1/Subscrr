@@ -55,7 +55,7 @@
             
             <!-- Teks Kiri (Canvas Partikel) -->
             <div class="space-y-4 z-10" data-animate="slide-left" style="transition-delay: 0.1s;">
-                <p class="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase">
+                <p class="text-xs font-bold tracking-[0.2em] text-gray-400 uppercase dark:text-gray-300">
                     Premium · AI Spend
                 </p>
                 <div id="particle-container" class="relative w-full h-30 md:h-40 cursor-pointer">
@@ -87,14 +87,14 @@
 
 <!-- ================= SECTION PREMIUM WIDGETS ================= -->
 <section id="premium-widgets" class="min-h-screen flex flex-col items-center justify-center px-6 py-20 text-center">
-    <p class="text-xs font-bold tracking-[0.2em] text-blue-500 uppercase mb-4" data-animate="fade-down" style="transition-delay: 0.1s;">
+    <p class="text-xs font-bold tracking-[0.2em] text-blue-500 uppercase mb-4 dark:text-blue-400" data-animate="fade-down" style="transition-delay: 0.1s;">
         Premium · Widgets
     </p>
-    <h2 class="text-5xl md:text-7xl font-extrabold tracking-tight text-[#111] leading-[1.1] max-w-4xl mx-auto" data-animate="fade-up" style="transition-delay: 0.2s;">
+    <h2 class="text-5xl md:text-7xl font-extrabold tracking-tight text-[#111] dark:text-white leading-[1.1] max-w-4xl mx-auto" data-animate="fade-up" style="transition-delay: 0.2s;">
         Your next payment,<br>
         right on the Home Screen.
     </h2>
-    <p class="mt-6 text-lg md:text-xl text-[#555] leading-relaxed max-w-2xl mx-auto" data-animate="fade-up" style="transition-delay: 0.3s;">
+    <p class="mt-6 text-lg md:text-xl text-[#555] dark:text-gray-300 leading-relaxed max-w-2xl mx-auto" data-animate="fade-up" style="transition-delay: 0.3s;">
         What is due next, on the Home and Lock Screen. You find out without opening the app,
         which is the highest praise an app can get. Comes with Premium.
     </p>
@@ -109,14 +109,14 @@
 
 <!-- ================= SECTION APPLE WATCH ================= -->
 <section id="apple-watch" class="min-h-screen flex flex-col items-center justify-center px-6 py-20 text-center">
-    <p class="text-xs font-bold tracking-[0.2em] text-blue-500 uppercase mb-4" data-animate="fade-down" style="transition-delay: 0.1s;">
+    <p class="text-xs font-bold tracking-[0.2em] text-blue-500 uppercase mb-4 dark:text-blue-400" data-animate="fade-down" style="transition-delay: 0.1s;">
         Apple Watch
     </p>
-    <h2 class="text-5xl md:text-7xl font-extrabold tracking-tight text-[#111] leading-[1.1] max-w-4xl mx-auto" data-animate="fade-up" style="transition-delay: 0.2s;">
+    <h2 class="text-5xl md:text-7xl font-extrabold tracking-tight text-[#111] dark:text-white leading-[1.1] max-w-4xl mx-auto" data-animate="fade-up" style="transition-delay: 0.2s;">
         The next charge,<br>
         on your wrist.
     </h2>
-    <p class="mt-6 text-lg md:text-xl text-[#555] leading-relaxed max-w-2xl mx-auto" data-animate="fade-up" style="transition-delay: 0.3s;">
+    <p class="mt-6 text-lg md:text-xl text-[#555] dark:text-gray-300 leading-relaxed max-w-2xl mx-auto" data-animate="fade-up" style="transition-delay: 0.3s;">
         A complication on the watch face shows what is due next and what it costs.
         Pick its colour right on the watch. The daily affirmation lives there too.
     </p>
@@ -136,7 +136,7 @@
     </div>
     <!-- Teks Besar di Bawah -->
     <div class="mt-20 max-w-4xl mx-auto text-left" data-animate="fade-up" style="transition-delay: 0.6s;">
-        <p class="text-3xl md:text-5xl font-extrabold tracking-tight text-[#111] leading-[1.2]">
+        <p class="text-3xl md:text-5xl font-extrabold tracking-tight text-[#111] dark:text-white leading-[1.2]">
             You know roughly what you pay every month. <span class="text-[#ff3b30]">Roughly</span> is the problem.
             All your subscriptions. We counted ours and cancelled three the same evening.
             Subscrr turns that quiet leak into <span class="text-[#ff3b30]">one honest number</span> you can act on.
@@ -348,29 +348,38 @@ document.addEventListener('DOMContentLoaded', function() {
     // ---------- PERUBAHAN BACKGROUND HALAMAN ----------
     const bgElement = document.getElementById('page-background');
     const sections = [
-        { id: 'ai_spend',        color: '#f5f4ee' },
-        { id: 'premium-widgets', color: '#f5d0b0' },
-        { id: 'apple-watch',     color: '#f5f4ee' }
+        { id: 'ai_spend',        light: '#f5f4ee', dark: '#0a0a0a' },
+        { id: 'premium-widgets', light: '#f5d0b0', dark: '#2b160b' },
+        { id: 'apple-watch',     light: '#f5f4ee', dark: '#0a0a0a' }
     ];
 
     const sectionElements = sections.map(s => document.getElementById(s.id));
+    let activeSectionId = null;
+
+    function updateBackgroundColor() {
+        const isDark = document.documentElement.classList.contains('dark');
+        const section = sections.find(s => s.id === activeSectionId);
+        if (section) {
+            bgElement.style.backgroundColor = isDark ? section.dark : section.light;
+        } else {
+            bgElement.style.backgroundColor = isDark ? '#0a0a0a' : '#f5f4ee';
+        }
+    }
 
     const bgObserver = new IntersectionObserver((entries) => {
         let maxRatio = 0;
-        let activeId = null;
+        let newActiveId = null;
 
         entries.forEach(entry => {
             if (entry.isIntersecting && entry.intersectionRatio > maxRatio) {
                 maxRatio = entry.intersectionRatio;
-                activeId = entry.target.id;
+                newActiveId = entry.target.id;
             }
         });
 
-        if (activeId) {
-            const section = sections.find(s => s.id === activeId);
-            if (section) {
-                bgElement.style.backgroundColor = section.color;
-            }
+        if (newActiveId) {
+            activeSectionId = newActiveId;
+            updateBackgroundColor();
         }
     }, {
         threshold: [0.2, 0.4, 0.6, 0.8]
@@ -379,6 +388,14 @@ document.addEventListener('DOMContentLoaded', function() {
     sectionElements.forEach(el => {
         if (el) bgObserver.observe(el);
     });
+
+    // Deteksi perubahan kelas 'dark' pada <html> (karena toggle dark mode)
+    const htmlElement = document.documentElement;
+    const themeObserver = new MutationObserver(updateBackgroundColor);
+    themeObserver.observe(htmlElement, { attributes: true, attributeFilter: ['class'] });
+
+    // Inisialisasi awal
+    updateBackgroundColor();
 
     // ---------- SCROLL ANIMATION OBSERVER ----------
     const animatedElements = document.querySelectorAll('[data-animate]');
