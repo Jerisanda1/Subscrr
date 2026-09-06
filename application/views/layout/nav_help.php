@@ -4,7 +4,7 @@
             
             <!-- Bagian Kiri (Logo & Title) - Diarahkan ke Help Center agar Refresh halaman -->
             <a href="<?= site_url('Help_center') ?>" id="logo-subscrr" class="flex items-center gap-3">
-               <img src="<?= base_url('assets/uploads/icon/icon_Subscrr.png') ?>" alt="Subscrr Logo" class="h-9 w-9 object-contain">
+               <img src="<?= base_url('assets/uploads/icon/icon_Subscrr.png') ?>" alt="Subscrr Logo" class="h-9 w-9 object-contain rounded-md">
                 
                 <div class="flex items-baseline gap-1.5 text-xl">
                     <span class="font-medium text-gray-900 dark:text-gray-100">Subscrr</span>

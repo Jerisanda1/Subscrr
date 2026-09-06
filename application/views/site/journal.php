@@ -1238,7 +1238,95 @@
 
 </main>
 
+<!-- ================= THREADS PROMO BLOCK ================= -->
+<section class="bg-[#f5f4ee] px-6 pb-24 lg:pb-32 dark:bg-[#0a0a0a]">
+  
+  <div class="max-w-5xl mx-auto">
+    
+    <!-- Bagian Banner Gambar -->
+    <div 
+      data-animate="zoom-in"
+      style="transition-delay: 0.1s"
+      class="relative overflow-hidden rounded-[2rem] shadow-lg border border-gray-100 bg-white group dark:bg-gray-900 dark:border-gray-700"
+    >
+      <!-- Link ke Threads -->
+      <a href="https://www.threads.com/@subscrr" target="_blank" rel="noopener noreferrer" class="absolute inset-0 z-0"></a>
 
+      <!-- Gambar Background -->
+      <img
+        src="assets/uploads/pricing/journal-block.png"
+        alt="Threads @subscrr"
+        class="w-full h-auto object-cover block select-none transition-transform duration-500 ease-in-out group-hover:scale-105"
+      />
+
+      <!-- Konten Kiri (Teks dan Tombol Panah) -->
+      <!-- PERUBAHAN: gunakan top-10 untuk mobile, dan bottom-10 untuk desktop -->
+      <div class="absolute top-10 left-10 md:top-auto md:bottom-10 z-10 flex flex-col items-start max-w-xl p-4 md:p-0">
+    <!-- Judul: Bisa diklik, mengarah ke blog, dan tambahkan cursor-pointer -->
+    <h1 
+        class="text-white text-2xl md:text-7xl font-bold leading-tight tracking-tight drop-shadow-lg cursor-pointer"
+    >
+        Open<br />
+        the Subscrr<br />
+        Journal
+    </h1>
+    
+    <!-- Paragraf: Hanya muncul di desktop (md ke atas) -->
+    <p class="text-white text-base md:text-xl font-light opacity-90 mt-4 md:mt-6 mb-6 md:mb-10 leading-relaxed drop-shadow-md hidden md:block">
+        We break down subscriptions and how much money they're costing you.
+    </p>
+
+    <!-- Tombol Panah Merah: Ukuran diperkecil di mobile (w-12 h-12) -->
+    <div class="relative group/btn" onclick="window.location.href='<?= site_url('blog') ?>'; event.stopPropagation();">
+        <!-- Ring / Lingkaran luar transparan saat hover -->
+        <div class="absolute inset-0 rounded-full bg-red-500 opacity-0 scale-100 group-hover/btn:opacity-40 group-hover/btn:scale-125 transition-all duration-500 pointer-events-none"></div>
+    </div>
+ </div>
+      <!-- Card Subscribe KHUSUS DESKTOP -->
+      <div 
+        class="hidden md:block absolute right-10 top-1/2 -translate-y-1/2 z-10 w-[450px] bg-white dark:bg-[#1a1a1a]/95 backdrop-blur-sm p-8 rounded-[2rem] shadow-2xl border border-gray-200 dark:border-white/10" 
+        onclick="event.stopPropagation()"
+      >
+          <h2 class="text-gray-900 dark:text-white text-2xl font-semibold mb-6">Subscribe for updates</h2>
+          <form class="flex items-center gap-3">
+              <input 
+                  type="email" 
+                  placeholder="you@example.com" 
+                  class="flex-1 bg-gray-100 border-gray-300 text-gray-900 placeholder-gray-500 dark:bg-[#2a2a2a] dark:border-transparent dark:text-white dark:placeholder-gray-400 rounded-full px-6 py-4 outline-none focus:ring-2 focus:ring-red-500 border transition-colors"
+              />
+              <button type="submit" class="bg-[#ff4d00] hover:bg-[#e64400] text-white font-bold rounded-full px-8 py-4 transition-colors whitespace-nowrap">
+                  Subscribe
+              </button>
+          </form>
+          <p class="text-gray-500 dark:text-gray-400 text-sm mt-5 leading-relaxed">
+              By subscribing, you agree to receive the Subscrr newsletter. You can unsubscribe anytime.
+          </p>
+      </div>
+    </div>
+
+    <!-- Card Subscribe KHUSUS MOBILE -->
+    <div 
+      class="md:hidden mt-6 bg-white dark:bg-[#1a1a1a]/95 backdrop-blur-sm p-8 rounded-[2rem] shadow-2xl border border-gray-200 dark:border-white/10" 
+      onclick="event.stopPropagation()"
+    >
+        <h2 class="text-gray-900 dark:text-white text-2xl font-semibold mb-6">Subscribe for updates</h2>
+        <form class="flex flex-col gap-3">
+            <input 
+                type="email" 
+                placeholder="you@example.com" 
+                class="w-full bg-gray-100 border-gray-300 text-gray-900 placeholder-gray-500 dark:bg-[#2a2a2a] dark:border-transparent dark:text-white dark:placeholder-gray-400 rounded-full px-6 py-4 outline-none focus:ring-2 focus:ring-red-500 border transition-colors"
+            />
+            <button type="submit" class="w-full bg-[#ff4d00] hover:bg-[#e64400] text-white font-bold rounded-full px-8 py-4 transition-colors whitespace-nowrap">
+                Subscribe
+            </button>
+        </form>
+        <p class="text-gray-500 dark:text-gray-400 text-sm mt-5 leading-relaxed">
+            By subscribing, you agree to receive the Subscrr newsletter. You can unsubscribe anytime.
+        </p>
+    </div>
+
+  </div>
+</section>
 <!-- =====================================================
      FOOTER
 ====================================================== -->

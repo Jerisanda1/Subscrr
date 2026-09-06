@@ -473,7 +473,7 @@
     </p>
 
     <!-- Tombol Panah Merah: Ukuran diperkecil di mobile (w-12 h-12) -->
-    <div class="relative group/btn" onclick="window.location.href='<?= site_url('blog') ?>'; event.stopPropagation();">
+    <div class="relative group/btn" onclick="window.location.href='<?= site_url('journal') ?>'; event.stopPropagation();">
         <!-- Ring / Lingkaran luar transparan saat hover -->
         <div class="absolute inset-0 rounded-full bg-red-500 opacity-0 scale-100 group-hover/btn:opacity-40 group-hover/btn:scale-125 transition-all duration-500 pointer-events-none"></div>
         
@@ -485,7 +485,7 @@
             </svg>
         </div>
     </div>
-</div>
+ </div>
       <!-- Card Subscribe KHUSUS DESKTOP -->
       <div 
         class="hidden md:block absolute right-10 top-1/2 -translate-y-1/2 z-10 w-[450px] bg-white dark:bg-[#1a1a1a]/95 backdrop-blur-sm p-8 rounded-[2rem] shadow-2xl border border-gray-200 dark:border-white/10" 

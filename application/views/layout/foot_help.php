@@ -6,7 +6,7 @@
             
             <!-- Logo & Tulisan Subscrr (Link ke Help Center) -->
             <a href="<?= site_url('Help_center') ?>" class="flex items-center gap-3">
-                <img src="<?= base_url('assets/uploads/icon/icon_Subscrr.png') ?>" alt="Subscrr" class="h-9 w-9 object-contain">
+                <img src="<?= base_url('assets/uploads/icon/icon_Subscrr.png') ?>" alt="Subscrr" class="h-9 w-9 object-contain rounded-md">
                 <span class="text-xl font-bold text-gray-900 dark:text-white">Subscrr</span>
             </a>
             
