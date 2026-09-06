@@ -97,8 +97,7 @@
     <div
       data-animate="fade-up"
       style="transition-delay: 0.2s"
-      class="mt-10 inline-flex bg-white/60 backdrop-blur-md rounded-full p-1 relative shadow-md dark:bg-gray-800/60"
-    >
+      class="mt-10 inline-flex bg-white/60 backdrop-blur-md rounded-full p-1 relative shadow-md dark:bg-[#141414]">
       <div
         id="toggle-indicator"
         style="
@@ -121,7 +120,7 @@
       </button>
       <button
         id="btn-yearly"
-        class="relative z-10 flex-1 px-8 py-3 rounded-full font-semibold transition-colors duration-300 text-gray-600 dark:text-gray-400 whitespace-nowrap"
+        class="relative z-10 flex-1 px-8 py-3 rounded-full font-semibold transition-colors duration-300 text-gray-600 dark:text-gray-600 whitespace-nowrap"
         style="background: transparent"
       >
         Yearly
