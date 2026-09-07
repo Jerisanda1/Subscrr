@@ -28,7 +28,8 @@
         <!-- Judul Besar -->
        <h1 class="text-5xl md:text-7xl font-black tracking-tight mb-10 leading-tight">
          <span class="inline-flex items-center group transition-transform duration-300 hover:-translate-y-1 cursor-pointer">
-            <span class="text-[#ff2500]">Download</span><img src="assets/uploads/icon/icon_Subscrr.png" alt="Subscrr Logo" 
+            <span class="text-[#ff2500]">Download</span>
+            <img src="<?= base_url('assets/uploads/icon/icon_SubScrr.png') ?>" alt="Subscrr Logo"
                 class="inline-block h-14 w-14 md:h-20 md:w-20 align-middle ml-2 rounded-xl transition-transform duration-300 origin-center group-hover:-rotate-6 group-hover:scale-105"><span class="text-[#ff2500]">ubscrr</span>
          </span>
          <br>
@@ -36,7 +37,8 @@
        </h1>
 
         <a href="https://apps.apple.com/us/app/subscrr-take-back-control/id6757530448" target="_blank" id="appstore-btn" class="block mb-4 transition-transform duration-200 ease-out will-change-transform" style="display: inline-block;">
-            <img src="assets/uploads/footer/appstore-badge.svg" alt="Download on the App Store" class="h-14 md:h-13 w-auto mx-auto invert rounded-3xl">
+            <img src="<?= base_url('assets/uploads/footer/appstore-badge.svg') ?>" alt="Download on the App Store"
+             class="h-14 md:h-13 w-auto mx-auto invert rounded-3xl">
         </a>
 
         <!-- Teks kecil di bawah tombol -->
@@ -56,12 +58,12 @@
     <div class="flex flex-col md:flex-row items-center gap-6">
         <!-- Logo -->
         <a href="#" class="flex items-center gap-2">
-            <img src="assets/uploads/icon/icon_Subscrr.png" alt="Subscrr" class="h-8 w-8 rounded-md">
+            <img src="<?= base_url('assets/uploads/icon/icon_Subscrr.png') ?>" alt="Subscrr" class="h-8 w-8 rounded-md">
             <span class="text-xl font-bold text-white">Subscrr</span>
         </a>
         
         <!-- Sosial Media Icons -->
-        <div class="flex items-center gap-4 text-gray-600 dark:text-gray-400">
+        <div class="flex items-center gap-4 text-gray-600  dark:text-gray-400">
             <!-- Threads -->
             <a href="https://www.threads.com/@subscrr" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -115,7 +117,9 @@
             
             <!-- Bagian Badge Maidemail -->
             <a href="https://maidensail.com/startup/subscrr" target="_blank">
-               <img src="assets/uploads/footer/subscrr.svg" alt="Maidemail" class="h-8 w-auto invert mt-6">
+               <img src="<?= base_url('assets/uploads/footer/subscrr.svg') ?>"
+     alt="Maidemail"
+     class="h-8 w-auto invert mt-6">
             </a>
         </div>
     </footer>

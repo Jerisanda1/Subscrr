@@ -56,15 +56,14 @@
     <style>
 
         /* =====================================================
-           RESET & BACKGROUND (LIGHT MODE DEFAULT)
-        ====================================================== */
+           RESET & BACKGROUND
+        ===================================================== */
 
         body {
             background-color: #f4f3ef;
             color: #1a1a1a;
         }
 
-        /* Dark Mode Override */
         .dark body {
             background-color: #0b0b0b;
             color: #ffffff;
@@ -73,7 +72,7 @@
 
         /* =====================================================
            JOURNAL WRAPPER
-        ====================================================== */
+        ===================================================== */
 
         .journal-wrapper {
             padding-top: 130px;
@@ -84,7 +83,7 @@
 
         /* =====================================================
            HEADER
-        ====================================================== */
+        ===================================================== */
 
         .j-lede {
             margin-bottom: 35px;
@@ -105,7 +104,7 @@
 
         /* =====================================================
            LAYOUT
-        ====================================================== */
+        ===================================================== */
 
         .journal-layout {
             display: flex;
@@ -116,7 +115,7 @@
 
         /* =====================================================
            SIDEBAR
-        ====================================================== */
+        ===================================================== */
 
         .journal-sidebar {
             width: 170px;
@@ -187,7 +186,7 @@
 
         /* =====================================================
            MAIN CONTENT
-        ====================================================== */
+        ===================================================== */
 
         .journal-main-content {
             flex-grow: 1;
@@ -202,7 +201,7 @@
            PRIMARY GRID
            ARTIKEL SELALU KIRI
            GET THE APP SELALU KANAN
-        ====================================================== */
+        ===================================================== */
 
         .journal-primary-grid {
             display: grid;
@@ -214,7 +213,7 @@
 
         /* =====================================================
            FEATURED CARD
-        ====================================================== */
+        ===================================================== */
 
         .featured-card {
             background: #ffffff;
@@ -308,6 +307,7 @@
         .featured-stats {
             font-size: 12px;
             color: #999999;
+            margin-top: 4px;
         }
 
         .dark .featured-stats {
@@ -317,8 +317,7 @@
 
         /* =====================================================
            PROMO CARD
-           SELALU DI KANAN
-        ====================================================== */
+        ===================================================== */
 
         .promo-card {
             background: #ffffff;
@@ -327,9 +326,6 @@
             display: flex;
             flex-direction: column;
             border: 1px solid #e5e5e5;
-
-            /* PENTING:
-               promo selalu berada di kolom kanan */
             grid-column: 2;
         }
 
@@ -406,7 +402,7 @@
 
         /* =====================================================
            SECONDARY ARTICLES
-        ====================================================== */
+        ===================================================== */
 
         .journal-secondary-grid {
             display: grid;
@@ -502,16 +498,29 @@
             font-size: 13px;
             line-height: 1.5;
             color: #555555;
+            margin-bottom: 14px;
         }
 
         .dark .article-desc {
             color: #888888;
         }
 
+        /* STATISTIK ARTIKEL SECONDARY */
+        .article-stats {
+            font-size: 12px;
+            color: #999999;
+            margin-top: auto;
+            padding-top: 2px;
+        }
+
+        .dark .article-stats {
+            color: #555555;
+        }
+
 
         /* =====================================================
            RESPONSIVE
-        ====================================================== */
+        ===================================================== */
 
         @media (max-width: 900px) {
 
@@ -533,16 +542,13 @@
                 flex-shrink: 0;
             }
 
-            .journal-primary-grid {
-                grid-template-columns: 1fr;
+            .journal-primary-grid,
+            .journal-secondary-grid {
+                grid-template-columns: 1fr !important;
             }
 
             .promo-card {
-                grid-column: 1;
-            }
-
-            .journal-secondary-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
+                grid-column: auto !important;
             }
 
         }
@@ -698,7 +704,7 @@
 
                     <!-- =================================================
                          ARTIKEL KIRI
-                    ================================================== -->
+                    ================================================= -->
 
 
                     <?php if ($topic === 'all' || $topic === 'money'): ?>
@@ -706,7 +712,7 @@
                         <!-- MONEY FEATURED -->
 
                         <a
-                            href="#"
+                            href="<?= site_url('journal/how-much-do-subscriptions-cost') ?>"
                             class="featured-card"
                         >
 
@@ -750,10 +756,13 @@
                                 </p>
 
 
-                                <div class="featured-stats">
-
-                                    34 views · 5 likes
-
+                                <div
+                                    class="featured-stats"
+                                    data-article-stats="how-much-do-subscriptions-cost"
+                                    data-base-views="47"
+                                    data-base-likes="7"
+                                >
+                                    47 views · 7 likes
                                 </div>
 
                             </div>
@@ -766,14 +775,14 @@
                         <!-- HABITS -->
 
                         <a
-                            href="#"
+                            href="<?= site_url('journal/forgot-to-cancel-free-trial') ?>"
                             class="featured-card"
                         >
 
                             <div class="featured-image-wrapper">
 
                                 <img
-                                    src="<?= base_url('assets/uploads/blog/blog-free-trial.jpg') ?>"
+                                    src="<?= base_url('assets/uploads/journal/PM-mtkfgyvc.png') ?>"
                                     alt="Forgot to cancel a free trial?"
                                 >
 
@@ -811,10 +820,13 @@
                                 </p>
 
 
-                                <div class="featured-stats">
-
-                                    0 views · 0 likes
-
+                                <div
+                                    class="featured-stats"
+                                    data-article-stats="forgot-to-cancel-free-trial"
+                                    data-base-views="29"
+                                    data-base-likes="4"
+                                >
+                                    29 views · 4 likes
                                 </div>
 
                             </div>
@@ -827,14 +839,14 @@
                         <!-- GUIDES -->
 
                         <a
-                            href="#"
+                            href="<?= site_url('journal/best-way-to-track-subscriptions-on-iphone-2026') ?>"
                             class="featured-card"
                         >
 
                             <div class="featured-image-wrapper">
 
                                 <img
-                                    src="<?= base_url('assets/uploads/blog/blog-track-iphone-3.jpg') ?>"
+                                    src="<?= base_url('assets/uploads/journal/app-mtkgbxxa.png') ?>"
                                     alt="The best way to track subscriptions on iPhone"
                                 >
 
@@ -871,10 +883,13 @@
                                 </p>
 
 
-                                <div class="featured-stats">
-
-                                    0 views · 0 likes
-
+                                <div
+                                    class="featured-stats"
+                                    data-article-stats="best-way-to-track-subscriptions-on-iphone-2026"
+                                    data-base-views="12"
+                                    data-base-likes="3"
+                                >
+                                    12 views · 3 likes
                                 </div>
 
                             </div>
@@ -887,14 +902,14 @@
                         <!-- PRODUCT -->
 
                         <a
-                            href="#"
+                            href="<?= site_url('journal/too-lazy-to-type-in-every-expense') ?>"
                             class="featured-card"
                         >
 
                             <div class="featured-image-wrapper">
 
                                 <img
-                                    src="<?= base_url('assets/uploads/blog/blog-ai-receipts-3.jpg') ?>"
+                                    src="<?= base_url('assets/uploads/journal/w-4-mtkg84sf.png') ?>"
                                     alt="Too lazy to type in every expense?"
                                 >
 
@@ -932,10 +947,13 @@
                                 </p>
 
 
-                                <div class="featured-stats">
-
-                                    5 views · 0 likes
-
+                                <div
+                                    class="featured-stats"
+                                    data-article-stats="too-lazy-to-type-in-every-expense"
+                                    data-base-views="7"
+                                    data-base-likes="0"
+                                >
+                                    7 views · 0 likes
                                 </div>
 
                             </div>
@@ -1006,19 +1024,19 @@
 
                     <!-- =================================================
                          MONEY ARTICLE 2
-                    ================================================== -->
+                    ================================================= -->
 
                     <?php if ($topic === 'all' || $topic === 'money'): ?>
 
                         <a
-                            href="#"
+                            href="<?= site_url('journal/subscription-creep') ?>"
                             class="article-card"
                         >
 
                             <div class="article-image-wrapper">
 
                                 <img
-                                    src="<?= base_url('assets/uploads/blog/blog-subscription-creep.jpg') ?>"
+                                    src="<?= base_url('assets/uploads/journal/Frame-51-mtkg5joa.png') ?>"
                                     alt="Subscription creep"
                                 >
 
@@ -1041,7 +1059,7 @@
                                 <h3 class="article-title">
 
                                     Subscription creep:
-                                    Why your money quietly disappears
+                                    Why your money quietly disappears every month
 
                                 </h3>
 
@@ -1053,6 +1071,16 @@
                                     price increases. Here is how to beat it.
 
                                 </p>
+
+
+                                <div
+                                    class="article-stats"
+                                    data-article-stats="subscription-creep"
+                                    data-base-views="12"
+                                    data-base-likes="3"
+                                >
+                                    12 views · 3 likes
+                                </div>
 
                             </div>
 
@@ -1068,15 +1096,18 @@
 
                     <?php if ($topic === 'all'): ?>
 
+
+                        <!-- HABITS -->
+
                         <a
-                            href="#"
+                            href="<?= site_url('journal/forgot-to-cancel-free-trial') ?>"
                             class="article-card"
                         >
 
                             <div class="article-image-wrapper">
 
                                 <img
-                                    src="<?= base_url('assets/uploads/blog/blog-free-trial.jpg') ?>"
+                                    src="<?= base_url('assets/uploads/journal/PM-mtkfgyvc.png') ?>"
                                     alt="Forgot to cancel a free trial?"
                                 >
 
@@ -1113,6 +1144,16 @@
 
                                 </p>
 
+
+                                <div
+                                    class="article-stats"
+                                    data-article-stats="forgot-to-cancel-free-trial"
+                                    data-base-views="29"
+                                    data-base-likes="4"
+                                >
+                                    29 views · 4 likes
+                                </div>
+
                             </div>
 
                         </a>
@@ -1123,14 +1164,14 @@
                         ================================================== -->
 
                         <a
-                            href="#"
+                            href="<?= site_url('journal/best-way-to-track-subscriptions-on-iphone-2026') ?>"
                             class="article-card"
                         >
 
                             <div class="article-image-wrapper">
 
                                 <img
-                                    src="<?= base_url('assets/uploads/blog/blog-track-iphone-3.jpg') ?>"
+                                    src="<?= base_url('assets/uploads/journal/app-mtkgbxxa.png') ?>"
                                     alt="The best way to track subscriptions on iPhone"
                                 >
 
@@ -1160,11 +1201,21 @@
 
                                 <p class="article-desc">
 
-                                    Spreadsheets, bank apps, iOS settings
-                                    or a dedicated tracker?
-                                    An honest comparison with a privacy checklist.
+                                    Spreadsheets, bank apps, iOS settings or a dedicated tracker?
+                                    An honest comparison of every way to track subscriptions on iPhone,
+                                    with a privacy checklist.
 
                                 </p>
+
+
+                                <div
+                                    class="article-stats"
+                                    data-article-stats="best-way-to-track-subscriptions-on-iphone-2026"
+                                    data-base-views="12"
+                                    data-base-likes="3"
+                                >
+                                    12 views · 3 likes
+                                </div>
 
                             </div>
 
@@ -1176,14 +1227,14 @@
                         ================================================== -->
 
                         <a
-                            href="#"
+                            href="<?= site_url('journal/too-lazy-to-type-in-every-expense') ?>"
                             class="article-card"
                         >
 
                             <div class="article-image-wrapper">
 
                                 <img
-                                    src="<?= base_url('assets/uploads/blog/blog-ai-receipts-3.jpg') ?>"
+                                    src="<?= base_url('assets/uploads/journal/w-4-mtkg84sf.png') ?>"
                                     alt="Too lazy to type in every expense?"
                                 >
 
@@ -1220,9 +1271,20 @@
 
                                 </p>
 
+
+                                <div
+                                    class="article-stats"
+                                    data-article-stats="too-lazy-to-type-in-every-expense"
+                                    data-base-views="7"
+                                    data-base-likes="0"
+                                >
+                                    7 views · 0 likes
+                                </div>
+
                             </div>
 
                         </a>
+
 
                     <?php endif; ?>
 
@@ -1238,100 +1300,357 @@
 
 </main>
 
+
 <!-- ================= THREADS PROMO BLOCK ================= -->
+
 <section class="bg-[#f5f4ee] px-6 pb-24 lg:pb-32 dark:bg-[#0a0a0a]">
-  
-  <div class="max-w-5xl mx-auto">
-    
-    <!-- Bagian Banner Gambar -->
-    <div 
-      data-animate="zoom-in"
-      style="transition-delay: 0.1s"
-      class="relative overflow-hidden rounded-[2rem] shadow-lg border border-gray-100 bg-white group dark:bg-gray-900 dark:border-gray-700"
-    >
-      <!-- Link ke Threads -->
-      <a href="https://www.threads.com/@subscrr" target="_blank" rel="noopener noreferrer" class="absolute inset-0 z-0"></a>
 
-      <!-- Gambar Background -->
-      <img
-        src="assets/uploads/pricing/journal-block.png"
-        alt="Threads @subscrr"
-        class="w-full h-auto object-cover block select-none transition-transform duration-500 ease-in-out group-hover:scale-105"
-      />
+    <div class="max-w-5xl mx-auto">
 
-      <!-- Konten Kiri (Teks dan Tombol Panah) -->
-      <!-- PERUBAHAN: gunakan top-10 untuk mobile, dan bottom-10 untuk desktop -->
-      <div class="absolute top-10 left-10 md:top-auto md:bottom-10 z-10 flex flex-col items-start max-w-xl p-4 md:p-0">
-    <!-- Judul: Bisa diklik, mengarah ke blog, dan tambahkan cursor-pointer -->
-    <h1 
-        class="text-white text-2xl md:text-7xl font-bold leading-tight tracking-tight drop-shadow-lg cursor-pointer"
-    >
-        Open<br />
-        the Subscrr<br />
-        Journal
-    </h1>
-    
-    <!-- Paragraf: Hanya muncul di desktop (md ke atas) -->
-    <p class="text-white text-base md:text-xl font-light opacity-90 mt-4 md:mt-6 mb-6 md:mb-10 leading-relaxed drop-shadow-md hidden md:block">
-        We break down subscriptions and how much money they're costing you.
-    </p>
+        <!-- Bagian Banner Gambar -->
 
-    <!-- Tombol Panah Merah: Ukuran diperkecil di mobile (w-12 h-12) -->
-    <div class="relative group/btn" onclick="window.location.href='<?= site_url('blog') ?>'; event.stopPropagation();">
-        <!-- Ring / Lingkaran luar transparan saat hover -->
-        <div class="absolute inset-0 rounded-full bg-red-500 opacity-0 scale-100 group-hover/btn:opacity-40 group-hover/btn:scale-125 transition-all duration-500 pointer-events-none"></div>
-    </div>
- </div>
-      <!-- Card Subscribe KHUSUS DESKTOP -->
-      <div 
-        class="hidden md:block absolute right-10 top-1/2 -translate-y-1/2 z-10 w-[450px] bg-white dark:bg-[#1a1a1a]/95 backdrop-blur-sm p-8 rounded-[2rem] shadow-2xl border border-gray-200 dark:border-white/10" 
-        onclick="event.stopPropagation()"
-      >
-          <h2 class="text-gray-900 dark:text-white text-2xl font-semibold mb-6">Subscribe for updates</h2>
-          <form class="flex items-center gap-3">
-              <input 
-                  type="email" 
-                  placeholder="you@example.com" 
-                  class="flex-1 bg-gray-100 border-gray-300 text-gray-900 placeholder-gray-500 dark:bg-[#2a2a2a] dark:border-transparent dark:text-white dark:placeholder-gray-400 rounded-full px-6 py-4 outline-none focus:ring-2 focus:ring-red-500 border transition-colors"
-              />
-              <button type="submit" class="bg-[#ff4d00] hover:bg-[#e64400] text-white font-bold rounded-full px-8 py-4 transition-colors whitespace-nowrap">
-                  Subscribe
-              </button>
-          </form>
-          <p class="text-gray-500 dark:text-gray-400 text-sm mt-5 leading-relaxed">
-              By subscribing, you agree to receive the Subscrr newsletter. You can unsubscribe anytime.
-          </p>
-      </div>
-    </div>
+        <div
+            data-animate="zoom-in"
+            style="transition-delay: 0.1s"
+            class="relative overflow-hidden rounded-[2rem] shadow-lg border border-gray-100 bg-white group dark:bg-gray-900 dark:border-gray-700"
+        >
 
-    <!-- Card Subscribe KHUSUS MOBILE -->
-    <div 
-      class="md:hidden mt-6 bg-white dark:bg-[#1a1a1a]/95 backdrop-blur-sm p-8 rounded-[2rem] shadow-2xl border border-gray-200 dark:border-white/10" 
-      onclick="event.stopPropagation()"
-    >
-        <h2 class="text-gray-900 dark:text-white text-2xl font-semibold mb-6">Subscribe for updates</h2>
-        <form class="flex flex-col gap-3">
-            <input 
-                type="email" 
-                placeholder="you@example.com" 
-                class="w-full bg-gray-100 border-gray-300 text-gray-900 placeholder-gray-500 dark:bg-[#2a2a2a] dark:border-transparent dark:text-white dark:placeholder-gray-400 rounded-full px-6 py-4 outline-none focus:ring-2 focus:ring-red-500 border transition-colors"
+            <!-- Link ke Threads -->
+
+            <a
+                href="https://www.threads.com/@subscrr"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="absolute inset-0 z-0"
+            ></a>
+
+
+            <!-- Gambar Background -->
+
+            <img
+                src="<?= base_url('assets/uploads/pricing/journal-block.png') ?>"
+                alt="Threads @subscrr"
+                class="w-full h-auto object-cover block select-none transition-transform duration-500 ease-in-out group-hover:scale-105"
             />
-            <button type="submit" class="w-full bg-[#ff4d00] hover:bg-[#e64400] text-white font-bold rounded-full px-8 py-4 transition-colors whitespace-nowrap">
-                Subscribe
-            </button>
-        </form>
-        <p class="text-gray-500 dark:text-gray-400 text-sm mt-5 leading-relaxed">
-            By subscribing, you agree to receive the Subscrr newsletter. You can unsubscribe anytime.
-        </p>
+
+
+            <!-- Konten Kiri -->
+
+            <div
+                class="absolute top-10 left-10 md:top-auto md:bottom-10 z-10 flex flex-col items-start max-w-xl p-4 md:p-0"
+            >
+
+                <h1
+                    class="text-white text-2xl md:text-7xl font-bold leading-tight tracking-tight drop-shadow-lg cursor-pointer"
+                >
+                    Open<br />
+                    the Subscrr<br />
+                    Journal
+                </h1>
+
+
+                <p
+                    class="text-white text-base md:text-xl font-light opacity-90 mt-4 md:mt-6 mb-6 md:mb-10 leading-relaxed drop-shadow-md hidden md:block"
+                >
+                    We break down subscriptions and how much money they're costing you.
+                </p>
+
+
+                <!-- Tombol Panah -->
+
+                <div class="relative group/btn">
+
+                    <div
+                        class="absolute inset-0 rounded-full bg-red-500 opacity-0 scale-100 group-hover/btn:opacity-40 group-hover/btn:scale-125 transition-all duration-500 pointer-events-none"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Card Subscribe KHUSUS DESKTOP -->
+
+            <div
+                class="hidden md:block absolute right-10 top-1/2 -translate-y-1/2 z-10 w-[450px] bg-white dark:bg-[#1a1a1a]/95 backdrop-blur-sm p-8 rounded-[2rem] shadow-2xl border border-gray-200 dark:border-white/10"
+                onclick="event.stopPropagation()"
+            >
+
+                <h2 class="text-gray-900 dark:text-white text-2xl font-semibold mb-6">
+                    Subscribe for updates
+                </h2>
+
+
+                <form class="flex items-center gap-3">
+
+                    <input
+                        type="email"
+                        placeholder="you@example.com"
+                        class="flex-1 bg-gray-100 border-gray-300 text-gray-900 placeholder-gray-500 dark:bg-[#2a2a2a] dark:border-transparent dark:text-white dark:placeholder-gray-400 rounded-full px-6 py-4 outline-none focus:ring-2 focus:ring-red-500 border transition-colors"
+                    >
+
+
+                    <button
+                        type="submit"
+                        class="bg-[#ff4d00] hover:bg-[#e64400] text-white font-bold rounded-full px-8 py-4 transition-colors whitespace-nowrap"
+                    >
+                        Subscribe
+                    </button>
+
+                </form>
+
+
+                <p class="text-gray-500 dark:text-gray-400 text-sm mt-5 leading-relaxed">
+                    By subscribing, you agree to receive the Subscrr newsletter.
+                    You can unsubscribe anytime.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Card Subscribe KHUSUS MOBILE -->
+
+        <div
+            class="md:hidden mt-6 bg-white dark:bg-[#1a1a1a]/95 backdrop-blur-sm p-8 rounded-[2rem] shadow-2xl border border-gray-200 dark:border-white/10"
+            onclick="event.stopPropagation()"
+        >
+
+            <h2 class="text-gray-900 dark:text-white text-2xl font-semibold mb-6">
+                Subscribe for updates
+            </h2>
+
+
+            <form class="flex flex-col gap-3">
+
+                <input
+                    type="email"
+                    placeholder="you@example.com"
+                    class="w-full bg-gray-100 border-gray-300 text-gray-900 placeholder-gray-500 dark:bg-[#2a2a2a] dark:border-transparent dark:text-white dark:placeholder-gray-400 rounded-full px-6 py-4 outline-none focus:ring-2 focus:ring-red-500 border transition-colors"
+                >
+
+
+                <button
+                    type="submit"
+                    class="w-full bg-[#ff4d00] hover:bg-[#e64400] text-white font-bold rounded-full px-8 py-4 transition-colors whitespace-nowrap"
+                >
+                    Subscribe
+                </button>
+
+            </form>
+
+
+            <p class="text-gray-500 dark:text-gray-400 text-sm mt-5 leading-relaxed">
+                By subscribing, you agree to receive the Subscrr newsletter.
+                You can unsubscribe anytime.
+            </p>
+
+        </div>
+
     </div>
 
-  </div>
 </section>
+
+
 <!-- =====================================================
      FOOTER
 ====================================================== -->
 
 <?php $this->load->view('layout/footer.php'); ?>
+
+
+<!-- =====================================================
+     ARTICLE STATISTICS
+     FRONTEND ONLY - LOCAL STORAGE
+====================================================== -->
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    /*
+    =====================================================
+    KONFIGURASI
+    =====================================================
+    */
+
+    const VIEW_COOLDOWN = 24 * 60 * 60 * 1000;
+
+
+    /*
+    =====================================================
+    AMBIL SEMUA ELEMEN STATISTIK
+    =====================================================
+    */
+
+    const statElements = document.querySelectorAll(
+        '[data-article-stats]'
+    );
+
+
+    /*
+    =====================================================
+    PROSES SETIAP ARTIKEL
+    =====================================================
+    */
+
+    statElements.forEach(function (element) {
+
+        const slug = element.getAttribute(
+            'data-article-stats'
+        );
+
+        const baseViews = parseInt(
+            element.getAttribute('data-base-views'),
+            10
+        ) || 0;
+
+        const baseLikes = parseInt(
+            element.getAttribute('data-base-likes'),
+            10
+        ) || 0;
+
+
+        const VIEW_KEY =
+            'subscrr_view_' + slug;
+
+        const LIKE_KEY =
+            'subscrr_like_' + slug;
+
+
+        /*
+        =================================================
+        VIEWS
+        =================================================
+        */
+
+        let viewCount = baseViews;
+
+
+        let viewData = null;
+
+
+        try {
+
+            viewData = localStorage.getItem(
+                VIEW_KEY
+            );
+
+        } catch (error) {
+
+            viewData = null;
+
+        }
+
+
+        if (viewData) {
+
+            try {
+
+                const parsedData =
+                    JSON.parse(viewData);
+
+                const lastViewed =
+                    Number(parsedData.timestamp);
+
+                const now =
+                    Date.now();
+
+
+                /*
+                =========================================
+                USER MEMBUKA ARTIKEL DALAM 24 JAM
+                =========================================
+                */
+
+                if (
+                    lastViewed > 0 &&
+                    (now - lastViewed) < VIEW_COOLDOWN
+                ) {
+
+                    /*
+                    Detail article sudah menambahkan
+                    1 view untuk browser ini.
+                    */
+
+                    viewCount =
+                        baseViews + 1;
+
+                }
+
+            } catch (error) {
+
+                /*
+                Jika data localStorage rusak,
+                gunakan base count.
+                */
+
+                viewCount =
+                    baseViews;
+
+            }
+
+        }
+
+
+        /*
+        =================================================
+        LIKES
+        =================================================
+        */
+
+        let likeCount =
+            baseLikes;
+
+
+        let liked = false;
+
+
+        try {
+
+            liked =
+                localStorage.getItem(
+                    LIKE_KEY
+                ) === 'true';
+
+        } catch (error) {
+
+            liked = false;
+
+        }
+
+
+        /*
+        Jika user pernah like artikel
+        dari browser ini, tampilkan +1.
+        */
+
+        if (liked) {
+
+            likeCount =
+                baseLikes + 1;
+
+        }
+
+
+        /*
+        =================================================
+        UPDATE TAMPILAN
+        =================================================
+        */
+
+        element.textContent =
+            viewCount +
+            ' views · ' +
+            likeCount +
+            ' likes';
+
+    });
+
+});
+
+</script>
 
 
 </body>

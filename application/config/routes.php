@@ -56,3 +56,4 @@ $route['translate_uri_dashes'] = FALSE;
 $route['privacy-policy'] = 'site/privacy_policy';
 $route['terms'] = 'site/terms';
 $route['journal'] = 'site/journal';
+$route['journal/(:any)'] = 'site/journal_article/$1';
